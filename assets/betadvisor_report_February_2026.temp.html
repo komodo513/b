@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betadvisor Club Premium Reports</title>
+    <style>
+        :root {
+            /* Premium Dark Theme Colors */
+            --premium-black: #0a0a0a;
+            --premium-dark: #121212;
+            --premium-card: #1a1a1a;
+            --premium-border: #2a2a2a;
+            --premium-hover: #2d2d2d;
+            --premium-text: #f0f0f0;
+            --premium-light-text: #b0b0b0;
+            --premium-green: #00ff88;
+            --premium-dark-green: #00cc6a;
+            --premium-red: #ff5555;
+            --premium-orange: #ffaa00;
+            --premium-blue: #4dabf7;
+            --premium-purple: #9775fa;
+            --premium-yellow: #ffd43b;
+            
+            /* Premium Spacing */
+            --space-xs: 6px;
+            --space-sm: 10px;
+            --space-md: 16px;
+            --space-lg: 20px;
+            --space-xl: 24px;
+            
+            /* Premium Font Sizes */
+            --text-xs: 12px;
+            --text-sm: 13px;
+            --text-md: 14px;
+            --text-lg: 16px;
+            --text-xl: 18px;
+            --text-2xl: 20px;
+            
+            /* Premium Effects */
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --hover-shadow: 0 6px 20px rgba(0, 255, 136, 0.15);
+            --gradient-primary: linear-gradient(135deg, var(--premium-green) 0%, var(--premium-blue) 100%);
+            --gradient-card: linear-gradient(145deg, var(--premium-card) 0%, #222222 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-size: var(--text-md);
+            line-height: 1.6;
+            color: var(--premium-text);
+            background-color: var(--premium-black);
+            padding: var(--space-sm);
+            min-height: 100vh;
+            width: 100%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--premium-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--premium-border);
+            width: 100%;
+        }
+        
+        /* Premium Header */
+        .header {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            padding: var(--space-xl);
+            position: relative;
+            border-bottom: 1px solid var(--premium-border);
+        }
+        
+        .header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-lg);
+        }
+        
+        .header-brand {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: linear-gradient(135deg, var(--premium-green) 0%, var(--premium-blue) 50%, var(--premium-purple) 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: var(--text-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .header-title h1 {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-title p {
+            font-size: var(--text-sm);
+            color: var(--premium-light-text);
+            line-height: 1.5;
+            max-width: 600px;
+        }
+        
+        /* Info Notice */
+        .info-notice {
+            background: rgba(0, 255, 136, 0.1);
+            border-left: 4px solid var(--premium-green);
+            padding: var(--space-md);
+            margin: var(--space-md);
+            border-radius: 8px;
+        }
+        
+        .info-notice h3 {
+            color: var(--premium-green);
+            font-size: var(--text-md);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .info-notice p {
+            font-size: var(--text-sm);
+            color: var(--premium-light-text);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .info-notice small {
+            display: block;
+            font-size: var(--text-xs);
+            color: var(--premium-light-text);
+            opacity: 0.8;
+            margin-top: var(--space-sm);
+            padding-top: var(--space-xs);
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+        }
+        
+        /* Main Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            padding: var(--space-md);
+        }
+        
+        .stat-card {
+            background: var(--gradient-card);
+            padding: var(--space-lg);
+            border-radius: 10px;
+            border: 1px solid var(--premium-border);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--premium-green);
+        }
+        
+        .stat-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+        }
+        
+        .stat-card h3 {
+            color: var(--premium-light-text);
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-sm);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-value {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--premium-text);
+            margin: var(--space-sm) 0;
+            font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+        }
+        
+        .profit-positive {
+            color: var(--premium-green) !important;
+        }
+        
+        .profit-negative {
+            color: var(--premium-red) !important;
+        }
+        
+        .profit-neutral {
+            color: var(--premium-light-text) !important;
+        }
+        
+        .stat-card p {
+            font-size: var(--text-xs);
+            color: var(--premium-light-text);
+            margin-top: var(--space-xs);
+            opacity: 0.9;
+        }
+        
+        /* Bank Section */
+        .bank-section {
+            background: var(--gradient-card);
+            margin: var(--space-md);
+            padding: var(--space-lg);
+            border-radius: 10px;
+            border: 1px solid var(--premium-border);
+        }
+        
+        .bank-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-md);
+        }
+        
+        .bank-header h2 {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--premium-text);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .bank-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .bank-stat {
+            text-align: center;
+        }
+        
+        .bank-stat .label {
+            font-size: var(--text-xs);
+            color: var(--premium-light-text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .bank-stat .value {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--premium-text);
+            font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+        }
+        
+        /* Month Sections */
+        .month-section {
+            margin: var(--space-md);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--premium-border);
+            background: var(--gradient-card);
+        }
+        
+        .month-header {
+            background: rgba(26, 26, 26, 0.8);
+            padding: var(--space-md);
+            border-bottom: 1px solid var(--premium-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        
+        .month-header h2 {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--premium-text);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .month-stats {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+        
+        .month-stat {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--text-sm);
+            color: var(--premium-light-text);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--premium-border);
+        }
+        
+        .month-stat .value {
+            font-weight: 600;
+            color: var(--premium-text);
+            font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+        }
+        
+        /* Table - Premium Dark */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: var(--text-sm);
+        }
+        
+        thead {
+            background: rgba(42, 42, 42, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--premium-light-text);
+            text-transform: uppercase;
+            font-size: var(--text-xs);
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--premium-border);
+            white-space: nowrap;
+        }
+        
+        tbody tr {
+            border-bottom: 1px solid var(--premium-border);
+            transition: background-color 0.2s ease;
+        }
+        
+        tbody tr:hover {
+            background-color: rgba(0, 255, 136, 0.05);
+        }
+        
+        td {
+            padding: 12px 16px;
+            color: var(--premium-text);
+            vertical-align: middle;
+        }
+        
+        /* Status badges */
+        .status-win {
+            background: rgba(0, 255, 136, 0.15);
+            color: var(--premium-green);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: var(--text-xs);
+            display: inline-block;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            min-width: 70px;
+            text-align: center;
+        }
+        
+        .status-loss {
+            background: rgba(255, 85, 85, 0.15);
+            color: var(--premium-red);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: var(--text-xs);
+            display: inline-block;
+            border: 1px solid rgba(255, 85, 85, 0.3);
+            min-width: 70px;
+            text-align: center;
+        }
+        
+        .status-pending {
+            background: rgba(255, 170, 0, 0.15);
+            color: var(--premium-orange);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: var(--text-xs);
+            display: inline-block;
+            border: 1px solid rgba(255, 170, 0, 0.3);
+            min-width: 70px;
+            text-align: center;
+        }
+        
+        /* Badges */
+        .league-badge {
+            background: rgba(77, 171, 247, 0.15);
+            color: var(--premium-blue);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: var(--text-xs);
+            display: inline-block;
+            max-width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            border: 1px solid rgba(77, 171, 247, 0.3);
+        }
+        
+        .coef-badge {
+            background: rgba(0, 255, 136, 0.15);
+            color: var(--premium-green);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: var(--text-sm);
+            display: inline-block;
+            min-width: 60px;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+        }
+        
+        /* Special cells */
+        .date-cell {
+            font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+            font-size: var(--text-xs);
+            color: var(--premium-light-text);
+            white-space: nowrap;
+        }
+        
+        .profit-cell {
+            font-weight: 700;
+            font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+            font-size: var(--text-sm);
+        }
+        
+        .team-cell {
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(10, 10, 10, 0.8);
+            color: var(--premium-light-text);
+            text-align: center;
+            padding: var(--space-lg);
+            margin-top: var(--space-xl);
+            border-top: 1px solid var(--premium-border);
+            font-size: var(--text-xs);
+        }
+        
+        .footer p {
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+        
+        .footer-legal {
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--premium-border);
+            font-size: 11px;
+            color: #888;
+        }
+        
+        /* Confidence Section */
+        .confidence-section {
+            background: var(--gradient-card);
+            margin: var(--space-md);
+            padding: var(--space-lg);
+            border-radius: 10px;
+            border: 1px solid var(--premium-border);
+        }
+        
+        .confidence-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .confidence-card {
+            padding: var(--space-md);
+        }
+        
+        .confidence-card h3 {
+            font-size: var(--text-md);
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--premium-text);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .confidence-level {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .confidence-message {
+            font-size: var(--text-sm);
+            color: var(--premium-light-text);
+            line-height: 1.5;
+        }
+        
+        /* Insights */
+        .insights-list {
+            list-style: none;
+        }
+        
+        .insights-list li {
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-lg);
+            position: relative;
+            color: var(--premium-light-text);
+            line-height: 1.5;
+        }
+        
+        .insights-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--premium-green);
+            font-weight: bold;
+        }
+        
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--premium-light-text);
+            font-size: var(--text-md);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-md);
+            }
+            
+            .header-brand {
+                min-width: auto;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .bank-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .month-header {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-sm);
+            }
+            
+            .month-stats {
+                justify-content: center;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .confidence-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .bank-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding: var(--space-xs);
+            }
+            
+            .container {
+                border-radius: 8px;
+            }
+            
+            th, td {
+                padding: 10px 12px;
+                font-size: var(--text-xs);
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .month-section {
+            animation: fadeInUp 0.4s ease-out;
+        }
+        
+        .stat-card {
+            animation: fadeInUp 0.3s ease-out;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--premium-dark);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--premium-border);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--premium-green);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-brand">
+                    <div class="premium-badge">
+                        <i class="fas fa-crown"></i>
+                        Premium Reports • February 2026
+                    </div>
+                    <div class="header-title">
+                        <h1>Betadvisor Club Premium</h1>
+                        <p>Professional Under 2.5 Goals Analysis • Daily Match Selection • First Match Per Day Strategy</p>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-card" style="min-width: 180px; text-align: right; padding: var(--space-md);">
+                        <div class="stat-value">41</div>
+                        <p>Days Analyzed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-notice">
+            <h3><i class="fas fa-info-circle"></i> Important Information</h3>
+            <p><strong>Stake Information:</strong> All profit calculations are based on a flat stake of $50 per match. You can adjust this to your preferred stake size (e.g., $25) - the percentages remain the same.</p>
+            <p><strong>Current Bank Status:</strong> Based on 41 days of analysis with 64.7% win rate.</p>
+            <small><i class="fas fa-exclamation-triangle"></i> This service is for personal use only. Reselling or redistribution will result in account termination.</small>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Win Rate</h3>
+                <div class="stat-value">64.7%</div>
+                <p>Success Rate on Under 2.5 Goals</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Total Profit</h3>
+                <div class="stat-value profit-positive">+$506.5</div>
+                <p>@ $50 flat stake per match</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>ROI</h3>
+                <div class="stat-value profit-positive">24.7%</div>
+                <p>Return on Investment</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Best Month</h3>
+                <div class="stat-value" style="font-size: var(--text-lg);">December 2025</div>
+                <p>71.4% win rate</p>
+            </div>
+        </div>
+        
+        <div class="bank-section">
+            <div class="bank-header">
+                <h2><i class="fas fa-chart-line"></i> Current Bank Status</h2>
+                <div class="bank-stat">
+                    <div class="label">This Month</div>
+                    <div class="value profit-positive">+$506.5</div>
+                </div>
+            </div>
+            <div class="bank-stats">
+                <div class="bank-stat">
+                    <div class="label">Total Staked</div>
+                    <div class="value">$2,050</div>
+                </div>
+                <div class="bank-stat">
+                    <div class="label">Total Returns</div>
+                    <div class="value">$2,557</div>
+                </div>
+                <div class="bank-stat">
+                    <div class="label">Profit per Day</div>
+                    <div class="value profit-positive">+$12.35</div>
+                </div>
+                <div class="bank-stat">
+                    <div class="label">Average Odds</div>
+                    <div class="value">2.0</div>
+                </div>
+                <div class="bank-stat">
+                    <div class="label">Win Streak</div>
+                    <div class="value">5</div>
+                </div>
+                <div class="bank-stat">
+                    <div class="label">Loss Streak</div>
+                    <div class="value">3</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="confidence-section">
+            <div class="confidence-content">
+                <div class="confidence-card">
+                    <h3><i class="fas fa-trophy"></i> Performance Analysis</h3>
+                    <div class="confidence-level">GOOD</div>
+                    <p class="confidence-message">Positive performance with room for improvement in consistency.</p>
+                    <p style="margin-top: var(--space-sm); font-size: var(--text-xs); color: var(--premium-light-text);">
+                        Based on 41 days of analysis with 66.7% profitable months.
+                    </p>
+                </div>
+                <div class="confidence-card">
+                    <h3><i class="fas fa-lightbulb"></i> Key Insights</h3>
+                    <ul class="insights-list">
+                        <li>Excellent 64.7% win rate demonstrates effective match selection</li>
+                        <li>Strong 24.7% ROI indicates excellent value finding</li>
+                        <li>Moderate 66.7% monthly consistency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+    <div class="month-section">
+        <div class="month-header">
+            <h2><i class="fas fa-calendar-alt"></i> February 2026</h2>
+            <div class="month-stats">
+                <div class="month-stat">
+                    <span class="label">Days:</span>
+                    <span class="value">6</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Wins:</span>
+                    <span class="value">1</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Losses:</span>
+                    <span class="value">1</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Rate:</span>
+                    <span class="value">50.0%</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Profit:</span>
+                    <span class="value profit-neutral">+$0.00</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Avg Odds:</span>
+                    <span class="value">1.98</span>
+                </div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>League</th>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>Odds</th>
+                    <th>Predicted</th>
+                    <th>Result</th>
+                    <th>Goals</th>
+                    <th>Status</th>
+                    <th>Profit</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <tr>
+                    <td class="date-cell">2026-02-06</td>
+                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
+                    <td class="team-cell">Persib Bandung</td>
+                    <td class="team-cell">Malut United</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>1 - 0</td>
+                    <td></td>
+                    <td>None</td>
+                    <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
+                    <td class="profit-cell profit-neutral"><strong>-</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-02-05</td>
+                    <td><span class="league-badge" title="Slovenia - Prva Liga">Slovenia - Prva Liga</span></td>
+                    <td class="team-cell">NK Aluminij</td>
+                    <td class="team-cell">Olimpija Ljublj</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 2</td>
+                    <td></td>
+                    <td>None</td>
+                    <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
+                    <td class="profit-cell profit-neutral"><strong>-</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-02-04</td>
+                    <td><span class="league-badge" title="Azerbaijan - Azerbaijan C...">Azerbaijan - Azerbaijan C...</span></td>
+                    <td class="team-cell">Sumqayit FK</td>
+                    <td class="team-cell">Zira</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 0</td>
+                    <td></td>
+                    <td>None</td>
+                    <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
+                    <td class="profit-cell profit-neutral"><strong>-</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-02-03</td>
+                    <td><span class="league-badge" title="Poland - Ekstraklasa">Poland - Ekstraklasa</span></td>
+                    <td class="team-cell">Piast Gliwice</td>
+                    <td class="team-cell">Lech Poznan</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 2</td>
+                    <td></td>
+                    <td>None</td>
+                    <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
+                    <td class="profit-cell profit-neutral"><strong>-</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-02-02</td>
+                    <td><span class="league-badge" title="Portugal - Liga Portugal">Portugal - Liga Portugal</span></td>
+                    <td class="team-cell">Casa Pia AC</td>
+                    <td class="team-cell">Porto</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>0 - 2</td>
+                    <td>2 - 1</td>
+                    <td>3</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-02-01</td>
+                    <td><span class="league-badge" title="El Salvador - Primera Div...">El Salvador - Primera Div...</span></td>
+                    <td class="team-cell">Luís Ángel Firp</td>
+                    <td class="team-cell">Inter F.A</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 0</td>
+                    <td>0 - 0</td>
+                    <td>0</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="month-section">
+        <div class="month-header">
+            <h2><i class="fas fa-calendar-alt"></i> January 2026</h2>
+            <div class="month-stats">
+                <div class="month-stat">
+                    <span class="label">Days:</span>
+                    <span class="value">28</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Wins:</span>
+                    <span class="value">16</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Losses:</span>
+                    <span class="value">9</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Rate:</span>
+                    <span class="value">64.0%</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Profit:</span>
+                    <span class="value profit-positive">+$361.5</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Avg Odds:</span>
+                    <span class="value">2.01</span>
+                </div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>League</th>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>Odds</th>
+                    <th>Predicted</th>
+                    <th>Result</th>
+                    <th>Goals</th>
+                    <th>Status</th>
+                    <th>Profit</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <tr>
+                    <td class="date-cell">2026-01-31</td>
+                    <td><span class="league-badge" title="Australia - A-League">Australia - A-League</span></td>
+                    <td class="team-cell">Perth Glory</td>
+                    <td class="team-cell">Auckland</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>0 - 1</td>
+                    <td>2 - 1</td>
+                    <td>3</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-30</td>
+                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
+                    <td class="team-cell">Persita Tangera</td>
+                    <td class="team-cell">Persija Jakarta</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>0 - 1</td>
+                    <td>0 - 2</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-29</td>
+                    <td><span class="league-badge" title="Unknown">Unknown</span></td>
+                    <td class="team-cell">Crvena Zvezda</td>
+                    <td class="team-cell">Celta Vigo</td>
+                    <td><span class="coef-badge">2.02</span></td>
+                    <td>0 - 1</td>
+                    <td>1 - 1</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$51.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-28</td>
+                    <td><span class="league-badge" title="Unknown">Unknown</span></td>
+                    <td class="team-cell">Union Saint-Gil</td>
+                    <td class="team-cell">Atalanta</td>
+                    <td><span class="coef-badge">2.10</span></td>
+                    <td>0 - 1</td>
+                    <td>1 - 0</td>
+                    <td>1</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$55.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-27</td>
+                    <td><span class="league-badge" title="England - NPL Premier Div...">England - NPL Premier Div...</span></td>
+                    <td class="team-cell">FC United</td>
+                    <td class="team-cell">Stockton Town</td>
+                    <td><span class="coef-badge">1.97</span></td>
+                    <td>0 - 1</td>
+                    <td>POST</td>
+                    <td>None</td>
+                    <td><span class="status-pending"><i class="fas fa-exclamation" style="margin-right: 4px;"></i>ERROR</span></td>
+                    <td class="profit-cell profit-neutral"><strong>-</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-26</td>
+                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
+                    <td class="team-cell">Dewa United</td>
+                    <td class="team-cell">Arema FC</td>
+                    <td><span class="coef-badge">2.08</span></td>
+                    <td>1 - 1</td>
+                    <td>2 - 0</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$54.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-25</td>
+                    <td><span class="league-badge" title="Australia - A-League Wome...">Australia - A-League Wome...</span></td>
+                    <td class="team-cell">Melbourne Victo</td>
+                    <td class="team-cell">Sydney W</td>
+                    <td><span class="coef-badge">2.05</span></td>
+                    <td>1 - 0</td>
+                    <td>0 - 0</td>
+                    <td>0</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$52.50</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-24</td>
+                    <td><span class="league-badge" title="Germany - Regionalliga No...">Germany - Regionalliga No...</span></td>
+                    <td class="team-cell">Meuselwitz</td>
+                    <td class="team-cell">BFC Preussen</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 0</td>
+                    <td></td>
+                    <td>None</td>
+                    <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
+                    <td class="profit-cell profit-neutral"><strong>-</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-23</td>
+                    <td><span class="league-badge" title="El Salvador - Primera Div...">El Salvador - Primera Div...</span></td>
+                    <td class="team-cell">Luís Ángel Firp</td>
+                    <td class="team-cell">Inter F.A</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 0</td>
+                    <td>0 - 0</td>
+                    <td>0</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-22</td>
+                    <td><span class="league-badge" title="El Salvador - Primera Div...">El Salvador - Primera Div...</span></td>
+                    <td class="team-cell">Hercules</td>
+                    <td class="team-cell">CD FAS</td>
+                    <td><span class="coef-badge">2.14</span></td>
+                    <td>0 - 0</td>
+                    <td>0 - 2</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$57.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-21</td>
+                    <td><span class="league-badge" title="Brazil - Campeonato Parai...">Brazil - Campeonato Parai...</span></td>
+                    <td class="team-cell">Confiança EC</td>
+                    <td class="team-cell">Botafogo PB</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>0 - 0</td>
+                    <td>0 - 1</td>
+                    <td>1</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-20</td>
+                    <td><span class="league-badge" title="England - National League...">England - National League...</span></td>
+                    <td class="team-cell">Leamington</td>
+                    <td class="team-cell">Buxton FC</td>
+                    <td><span class="coef-badge">1.98</span></td>
+                    <td>0 - 1</td>
+                    <td>No Score</td>
+                    <td>None</td>
+                    <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
+                    <td class="profit-cell profit-neutral"><strong>-</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-19</td>
+                    <td><span class="league-badge" title="Jamaica - Premier League">Jamaica - Premier League</span></td>
+                    <td class="team-cell">Molynes United</td>
+                    <td class="team-cell">Tivoli Gardens</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 1</td>
+                    <td>3 - 2</td>
+                    <td>5</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-17</td>
+                    <td><span class="league-badge" title="Thailand - Thai League 2">Thailand - Thai League 2</span></td>
+                    <td class="team-cell">Phrae United</td>
+                    <td class="team-cell">Kasetsart FC</td>
+                    <td><span class="coef-badge">1.97</span></td>
+                    <td>1 - 1</td>
+                    <td>2 - 1</td>
+                    <td>3</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-16</td>
+                    <td><span class="league-badge" title="Saudi Arabia - 1st Divisi...">Saudi Arabia - 1st Divisi...</span></td>
+                    <td class="team-cell">Al Jabalain</td>
+                    <td class="team-cell">Al Wahda Mecca</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>2 - 0</td>
+                    <td>2 - 0</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-15</td>
+                    <td><span class="league-badge" title="Mexico - Liga MX">Mexico - Liga MX</span></td>
+                    <td class="team-cell">Querétaro FC</td>
+                    <td class="team-cell">Club Tijuana</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>1 - 1</td>
+                    <td>1 - 2</td>
+                    <td>3</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-14</td>
+                    <td><span class="league-badge" title="Mexico - Liga MX">Mexico - Liga MX</span></td>
+                    <td class="team-cell">FC Juárez</td>
+                    <td class="team-cell">Guadalajara Chi</td>
+                    <td><span class="coef-badge">2.02</span></td>
+                    <td>0 - 1</td>
+                    <td>0 - 1</td>
+                    <td>1</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$51.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-13</td>
+                    <td><span class="league-badge" title="Angola - Girabola">Angola - Girabola</span></td>
+                    <td class="team-cell">Petro Atletico</td>
+                    <td class="team-cell">Guelson FC</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>1 - 0</td>
+                    <td>2 - 1</td>
+                    <td>3</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-12</td>
+                    <td><span class="league-badge" title="Brazil - Copa Sao Paulo d...">Brazil - Copa Sao Paulo d...</span></td>
+                    <td class="team-cell">Botafogo SP U20</td>
+                    <td class="team-cell">Vasco U20</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 1</td>
+                    <td>1 - 0</td>
+                    <td>1</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-11</td>
+                    <td><span class="league-badge" title="Portugal - Liga Portugal ...">Portugal - Liga Portugal ...</span></td>
+                    <td class="team-cell">Portimonense SC</td>
+                    <td class="team-cell">FC Felgueiras</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>0 - 0</td>
+                    <td>0 - 0</td>
+                    <td>0</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-10</td>
+                    <td><span class="league-badge" title="Türkiye - TFF 3. Lig">Türkiye - TFF 3. Lig</span></td>
+                    <td class="team-cell">Kilis Belediyes</td>
+                    <td class="team-cell">Kahramanmaras</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>2 - 0</td>
+                    <td>0 - 2</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-09</td>
+                    <td><span class="league-badge" title="Brazil - Copa Sao Paulo d...">Brazil - Copa Sao Paulo d...</span></td>
+                    <td class="team-cell">Trindade U20</td>
+                    <td class="team-cell">Luverdense MT U</td>
+                    <td><span class="coef-badge">1.97</span></td>
+                    <td>1 - 0</td>
+                    <td>0 - 1</td>
+                    <td>1</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$48.50</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-07</td>
+                    <td><span class="league-badge" title="Saudi Arabia - 1st Divisi...">Saudi Arabia - 1st Divisi...</span></td>
+                    <td class="team-cell">Al Raed Club</td>
+                    <td class="team-cell">Al Ula</td>
+                    <td><span class="coef-badge">1.97</span></td>
+                    <td>1 - 1</td>
+                    <td>3 - 2</td>
+                    <td>5</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-06</td>
+                    <td><span class="league-badge" title="Israel - Liga Alef South">Israel - Liga Alef South</span></td>
+                    <td class="team-cell">Beitar Yavne</td>
+                    <td class="team-cell">Kfar Saba 1928</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>1 - 0</td>
+                    <td>1 - 1</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-04</td>
+                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
+                    <td class="team-cell">Bali United Pus</td>
+                    <td class="team-cell">Arema FC</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 0</td>
+                    <td>1 - 0</td>
+                    <td>1</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-03</td>
+                    <td><span class="league-badge" title="Cyprus - Second Division">Cyprus - Second Division</span></td>
+                    <td class="team-cell">Ahironas / Onis</td>
+                    <td class="team-cell">Omonia 29is Mai</td>
+                    <td><span class="coef-badge">2.10</span></td>
+                    <td>0 - 1</td>
+                    <td>0 - 5</td>
+                    <td>5</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-02</td>
+                    <td><span class="league-badge" title="Israel - Liga Alef North">Israel - Liga Alef North</span></td>
+                    <td class="team-cell">Ironi Nesher</td>
+                    <td class="team-cell">Tzeirey Tamra</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>1 - 0</td>
+                    <td>1 - 3</td>
+                    <td>4</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2026-01-01</td>
+                    <td><span class="league-badge" title="England - Championship">England - Championship</span></td>
+                    <td class="team-cell">Ipswich Town</td>
+                    <td class="team-cell">Oxford United</td>
+                    <td><span class="coef-badge">2.10</span></td>
+                    <td>1 - 0</td>
+                    <td>2 - 1</td>
+                    <td>3</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="month-section">
+        <div class="month-header">
+            <h2><i class="fas fa-calendar-alt"></i> December 2025</h2>
+            <div class="month-stats">
+                <div class="month-stat">
+                    <span class="label">Days:</span>
+                    <span class="value">7</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Wins:</span>
+                    <span class="value">5</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Losses:</span>
+                    <span class="value">2</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Rate:</span>
+                    <span class="value">71.4%</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Profit:</span>
+                    <span class="value profit-positive">+$145.0</span>
+                </div>
+                <div class="month-stat">
+                    <span class="label">Avg Odds:</span>
+                    <span class="value">1.99</span>
+                </div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>League</th>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>Odds</th>
+                    <th>Predicted</th>
+                    <th>Result</th>
+                    <th>Goals</th>
+                    <th>Status</th>
+                    <th>Profit</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <tr>
+                    <td class="date-cell">2025-12-31</td>
+                    <td><span class="league-badge" title="Kuwait - Premier League">Kuwait - Premier League</span></td>
+                    <td class="team-cell">Al Nasr (KUW)</td>
+                    <td class="team-cell">Qadisiya Kuwait</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>0 - 2</td>
+                    <td>0 - 0</td>
+                    <td>0</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2025-12-30</td>
+                    <td><span class="league-badge" title="Saudi Arabia - 1st Divisi...">Saudi Arabia - 1st Divisi...</span></td>
+                    <td class="team-cell">Al Arabi (KSA)</td>
+                    <td class="team-cell">Al Wahda Mecca</td>
+                    <td><span class="coef-badge">2.10</span></td>
+                    <td>0 - 1</td>
+                    <td>0 - 1</td>
+                    <td>1</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$55.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2025-12-29</td>
+                    <td><span class="league-badge" title="Unknown">Unknown</span></td>
+                    <td class="team-cell">Zambia</td>
+                    <td class="team-cell">Morocco</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 1</td>
+                    <td>0 - 3</td>
+                    <td>3</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2025-12-28</td>
+                    <td><span class="league-badge" title="Thailand - League Cup">Thailand - League Cup</span></td>
+                    <td class="team-cell">Chainat FC</td>
+                    <td class="team-cell">Port FC</td>
+                    <td><span class="coef-badge">2.00</span></td>
+                    <td>0 - 1</td>
+                    <td>0 - 5</td>
+                    <td>5</td>
+                    <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
+                    <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2025-12-27</td>
+                    <td><span class="league-badge" title="England - Isthmian League">England - Isthmian League</span></td>
+                    <td class="team-cell">Carshalton</td>
+                    <td class="team-cell">Dulwich Hamlet</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>0 - 1</td>
+                    <td>1 - 1</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2025-12-26</td>
+                    <td><span class="league-badge" title="UAE - Division 1">UAE - Division 1</span></td>
+                    <td class="team-cell">Al Dahra</td>
+                    <td class="team-cell">Dubai City Club</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>0 - 0</td>
+                    <td>1 - 1</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
+                </tr>
+        
+                <tr>
+                    <td class="date-cell">2025-12-25</td>
+                    <td><span class="league-badge" title="India - Santosh Trophy">India - Santosh Trophy</span></td>
+                    <td class="team-cell">Uttarakhand</td>
+                    <td class="team-cell">Uttar Pradesh</td>
+                    <td><span class="coef-badge">1.95</span></td>
+                    <td>1 - 0</td>
+                    <td>2 - 0</td>
+                    <td>2</td>
+                    <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
+                    <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+    
+        
+        <div class="footer">
+            <p><i class="fas fa-calendar-alt"></i> Report Period: 2025-12-25 to 2026-02-06</p>
+            <p><i class="fas fa-clock"></i> Generated: 2026-02-03 10:20 • Premium Report v1.0</p>
+            <p><i class="fas fa-user-shield"></i> Full premium data including today's matches</p>
+            
+            <div class="footer-legal">
+                <p><strong>Terms of Service:</strong> This report is provided exclusively for personal use by Betadvisor Club Premium members.</p>
+                <p>Unauthorized distribution, reselling, or sharing of this content is strictly prohibited and will result in immediate account termination.</p>
+                <p>Betting involves risk. Only gamble with money you can afford to lose.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
