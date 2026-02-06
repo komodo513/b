@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-05 10:06",
+    "generated": "2026-02-06 05:21",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-04",
+    "date_range": "2025-12-25 to 2026-02-05",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 39,
-    "total_days": 39,
+    "total_matches": 40,
+    "total_days": 40,
     "total_wins": 22,
-    "total_losses": 13,
+    "total_losses": 14,
     "total_pending": 3,
     "total_errors": 1,
-    "total_staked": 1950,
-    "total_profit": 452.50000953674316,
+    "total_staked": 2000,
+    "total_profit": 402.50000953674316,
     "total_returns": 2402.500009536743,
-    "win_rate": 62.9,
-    "roi": 23.2,
-    "hit_rate": 100.0,
-    "profit_per_match": 11.6,
-    "profit_per_day": 11.6,
+    "win_rate": 61.1,
+    "roi": 20.1,
+    "hit_rate": 66.7,
+    "profit_per_match": 10.06,
+    "profit_per_day": 10.06,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -32,26 +32,26 @@
     "avg_odds": 2.0
   },
   "confidence_analysis": {
-    "level": "EXCELLENT",
-    "message": "Outstanding performance! Strong win rate with consistent profitability."
+    "level": "GOOD",
+    "message": "Positive performance with room for improvement in consistency."
   },
   "monthly_summary": {
     "2026-02": {
       "name": "February 2026",
       "stats": {
-        "total": 4,
+        "total": 5,
         "wins": 2,
-        "losses": 1,
+        "losses": 2,
         "pending": 1,
         "errors": 0,
-        "profit": 50.0,
-        "staked": 150,
+        "profit": 0.0,
+        "staked": 200,
         "avg_odds": 1.99,
-        "win_rate": 66.7,
-        "total_goals": 3,
-        "avg_goals": 1.0
+        "win_rate": 50.0,
+        "total_goals": 6,
+        "avg_goals": 1.5
       },
-      "match_count": 4
+      "match_count": 5
     },
     "2026-01": {
       "name": "January 2026",
@@ -89,6 +89,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-02-05",
+      "league": "Slovenia - Prva Liga",
+      "home_team": "NK Aluminij",
+      "away_team": "Olimpija Ljubljana",
+      "probability": "48",
+      "under_over": "Under",
+      "over_probability": "52",
+      "correct_score": "0 - 2",
+      "avg_goals": 2.4100000858306885,
+      "weather": "3\u00b0",
+      "coef": 2.0,
+      "score": "1 - 2",
+      "score_priority": 4,
+      "result": "loss",
+      "profit": -50,
+      "is_win": 0,
+      "total_goals": 3
+    },
     {
       "date": "2026-02-04",
       "league": "Azerbaijan - Azerbaijan Cup",
@@ -164,25 +183,6 @@
       "profit": 50.0,
       "is_win": 1,
       "total_goals": 0
-    },
-    {
-      "date": "2026-01-31",
-      "league": "Australia - A-League",
-      "home_team": "Perth Glory",
-      "away_team": "Auckland",
-      "probability": "36",
-      "under_over": "Under",
-      "over_probability": "64",
-      "correct_score": "0 - 1",
-      "avg_goals": 1.7999999523162842,
-      "weather": "16\u00b0",
-      "coef": 1.9500000476837158,
-      "score": "2 - 1",
-      "score_priority": 2,
-      "result": "loss",
-      "profit": -50,
-      "is_win": 0,
-      "total_goals": 3
     }
   ]
 }
