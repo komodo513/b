@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root { 
+            --bg: #1a1d21; 
+            --card: #2a2e35; 
+            --green: #007351; 
+            --accent: #ffdf1b; 
+            --text: #ffffff; 
+        } 
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg); 
+            color: var(--text); 
+            padding: 0; 
+            margin: 0; 
+            -webkit-font-smoothing: antialiased; 
+        } 
+        
+        .container { 
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto; 
+            padding: 20px; 
+            background: var(--bg); 
+        }
+        
+        .main-header { 
+            background: var(--green); 
+            padding: 20px; 
+            border-radius: 8px 8px 0 0; 
+            border-bottom: 4px solid var(--accent); 
+        }
+        
+        .main-header h2 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .header-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .disclaimer { 
+            background: #21252b; 
+            padding: 12px; 
+            border-radius: 0 0 8px 8px; 
+            font-size: 0.7rem;
+            color: #888; 
+            border: 1px solid #333; 
+            line-height: 1.5; 
+        } 
+        
+        .month-block { 
+            background: var(--card); 
+            margin-top: 20px; 
+            border-radius: 8px; 
+            overflow: hidden; 
+        } 
+        
+        .month-header { 
+            background: #353b45; 
+            padding: 10px 15px; 
+            font-weight: bold; 
+            color: var(--accent);
+            font-size: 1rem;
+        } 
+        
+        .m-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            background: #21252b; 
+            text-align: center; 
+            border-bottom: 1px solid #444; 
+            gap: 1px;
+        } 
+        
+        .m-stat { 
+            padding: 10px 5px; 
+            background: #21252b;
+        } 
+        
+        .m-stat span { 
+            display: block; 
+            font-size: 0.6rem;
+            color: #888; 
+            margin-bottom: 3px;
+        } 
+        
+        .m-stat strong { 
+            font-size: 1rem;
+            color: #fff; 
+        } 
+        
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .m-table { 
+            width: 100%; 
+            border-collapse: collapse;
+            font-size: 0.75rem;
+        } 
+        
+        .m-table thead {
+            background: #1a1d21;
+        }
+        
+        .m-table th { 
+            background: #1a1d21; 
+            color: #888; 
+            padding: 8px 6px; 
+            text-align: left; 
+            font-size: 0.65rem;
+            white-space: nowrap;
+            font-weight: 600;
+        } 
+        
+        .m-table td { 
+            padding: 8px 6px; 
+            border-bottom: 1px solid #353b45; 
+            font-size: 0.7rem;
+            color: #ddd;
+        } 
+        
+        .league-name {
+            font-weight: 600;
+            color: #aaa;
+            font-size: 0.65rem;
+            margin-bottom: 2px;
+        }
+        
+        .match-teams {
+            color: #fff;
+            font-size: 0.7rem;
+            line-height: 1.3;
+        }
+        
+        .desktop-date {
+            display: inline;
+        }
+        
+        .mobile-date {
+            display: none;
+        }
+        
+        .profit-pos { 
+            color: #00ff88; 
+            font-weight: bold; 
+        } 
+        
+        .profit-neg { 
+            color: #ff4444; 
+        }
+        
+        /* Mobile optimizations */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .main-header {
+                padding: 15px;
+            }
+            
+            .main-header h2 {
+                font-size: 1.1rem;
+            }
+            
+            .header-stats {
+                font-size: 0.75rem;
+                gap: 10px;
+            }
+            
+            .disclaimer {
+                padding: 10px;
+                font-size: 0.65rem;
+            }
+            
+            .month-block {
+                margin-top: 15px;
+            }
+            
+            .month-header {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .m-grid {
+                grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+            }
+            
+            .m-stat {
+                padding: 8px 3px;
+            }
+            
+            .m-stat span {
+                font-size: 0.55rem;
+            }
+            
+            .m-stat strong {
+                font-size: 0.9rem;
+            }
+            
+            .m-table {
+                font-size: 0.65rem;
+            }
+            
+            .m-table th {
+                padding: 6px 4px;
+                font-size: 0.6rem;
+            }
+            
+            .m-table td {
+                padding: 6px 4px;
+                font-size: 0.65rem;
+            }
+            
+            .league-name {
+                font-size: 0.6rem;
+            }
+            
+            .match-teams {
+                font-size: 0.65rem;
+            }
+            
+            /* Show short date on mobile */
+            .desktop-date {
+                display: none;
+            }
+            
+            .mobile-date {
+                display: inline;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .main-header h2 {
+                font-size: 1rem;
+            }
+            
+            .header-stats {
+                font-size: 0.7rem;
+                gap: 8px;
+            }
+            
+            .m-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .m-stat:last-child {
+                grid-column: 1 / -1;
+            }
+            
+            .m-table {
+                font-size: 0.6rem;
+            }
+            
+            .m-table th {
+                padding: 5px 3px;
+                font-size: 0.55rem;
+            }
+            
+            .m-table td {
+                padding: 5px 3px;
+                font-size: 0.6rem;
+            }
+            
+            .league-name {
+                font-size: 0.55rem;
+                margin-bottom: 1px;
+            }
+            
+            .match-teams {
+                font-size: 0.6rem;
+                line-height: 1.2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class='container' id='capture'>
+        <div class='main-header'>
+            <h2>BETADVISOR CLUB PREMIUM REPORTS - PREMIUM</h2>
+            <div class="header-stats">
+                <span>WR: 65.7%</span>
+                <span>ROI: 31.8%</span>
+                <span>BANK: $557</span>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <strong>FLAT STAKE STRATEGY:</strong> Records based on <strong>$50.0</strong> flat stake. Consistency is key.
+        </div>
+        
+        <div class='month-block' style='border: 1px solid #ffdf1b'>
+            <div class='month-header' style='background:#3d444d'>🎯 REAL UPCOMING PREDICTIONS</div>
+            <div class='table-wrapper'>
+                <table class='m-table'>
+                    <thead>
+                        <tr><th>Date</th><th>League / Match</th><th>Odds</th><th>Status</th></tr>
+                    </thead>
+                    <tbody><tr><td><span class='desktop-date'>2026-02-05</span><span class='mobile-date'>02/05</span></td><td><div class='league-name'>Slovenia - Prva Liga</div><div class='match-teams'>NK Aluminij vs Olimpija Ljubljana</div></td><td>2.00</td><td style='color:#ffa726; font-weight:bold'>TODAY</td></tr><tr><td><span class='desktop-date'>2026-02-06</span><span class='mobile-date'>02/06</span></td><td><div class='league-name'>Indonesia - Liga 1</div><div class='match-teams'>Persib Bandung vs Malut United</div></td><td>1.95</td><td style='color:#4fc3f7; font-weight:bold'>UPCOMING</td></tr><tr><td><span class='desktop-date'>2026-02-07</span><span class='mobile-date'>02/07</span></td><td><div class='league-name'>Spain - Tercera Division Group 12 - Canarias</div><div class='match-teams'>Real Unión de Tenerife vs Unión Sur Yaiza</div></td><td>1.95</td><td style='color:#4fc3f7; font-weight:bold'>UPCOMING</td></tr><tr><td><span class='desktop-date'>2026-02-08</span><span class='mobile-date'>02/08</span></td><td><div class='league-name'>Spain - Tercera Division Group 3 - Cantabria</div><div class='match-teams'>SD Noja vs Montañas del Pas</div></td><td>1.95</td><td style='color:#4fc3f7; font-weight:bold'>UPCOMING</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+        
+        
+        <div class='month-block' style='border: 1px solid #ff6b6b'>
+            <div class='month-header' style='background:#3d444d; color:#ff6b6b'>⏳ PAST MATCHES AWAITING RESULTS</div>
+            <div class='table-wrapper'>
+                <table class='m-table'>
+                    <thead>
+                        <tr><th>Date</th><th>League / Match</th><th>Odds</th><th>Status</th></tr>
+                    </thead>
+                    <tbody><tr><td><span class='desktop-date'>2026-01-20</span><span class='mobile-date'>01/20</span></td><td><div class='league-name'>England - National League North</div><div class='match-teams'>Leamington vs Buxton FC</div></td><td>1.98</td><td style='color:#ff6b6b'>AWAITING RESULT</td></tr><tr><td><span class='desktop-date'>2026-01-24</span><span class='mobile-date'>01/24</span></td><td><div class='league-name'>Bangladesh - Federation Cup</div><div class='match-teams'>Brothers Union vs PWD Sports Club</div></td><td>2.00</td><td style='color:#ff6b6b'>AWAITING RESULT</td></tr><tr><td><span class='desktop-date'>2026-01-27</span><span class='mobile-date'>01/27</span></td><td><div class='league-name'>England - NPL Premier Division</div><div class='match-teams'>FC United vs Stockton Town</div></td><td>1.97</td><td style='color:#ff6b6b'>AWAITING RESULT</td></tr><tr><td><span class='desktop-date'>2026-02-03</span><span class='mobile-date'>02/03</span></td><td><div class='league-name'>Bangladesh - Federation Cup</div><div class='match-teams'>Brothers Union vs PWD Sports Club</div></td><td>2.00</td><td style='color:#ff6b6b'>AWAITING RESULT</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="month-block"><div class="month-header">February 2026</div><div class="m-grid"><div class="m-stat"><span>TIPS</span><strong>3</strong></div><div class="m-stat"><span>WIN RATE</span><strong>66.7%</strong></div><div class="m-stat"><span>PROFIT</span><strong style="color:#ffdf1b">$50</strong></div><div class="m-stat"><span>ROI</span><strong>33.3%</strong></div><div class="m-stat"><span>BANK</span><strong>$557</strong></div></div><div class='table-wrapper'><table class="m-table"><thead><tr><th>Date</th><th>League / Match</th><th>Odds</th><th>Score</th><th>Net</th><th>Bank</th></tr></thead><tbody><tr><td><span class='desktop-date'>2026-02-04</span><span class='mobile-date'>02/04</span></td><td><div class='league-name'>Azerbaijan - Azerbaijan Cup</div><div class='match-teams'>Sumqayit FK vs Zira</div></td><td>2.00</td><td style="color: #00ff88; font-weight: bold;">0 - 0</td><td class='profit-pos'>$50</td><td>$557</td></tr><tr><td><span class='desktop-date'>2026-02-02</span><span class='mobile-date'>02/02</span></td><td><div class='league-name'>Portugal - Liga Portugal</div><div class='match-teams'>Casa Pia AC vs Porto</div></td><td>1.95</td><td >2 - 1</td><td class='profit-neg'>$-50</td><td>$507</td></tr><tr><td><span class='desktop-date'>2026-02-01</span><span class='mobile-date'>02/01</span></td><td><div class='league-name'>El Salvador - Primera Division</div><div class='match-teams'>Luís Ángel Firpo vs Inter F.A</div></td><td>2.00</td><td style="color: #00ff88; font-weight: bold;">0 - 0</td><td class='profit-pos'>$50</td><td>$557</td></tr></tbody></table></div></div><div class="month-block"><div class="month-header">January 2026</div><div class="m-grid"><div class="m-stat"><span>TIPS</span><strong>25</strong></div><div class="m-stat"><span>WIN RATE</span><strong>64.0%</strong></div><div class="m-stat"><span>PROFIT</span><strong style="color:#ffdf1b">$361</strong></div><div class="m-stat"><span>ROI</span><strong>28.9%</strong></div><div class="m-stat"><span>BANK</span><strong>$507</strong></div></div><div class='table-wrapper'><table class="m-table"><thead><tr><th>Date</th><th>League / Match</th><th>Odds</th><th>Score</th><th>Net</th><th>Bank</th></tr></thead><tbody><tr><td><span class='desktop-date'>2026-01-31</span><span class='mobile-date'>01/31</span></td><td><div class='league-name'>Australia - A-League</div><div class='match-teams'>Perth Glory vs Auckland</div></td><td>1.95</td><td >2 - 1</td><td class='profit-neg'>$-50</td><td>$507</td></tr><tr><td><span class='desktop-date'>2026-01-30</span><span class='mobile-date'>01/30</span></td><td><div class='league-name'>Indonesia - Liga 1</div><div class='match-teams'>Persita Tangerang vs Persija Jakarta</div></td><td>1.95</td><td style="color: #00ff88; font-weight: bold;">0 - 2</td><td class='profit-pos'>$47</td><td>$557</td></tr><tr><td><span class='desktop-date'>2026-01-29</span><span class='mobile-date'>01/29</span></td><td><div class='league-name'>Unknown</div><div class='match-teams'>Crvena Zvezda vs Celta Vigo</div></td><td>2.02</td><td style="color: #00ff88; font-weight: bold;">1 - 1</td><td class='profit-pos'>$50</td><td>$509</td></tr><tr><td><span class='desktop-date'>2026-01-28</span><span class='mobile-date'>01/28</span></td><td><div class='league-name'>Unknown</div><div class='match-teams'>Union Saint-Gilloise vs Atalanta</div></td><td>2.10</td><td style="color: #00ff88; font-weight: bold;">1 - 0</td><td class='profit-pos'>$54</td><td>$458</td></tr><tr><td><span class='desktop-date'>2026-01-26</span><span class='mobile-date'>01/26</span></td><td><div class='league-name'>Indonesia - Liga 1</div><div class='match-teams'>Dewa United vs Arema FC</div></td><td>2.08</td><td style="color: #00ff88; font-weight: bold;">2 - 0</td><td class='profit-pos'>$53</td><td>$403</td></tr><tr><td><span class='desktop-date'>2026-01-25</span><span class='mobile-date'>01/25</span></td><td><div class='league-name'>Australia - A-League Women</div><div class='match-teams'>Melbourne Victory W vs Sydney W</div></td><td>2.05</td><td style="color: #00ff88; font-weight: bold;">0 - 0</td><td class='profit-pos'>$52</td><td>$349</td></tr><tr><td><span class='desktop-date'>2026-01-23</span><span class='mobile-date'>01/23</span></td><td><div class='league-name'>El Salvador - Primera Division</div><div class='match-teams'>Luís Ángel Firpo vs Inter F.A</div></td><td>2.00</td><td style="color: #00ff88; font-weight: bold;">0 - 0</td><td class='profit-pos'>$50</td><td>$297</td></tr><tr><td><span class='desktop-date'>2026-01-22</span><span class='mobile-date'>01/22</span></td><td><div class='league-name'>El Salvador - Primera Division</div><div class='match-teams'>Hercules vs CD FAS</div></td><td>2.14</td><td style="color: #00ff88; font-weight: bold;">0 - 2</td><td class='profit-pos'>$57</td><td>$247</td></tr><tr><td><span class='desktop-date'>2026-01-21</span><span class='mobile-date'>01/21</span></td><td><div class='league-name'>Brazil - Campeonato Paraibano</div><div class='match-teams'>Confiança EC vs Botafogo PB</div></td><td>1.95</td><td style="color: #00ff88; font-weight: bold;">0 - 1</td><td class='profit-pos'>$47</td><td>$190</td></tr><tr><td><span class='desktop-date'>2026-01-19</span><span class='mobile-date'>01/19</span></td><td><div class='league-name'>Jamaica - Premier League</div><div class='match-teams'>Molynes United vs Tivoli Gardens</div></td><td>2.00</td><td >3 - 2</td><td class='profit-neg'>$-50</td><td>$142</td></tr><tr><td><span class='desktop-date'>2026-01-17</span><span class='mobile-date'>01/17</span></td><td><div class='league-name'>Thailand - Thai League 2</div><div class='match-teams'>Phrae United vs Kasetsart FC</div></td><td>1.97</td><td >2 - 1</td><td class='profit-neg'>$-50</td><td>$192</td></tr><tr><td><span class='desktop-date'>2026-01-16</span><span class='mobile-date'>01/16</span></td><td><div class='league-name'>Saudi Arabia - 1st Division</div><div class='match-teams'>Al Jabalain vs Al Wahda Mecca</div></td><td>2.00</td><td style="color: #00ff88; font-weight: bold;">2 - 0</td><td class='profit-pos'>$50</td><td>$242</td></tr><tr><td><span class='desktop-date'>2026-01-15</span><span class='mobile-date'>01/15</span></td><td><div class='league-name'>Mexico - Liga MX</div><div class='match-teams'>Querétaro FC vs Club Tijuana</div></td><td>2.00</td><td >1 - 2</td><td class='profit-neg'>$-50</td><td>$192</td></tr><tr><td><span class='desktop-date'>2026-01-14</span><span class='mobile-date'>01/14</span></td><td><div class='league-name'>Mexico - Liga MX</div><div class='match-teams'>FC Juárez vs Guadalajara Chivas</div></td><td>2.02</td><td style="color: #00ff88; font-weight: bold;">0 - 1</td><td class='profit-pos'>$50</td><td>$242</td></tr><tr><td><span class='desktop-date'>2026-01-13</span><span class='mobile-date'>01/13</span></td><td><div class='league-name'>Angola - Girabola</div><div class='match-teams'>Petro Atletico vs Guelson FC</div></td><td>2.00</td><td >2 - 1</td><td class='profit-neg'>$-50</td><td>$191</td></tr><tr><td><span class='desktop-date'>2026-01-12</span><span class='mobile-date'>01/12</span></td><td><div class='league-name'>Brazil - Copa Sao Paulo de Juniores</div><div class='match-teams'>Botafogo SP U20 vs Vasco U20</div></td><td>2.00</td><td style="color: #00ff88; font-weight: bold;">1 - 0</td><td class='profit-pos'>$50</td><td>$241</td></tr><tr><td><span class='desktop-date'>2026-01-11</span><span class='mobile-date'>01/11</span></td><td><div class='league-name'>Portugal - Liga Portugal 2</div><div class='match-teams'>Portimonense SC vs FC Felgueiras</div></td><td>1.95</td><td style="color: #00ff88; font-weight: bold;">0 - 0</td><td class='profit-pos'>$47</td><td>$191</td></tr><tr><td><span class='desktop-date'>2026-01-10</span><span class='mobile-date'>01/10</span></td><td><div class='league-name'>Türkiye - TFF 3. Lig</div><div class='match-teams'>Kilis Belediyespor vs Kahramanmaras</div></td><td>2.00</td><td style="color: #00ff88; font-weight: bold;">0 - 2</td><td class='profit-pos'>$50</td><td>$144</td></tr><tr><td><span class='desktop-date'>2026-01-09</span><span class='mobile-date'>01/09</span></td><td><div class='league-name'>Brazil - Copa Sao Paulo de Juniores</div><div class='match-teams'>Trindade U20 vs Luverdense MT U20</div></td><td>1.97</td><td style="color: #00ff88; font-weight: bold;">0 - 1</td><td class='profit-pos'>$48</td><td>$94</td></tr><tr><td><span class='desktop-date'>2026-01-07</span><span class='mobile-date'>01/07</span></td><td><div class='league-name'>Saudi Arabia - 1st Division</div><div class='match-teams'>Al Raed Club vs Al Ula</div></td><td>1.97</td><td >3 - 2</td><td class='profit-neg'>$-50</td><td>$45</td></tr><tr><td><span class='desktop-date'>2026-01-06</span><span class='mobile-date'>01/06</span></td><td><div class='league-name'>Israel - Liga Alef South</div><div class='match-teams'>Beitar Yavne vs Kfar Saba 1928</div></td><td>2.00</td><td style="color: #00ff88; font-weight: bold;">1 - 1</td><td class='profit-pos'>$50</td><td>$95</td></tr><tr><td><span class='desktop-date'>2026-01-04</span><span class='mobile-date'>01/04</span></td><td><div class='league-name'>Indonesia - Liga 1</div><div class='match-teams'>Bali United Pusam vs Arema FC</div></td><td>2.00</td><td style="color: #00ff88; font-weight: bold;">1 - 0</td><td class='profit-pos'>$50</td><td>$45</td></tr><tr><td><span class='desktop-date'>2026-01-03</span><span class='mobile-date'>01/03</span></td><td><div class='league-name'>Cyprus - Second Division</div><div class='match-teams'>Ahironas / Onisilos vs Omonia 29is Maiou</div></td><td>2.10</td><td >0 - 5</td><td class='profit-neg'>$-50</td><td>$-5</td></tr><tr><td><span class='desktop-date'>2026-01-02</span><span class='mobile-date'>01/02</span></td><td><div class='league-name'>Israel - Liga Alef North</div><div class='match-teams'>Ironi Nesher vs Tzeirey Tamra</div></td><td>2.00</td><td >1 - 3</td><td class='profit-neg'>$-50</td><td>$45</td></tr><tr><td><span class='desktop-date'>2026-01-01</span><span class='mobile-date'>01/01</span></td><td><div class='league-name'>England - Championship</div><div class='match-teams'>Ipswich Town vs Oxford United</div></td><td>2.10</td><td >2 - 1</td><td class='profit-neg'>$-50</td><td>$95</td></tr></tbody></table></div></div><div class="month-block"><div class="month-header">December 2025</div><div class="m-grid"><div class="m-stat"><span>TIPS</span><strong>7</strong></div><div class="m-stat"><span>WIN RATE</span><strong>71.4%</strong></div><div class="m-stat"><span>PROFIT</span><strong style="color:#ffdf1b">$145</strong></div><div class="m-stat"><span>ROI</span><strong>41.4%</strong></div><div class="m-stat"><span>BANK</span><strong>$145</strong></div></div><div class='table-wrapper'><table class="m-table"><thead><tr><th>Date</th><th>League / Match</th><th>Odds</th><th>Score</th><th>Net</th><th>Bank</th></tr></thead><tbody><tr><td><span class='desktop-date'>2025-12-31</span><span class='mobile-date'>12/31</span></td><td><div class='league-name'>Kuwait - Premier League</div><div class='match-teams'>Al Nasr (KUW) vs Qadisiya Kuwait</div></td><td>1.95</td><td style="color: #00ff88; font-weight: bold;">0 - 0</td><td class='profit-pos'>$47</td><td>$145</td></tr><tr><td><span class='desktop-date'>2025-12-30</span><span class='mobile-date'>12/30</span></td><td><div class='league-name'>Saudi Arabia - 1st Division</div><div class='match-teams'>Al Arabi (KSA) vs Al Wahda Mecca</div></td><td>2.10</td><td style="color: #00ff88; font-weight: bold;">0 - 1</td><td class='profit-pos'>$54</td><td>$98</td></tr><tr><td><span class='desktop-date'>2025-12-29</span><span class='mobile-date'>12/29</span></td><td><div class='league-name'>Unknown</div><div class='match-teams'>Zambia vs Morocco</div></td><td>2.00</td><td >0 - 3</td><td class='profit-neg'>$-50</td><td>$43</td></tr><tr><td><span class='desktop-date'>2025-12-28</span><span class='mobile-date'>12/28</span></td><td><div class='league-name'>Thailand - League Cup</div><div class='match-teams'>Chainat FC vs Port FC</div></td><td>2.00</td><td >0 - 5</td><td class='profit-neg'>$-50</td><td>$93</td></tr><tr><td><span class='desktop-date'>2025-12-27</span><span class='mobile-date'>12/27</span></td><td><div class='league-name'>England - Isthmian League</div><div class='match-teams'>Carshalton vs Dulwich Hamlet</div></td><td>1.95</td><td style="color: #00ff88; font-weight: bold;">1 - 1</td><td class='profit-pos'>$47</td><td>$143</td></tr><tr><td><span class='desktop-date'>2025-12-26</span><span class='mobile-date'>12/26</span></td><td><div class='league-name'>UAE - Division 1</div><div class='match-teams'>Al Dahra vs Dubai City Club</div></td><td>1.95</td><td style="color: #00ff88; font-weight: bold;">1 - 1</td><td class='profit-pos'>$47</td><td>$95</td></tr><tr><td><span class='desktop-date'>2025-12-25</span><span class='mobile-date'>12/25</span></td><td><div class='league-name'>India - Santosh Trophy</div><div class='match-teams'>Uttarakhand vs Uttar Pradesh</div></td><td>1.95</td><td style="color: #00ff88; font-weight: bold;">2 - 0</td><td class='profit-pos'>$47</td><td>$48</td></tr></tbody></table></div></div>
+    </div>
+</body>
+</html>
