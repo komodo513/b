@@ -1,6 +1,6 @@
 {
   "report_info": {
-    "generated": "2026-02-11 10:24",
+    "generated": "2026-02-11 19:02",
     "version": "1.0",
     "date_range": "2025-12-25 to 2026-02-14",
     "include_today": true,
@@ -48,8 +48,8 @@
         "staked": 500,
         "avg_odds": 2.0,
         "win_rate": 60.0,
-        "total_goals": 17,
-        "avg_goals": 1.7
+        "total_goals": 19,
+        "avg_goals": 1.9
       },
       "match_count": 14
     },
@@ -158,12 +158,12 @@
       "avg_goals": 2.25,
       "weather": "31\u00b0",
       "coef": 2.0,
-      "score": "0 - 0",
+      "score": "2 - 0",
       "score_priority": 2,
       "result": "win",
       "profit": 50.0,
       "is_win": 1,
-      "total_goals": 0
+      "total_goals": 2
     },
     {
       "date": "2026-02-10",
