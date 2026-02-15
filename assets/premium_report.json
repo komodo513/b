@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-14 15:43",
+    "generated": "2026-02-15 10:47",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-17",
+    "date_range": "2025-12-25 to 2026-02-18",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,25 +11,25 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 52,
-    "total_days": 52,
-    "total_wins": 28,
+    "total_matches": 53,
+    "total_days": 53,
+    "total_wins": 29,
     "total_losses": 16,
     "total_pending": 7,
     "total_errors": 1,
-    "total_staked": 2600,
-    "total_profit": 608.5000038146973,
-    "total_returns": 3208.5000038146973,
-    "win_rate": 63.6,
-    "roi": 23.4,
+    "total_staked": 2650,
+    "total_profit": 656.000006198883,
+    "total_returns": 3306.000006198883,
+    "win_rate": 64.4,
+    "roi": 24.8,
     "hit_rate": 100.0,
-    "profit_per_match": 11.7,
-    "profit_per_day": 11.7,
+    "profit_per_match": 12.38,
+    "profit_per_day": 12.38,
     "streak_wins": 5,
     "streak_losses": 3,
     "best_month": "December 2025",
     "best_month_win_rate": 71.4,
-    "avg_odds": 2.0
+    "avg_odds": 2.01
   },
   "confidence_analysis": {
     "level": "EXCELLENT",
@@ -39,19 +39,19 @@
     "2026-02": {
       "name": "February 2026",
       "stats": {
-        "total": 17,
-        "wins": 7,
+        "total": 18,
+        "wins": 8,
         "losses": 5,
         "pending": 5,
         "errors": 0,
-        "profit": 101.99999809265137,
-        "staked": 600,
-        "avg_odds": 2.0,
-        "win_rate": 58.3,
-        "total_goals": 24,
+        "profit": 149.50000047683716,
+        "staked": 650,
+        "avg_odds": 2.01,
+        "win_rate": 61.5,
+        "total_goals": 26,
         "avg_goals": 2.0
       },
-      "match_count": 17
+      "match_count": 18
     },
     "2026-01": {
       "name": "January 2026",
@@ -89,6 +89,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-02-18",
+      "league": "Brazil - Campeonato Baiano",
+      "home_team": "Alagoinhas Atl\u00e9tico BA",
+      "away_team": "Porto BA",
+      "probability": "44",
+      "under_over": "Under",
+      "over_probability": "56",
+      "correct_score": "1 - 1",
+      "avg_goals": 2.200000047683716,
+      "weather": "35\u00b0",
+      "coef": 2.0799999237060547,
+      "score": "",
+      "score_priority": 6,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-02-17",
       "league": "Brazil - Campeonato Roraimense",
@@ -139,12 +158,12 @@
       "avg_goals": 2.0,
       "weather": "13\u00b0",
       "coef": 1.9500000476837158,
-      "score": "",
+      "score": "0 - 2",
       "score_priority": 6,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
+      "result": "win",
+      "profit": 47.50000238418579,
+      "is_win": 1,
+      "total_goals": 2
     },
     {
       "date": "2026-02-14",
@@ -164,25 +183,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-02-13",
-      "league": "T\u00fcrkiye - TFF 1. Lig",
-      "home_team": "76 Igd\u0131r Belediye Spor",
-      "away_team": "\u00dcmraniyespor",
-      "probability": "17",
-      "under_over": "Under",
-      "over_probability": "83",
-      "correct_score": "1 - 0",
-      "avg_goals": 0.8299999833106995,
-      "weather": "9\u00b0",
-      "coef": 2.0999999046325684,
-      "score": "1 - 1",
-      "score_priority": 3,
-      "result": "win",
-      "profit": 54.99999523162842,
-      "is_win": 1,
-      "total_goals": 2
     }
   ]
 }
