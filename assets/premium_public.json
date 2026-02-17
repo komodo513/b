@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-16 22:37",
+    "generated": "2026-02-17 10:03",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-15",
+    "date_range": "2025-12-25 to 2026-02-16",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 50,
-    "total_days": 50,
+    "total_matches": 51,
+    "total_days": 51,
     "total_wins": 29,
-    "total_losses": 16,
+    "total_losses": 17,
     "total_pending": 4,
     "total_errors": 1,
-    "total_staked": 2500,
-    "total_profit": 656.000006198883,
+    "total_staked": 2550,
+    "total_profit": 606.000006198883,
     "total_returns": 3156.000006198883,
-    "win_rate": 64.4,
-    "roi": 26.2,
+    "win_rate": 63.0,
+    "roi": 23.8,
     "hit_rate": 100.0,
-    "profit_per_match": 13.12,
-    "profit_per_day": 13.12,
+    "profit_per_match": 11.88,
+    "profit_per_day": 11.88,
     "streak_wins": 5,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,19 +39,19 @@
     "2026-02": {
       "name": "February 2026",
       "stats": {
-        "total": 15,
+        "total": 16,
         "wins": 8,
-        "losses": 5,
+        "losses": 6,
         "pending": 2,
         "errors": 0,
-        "profit": 149.50000047683716,
-        "staked": 650,
+        "profit": 99.50000047683716,
+        "staked": 700,
         "avg_odds": 2.0,
-        "win_rate": 61.5,
-        "total_goals": 26,
-        "avg_goals": 2.0
+        "win_rate": 57.1,
+        "total_goals": 29,
+        "avg_goals": 2.07
       },
-      "match_count": 15
+      "match_count": 16
     },
     "2026-01": {
       "name": "January 2026",
@@ -89,6 +89,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-02-16",
+      "league": "Indonesia - Liga 1",
+      "home_team": "Persita Tangerang",
+      "away_team": "PSBS Biak Numfor",
+      "probability": "44",
+      "under_over": "Under",
+      "over_probability": "56",
+      "correct_score": "2 - 0",
+      "avg_goals": 2.200000047683716,
+      "weather": "30\u00b0",
+      "coef": 1.9600000381469727,
+      "score": "2 - 1",
+      "score_priority": 5,
+      "result": "loss",
+      "profit": -50,
+      "is_win": 0,
+      "total_goals": 3
+    },
     {
       "date": "2026-02-15",
       "league": "Japan - J1 League",
@@ -164,25 +183,6 @@
       "profit": -50,
       "is_win": 0,
       "total_goals": 3
-    },
-    {
-      "date": "2026-02-11",
-      "league": "Thailand - Thai League 3",
-      "home_team": "Singbury Warriors",
-      "away_team": "Pathum Thani University",
-      "probability": "45",
-      "under_over": "Under",
-      "over_probability": "55",
-      "correct_score": "0 - 1",
-      "avg_goals": 2.25,
-      "weather": "31\u00b0",
-      "coef": 2.0,
-      "score": "2 - 0",
-      "score_priority": 2,
-      "result": "win",
-      "profit": 50.0,
-      "is_win": 1,
-      "total_goals": 2
     }
   ]
 }
