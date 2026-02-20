@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-19 14:04",
+    "generated": "2026-02-20 10:02",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-18",
+    "date_range": "2025-12-25 to 2026-02-19",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,25 +11,25 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 53,
-    "total_days": 53,
-    "total_wins": 30,
+    "total_matches": 54,
+    "total_days": 54,
+    "total_wins": 31,
     "total_losses": 17,
     "total_pending": 5,
     "total_errors": 1,
-    "total_staked": 2650,
-    "total_profit": 660.0000023841858,
-    "total_returns": 3310.000002384186,
-    "win_rate": 63.8,
-    "roi": 24.9,
+    "total_staked": 2700,
+    "total_profit": 710.0000023841858,
+    "total_returns": 3410.000002384186,
+    "win_rate": 64.6,
+    "roi": 26.3,
     "hit_rate": 100.0,
-    "profit_per_match": 12.45,
-    "profit_per_day": 12.45,
+    "profit_per_match": 13.15,
+    "profit_per_day": 13.15,
     "streak_wins": 5,
     "streak_losses": 3,
     "best_month": "December 2025",
     "best_month_win_rate": 71.4,
-    "avg_odds": 2.01
+    "avg_odds": 2.0
   },
   "confidence_analysis": {
     "level": "EXCELLENT",
@@ -39,19 +39,19 @@
     "2026-02": {
       "name": "February 2026",
       "stats": {
-        "total": 18,
-        "wins": 9,
+        "total": 19,
+        "wins": 10,
         "losses": 6,
         "pending": 3,
         "errors": 0,
-        "profit": 153.4999966621399,
-        "staked": 750,
+        "profit": 203.4999966621399,
+        "staked": 800,
         "avg_odds": 2.01,
-        "win_rate": 60.0,
+        "win_rate": 62.5,
         "total_goals": 31,
-        "avg_goals": 2.07
+        "avg_goals": 1.94
       },
-      "match_count": 18
+      "match_count": 19
     },
     "2026-01": {
       "name": "January 2026",
@@ -89,6 +89,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-02-19",
+      "league": "Unknown",
+      "home_team": "Sigma Olomouc",
+      "away_team": "Lausanne-Sport",
+      "probability": "40",
+      "under_over": "Under",
+      "over_probability": "60",
+      "correct_score": "0 - 0",
+      "avg_goals": 2.0199999809265137,
+      "weather": "",
+      "coef": 2.0,
+      "score": "0 - 0",
+      "score_priority": 1,
+      "result": "win",
+      "profit": 50.0,
+      "is_win": 1,
+      "total_goals": 0
+    },
     {
       "date": "2026-02-18",
       "league": "Brazil - Campeonato Baiano",
@@ -164,25 +183,6 @@
       "profit": 47.50000238418579,
       "is_win": 1,
       "total_goals": 2
-    },
-    {
-      "date": "2026-02-14",
-      "league": "Romania - Divizia A",
-      "home_team": "CS Metaloglobus",
-      "away_team": "Otelul Galati",
-      "probability": "45",
-      "under_over": "Under",
-      "over_probability": "55",
-      "correct_score": "0 - 2",
-      "avg_goals": 2.25,
-      "weather": "12\u00b0",
-      "coef": 1.9900000095367432,
-      "score": "",
-      "score_priority": 4,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
     }
   ]
 }
