@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-20 15:37",
+    "generated": "2026-02-21 10:02",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-22",
+    "date_range": "2025-12-25 to 2026-02-24",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 57,
-    "total_days": 57,
+    "total_matches": 58,
+    "total_days": 58,
     "total_wins": 31,
     "total_losses": 17,
-    "total_pending": 8,
+    "total_pending": 9,
     "total_errors": 1,
-    "total_staked": 2850,
+    "total_staked": 2900,
     "total_profit": 710.0000023841858,
-    "total_returns": 3560.000002384186,
+    "total_returns": 3610.000002384186,
     "win_rate": 64.6,
-    "roi": 24.9,
+    "roi": 24.5,
     "hit_rate": 100.0,
-    "profit_per_match": 12.46,
-    "profit_per_day": 12.46,
+    "profit_per_match": 12.24,
+    "profit_per_day": 12.24,
     "streak_wins": 5,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-02": {
       "name": "February 2026",
       "stats": {
-        "total": 22,
+        "total": 23,
         "wins": 10,
         "losses": 6,
-        "pending": 6,
+        "pending": 7,
         "errors": 0,
         "profit": 203.4999966621399,
         "staked": 800,
@@ -51,7 +51,7 @@
         "total_goals": 31,
         "avg_goals": 1.94
       },
-      "match_count": 22
+      "match_count": 23
     },
     "2026-01": {
       "name": "January 2026",
@@ -89,6 +89,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-02-24",
+      "league": "Ecuador - Serie A",
+      "home_team": "Libertad FC (ECU)",
+      "away_team": "Manta FC",
+      "probability": "45",
+      "under_over": "Under",
+      "over_probability": "55",
+      "correct_score": "2 - 0",
+      "avg_goals": 2.2300000190734863,
+      "weather": "18\u00b0",
+      "coef": 1.9700000286102295,
+      "score": "",
+      "score_priority": 5,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-02-22",
       "league": "Mexico - Liga MX",
@@ -164,25 +183,6 @@
       "profit": 50.0,
       "is_win": 1,
       "total_goals": 0
-    },
-    {
-      "date": "2026-02-18",
-      "league": "Brazil - Campeonato Baiano",
-      "home_team": "Alagoinhas Atl\u00e9tico BA",
-      "away_team": "Porto BA",
-      "probability": "44",
-      "under_over": "Under",
-      "over_probability": "56",
-      "correct_score": "1 - 1",
-      "avg_goals": 2.200000047683716,
-      "weather": "35\u00b0",
-      "coef": 2.0799999237060547,
-      "score": "",
-      "score_priority": 6,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
     }
   ]
 }
