@@ -58,20 +58,19 @@
             line-height: 1.6;
             color: var(--premium-text);
             background-color: var(--premium-black);
-            padding: var(--space-sm);
+            padding: 0;  /* removed padding */
             min-height: 100vh;
             width: 100%;
         }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;            /* full width */
+            margin: 0;              /* no auto margin */
             background: var(--premium-dark);
-            border-radius: 12px;
+            border-radius: 0;       /* optional: remove border radius */
             overflow: hidden;
             box-shadow: var(--card-shadow);
             border: 1px solid var(--premium-border);
-            width: 100%;
         }
         
         /* Premium Header */
@@ -359,7 +358,7 @@
         }
         
         th {
-            padding: 12px 16px;
+            padding: 8px 10px;      /* reduced from 12px 16px */
             text-align: left;
             font-weight: 600;
             color: var(--premium-light-text);
@@ -380,48 +379,65 @@
         }
         
         td {
-            padding: 12px 16px;
+            padding: 8px 10px;      /* reduced from 12px 16px */
             color: var(--premium-text);
             vertical-align: middle;
+        }
+        
+        /* Match cell - combined league and teams */
+        .match-cell {
+            max-width: 250px;
+        }
+        .league-line {
+            font-weight: 600;
+            color: var(--premium-blue);
+            font-size: var(--text-xs);
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+        .teams-line {
+            font-size: var(--text-sm);
+            color: var(--premium-text);
+            white-space: nowrap;    /* keep teams on one line, horizontal scroll if needed */
         }
         
         /* Status badges */
         .status-win {
             background: rgba(0, 255, 136, 0.15);
             color: var(--premium-green);
-            padding: 6px 12px;
+            padding: 4px 8px;       /* slightly smaller */
             border-radius: 6px;
             font-weight: 600;
             font-size: var(--text-xs);
             display: inline-block;
             border: 1px solid rgba(0, 255, 136, 0.3);
-            min-width: 70px;
+            min-width: 60px;        /* reduced */
             text-align: center;
         }
         
         .status-loss {
             background: rgba(255, 85, 85, 0.15);
             color: var(--premium-red);
-            padding: 6px 12px;
+            padding: 4px 8px;
             border-radius: 6px;
             font-weight: 600;
             font-size: var(--text-xs);
             display: inline-block;
             border: 1px solid rgba(255, 85, 85, 0.3);
-            min-width: 70px;
+            min-width: 60px;
             text-align: center;
         }
         
         .status-pending {
             background: rgba(255, 170, 0, 0.15);
             color: var(--premium-orange);
-            padding: 6px 12px;
+            padding: 4px 8px;
             border-radius: 6px;
             font-weight: 600;
             font-size: var(--text-xs);
             display: inline-block;
             border: 1px solid rgba(255, 170, 0, 0.3);
-            min-width: 70px;
+            min-width: 60px;
             text-align: center;
         }
         
@@ -443,12 +459,12 @@
         .coef-badge {
             background: rgba(0, 255, 136, 0.15);
             color: var(--premium-green);
-            padding: 6px 12px;
+            padding: 4px 8px;
             border-radius: 6px;
             font-weight: 600;
-            font-size: var(--text-sm);
+            font-size: var(--text-xs);
             display: inline-block;
-            min-width: 60px;
+            min-width: 50px;
             text-align: center;
             border: 1px solid rgba(0, 255, 136, 0.3);
             font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
@@ -465,7 +481,8 @@
         .profit-cell {
             font-weight: 700;
             font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
-            font-size: var(--text-sm);
+            font-size: var(--text-xs);
+            white-space: nowrap;
         }
         
         .team-cell {
@@ -625,16 +642,47 @@
             }
             
             body {
-                padding: var(--space-xs);
+                padding: 0;
             }
             
             .container {
-                border-radius: 8px;
+                border-radius: 0;
             }
             
+            /* Tighter table cells on mobile */
             th, td {
-                padding: 10px 12px;
-                font-size: var(--text-xs);
+                padding: 4px 6px;    /* even smaller on mobile */
+                font-size: 11px;
+                line-height: 1.2;    /* reduce row height */
+            }
+            
+            .coef-badge {
+                padding: 2px 4px;
+                font-size: 10px;
+                min-width: 35px;
+            }
+            
+            .status-win, .status-loss, .status-pending {
+                padding: 2px 4px;
+                font-size: 10px;
+                min-width: 45px;
+            }
+            
+            .profit-cell {
+                font-size: 10px;
+            }
+            
+            .league-line {
+                font-size: 9px;
+                margin-bottom: 1px;
+            }
+            
+            .teams-line {
+                font-size: 10px;
+            }
+            
+            .match-cell {
+                max-width: 180px;
             }
         }
         
@@ -824,13 +872,8 @@
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>League</th>
-                    <th>Home Team</th>
-                    <th>Away Team</th>
+                    <th>Match</th>
                     <th>Odds</th>
-                    <th>Predicted</th>
-                    <th>Result</th>
-                    <th>Goals</th>
                     <th>Status</th>
                     <th>Profit</th>
                 </tr>
@@ -839,299 +882,184 @@
     
                 <tr>
                     <td class="date-cell">2026-02-24</td>
-                    <td><span class="league-badge" title="Ecuador - Serie A">Ecuador - Serie A</span></td>
-                    <td class="team-cell">Libertad FC (EC</td>
-                    <td class="team-cell">Manta FC</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Ecuador - Serie A</span><br><span class="teams-line">Libertad FC (ECU) vs Manta FC</span></div></td>
                     <td><span class="coef-badge">1.97</span></td>
-                    <td>2 - 0</td>
-                    <td></td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-22</td>
-                    <td><span class="league-badge" title="Mexico - Liga MX">Mexico - Liga MX</span></td>
-                    <td class="team-cell">Club Necaxa</td>
-                    <td class="team-cell">Deportivo Toluc</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Mexico - Liga MX</span><br><span class="teams-line">Club Necaxa vs Deportivo Toluca</span></div></td>
                     <td><span class="coef-badge">2.01</span></td>
-                    <td>1 - 1</td>
-                    <td></td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-21</td>
-                    <td><span class="league-badge" title="Mexico - Liga de Expansio...">Mexico - Liga de Expansio...</span></td>
-                    <td class="team-cell">Tepatitlán de M</td>
-                    <td class="team-cell">CD Irapuato</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Mexico - Liga de Expansion MX</span><br><span class="teams-line">Tepatitlán de Morelos vs CD Irapuato</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>1 - 1</td>
-                    <td></td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-20</td>
-                    <td><span class="league-badge" title="Germany - 2. Bundesliga">Germany - 2. Bundesliga</span></td>
-                    <td class="team-cell">Bochum</td>
-                    <td class="team-cell">Nürnberg</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Germany - 2. Bundesliga</span><br><span class="teams-line">Bochum vs Nürnberg</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>2 - 0</td>
-                    <td></td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-19</td>
-                    <td><span class="league-badge" title="Unknown">Unknown</span></td>
-                    <td class="team-cell">Sigma Olomouc</td>
-                    <td class="team-cell">Lausanne-Sport</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Unknown</span><br><span class="teams-line">Sigma Olomouc vs Lausanne-Sport</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 0</td>
-                    <td>0 - 0</td>
-                    <td>0</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-18</td>
-                    <td><span class="league-badge" title="Brazil - Campeonato Baian...">Brazil - Campeonato Baian...</span></td>
-                    <td class="team-cell">Alagoinhas Atlé</td>
-                    <td class="team-cell">Porto BA</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Brazil - Campeonato Baiano</span><br><span class="teams-line">Alagoinhas Atlético BA vs Porto BA</span></div></td>
                     <td><span class="coef-badge">2.08</span></td>
-                    <td>1 - 1</td>
-                    <td></td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-17</td>
-                    <td><span class="league-badge" title="Brazil - Campeonato Rorai...">Brazil - Campeonato Rorai...</span></td>
-                    <td class="team-cell">Rio Negro RR</td>
-                    <td class="team-cell">River</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Brazil - Campeonato Roraimense</span><br><span class="teams-line">Rio Negro RR vs River</span></div></td>
                     <td><span class="coef-badge">2.08</span></td>
-                    <td>1 - 1</td>
-                    <td>0 - 2</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$54.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-16</td>
-                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
-                    <td class="team-cell">Persita Tangera</td>
-                    <td class="team-cell">PSBS Biak Numfo</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Persita Tangerang vs PSBS Biak Numfor</span></div></td>
                     <td><span class="coef-badge">1.96</span></td>
-                    <td>2 - 0</td>
-                    <td>2 - 1</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-15</td>
-                    <td><span class="league-badge" title="Japan - J1 League">Japan - J1 League</span></td>
-                    <td class="team-cell">Avispa Fukuoka</td>
-                    <td class="team-cell">Cerezo Osaka</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Japan - J1 League</span><br><span class="teams-line">Avispa Fukuoka vs Cerezo Osaka</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>1 - 1</td>
-                    <td>0 - 2</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-14</td>
-                    <td><span class="league-badge" title="Romania - Divizia A">Romania - Divizia A</span></td>
-                    <td class="team-cell">CS Metaloglobus</td>
-                    <td class="team-cell">Otelul Galati</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Romania - Divizia A</span><br><span class="teams-line">CS Metaloglobus vs Otelul Galati</span></div></td>
                     <td><span class="coef-badge">1.99</span></td>
-                    <td>0 - 2</td>
-                    <td></td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-13</td>
-                    <td><span class="league-badge" title="Türkiye - TFF 1. Lig">Türkiye - TFF 1. Lig</span></td>
-                    <td class="team-cell">76 Igdır Beledi</td>
-                    <td class="team-cell">Ümraniyespor</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Türkiye - TFF 1. Lig</span><br><span class="teams-line">76 Igdır Belediye Spor vs Ümraniyespor</span></div></td>
                     <td><span class="coef-badge">2.10</span></td>
-                    <td>1 - 0</td>
-                    <td>1 - 1</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$55.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-12</td>
-                    <td><span class="league-badge" title="Unknown">Unknown</span></td>
-                    <td class="team-cell">Atletico Madrid</td>
-                    <td class="team-cell">Man Utd W</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Unknown</span><br><span class="teams-line">Atletico Madrid W vs Man Utd W</span></div></td>
                     <td><span class="coef-badge">2.10</span></td>
-                    <td>0 - 1</td>
-                    <td>0 - 3</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-11</td>
-                    <td><span class="league-badge" title="Thailand - Thai League 3">Thailand - Thai League 3</span></td>
-                    <td class="team-cell">Singbury Warrio</td>
-                    <td class="team-cell">Pathum Thani Un</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Thailand - Thai League 3</span><br><span class="teams-line">Singbury Warriors vs Pathum Thani University</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 1</td>
-                    <td>2 - 0</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-10</td>
-                    <td><span class="league-badge" title="England - National League">England - National League</span></td>
-                    <td class="team-cell">Morecambe</td>
-                    <td class="team-cell">Tamworth</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">England - National League</span><br><span class="teams-line">Morecambe vs Tamworth</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 0</td>
-                    <td>2 - 2</td>
-                    <td>4</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-09</td>
-                    <td><span class="league-badge" title="Nicaragua - Primera Divis...">Nicaragua - Primera Divis...</span></td>
-                    <td class="team-cell">Real Madriz</td>
-                    <td class="team-cell">H&H Export</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Nicaragua - Primera Division</span><br><span class="teams-line">Real Madriz vs H&H Export</span></div></td>
                     <td><span class="coef-badge">1.97</span></td>
-                    <td>0 - 0</td>
-                    <td>1 - 0</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$48.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-08</td>
-                    <td><span class="league-badge" title="Spain - Tercera Division ...">Spain - Tercera Division ...</span></td>
-                    <td class="team-cell">SD Noja</td>
-                    <td class="team-cell">Montañas del Pa</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Spain - Tercera Division Group 3 - Cantabria</span><br><span class="teams-line">SD Noja vs Montañas del Pas</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 0</td>
-                    <td>3 - 0</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-07</td>
-                    <td><span class="league-badge" title="Taiwan - Mulan Football L...">Taiwan - Mulan Football L...</span></td>
-                    <td class="team-cell">Taipei Bear W</td>
-                    <td class="team-cell">Sakura W</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Taiwan - Mulan Football League Women</span><br><span class="teams-line">Taipei Bear W vs Sakura W</span></div></td>
                     <td><span class="coef-badge">2.02</span></td>
-                    <td>0 - 0</td>
-                    <td>0 - 1</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$51.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-06</td>
-                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
-                    <td class="team-cell">Persib Bandung</td>
-                    <td class="team-cell">Malut United</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Persib Bandung vs Malut United</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>1 - 0</td>
-                    <td>2 - 0</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-05</td>
-                    <td><span class="league-badge" title="Slovenia - Prva Liga">Slovenia - Prva Liga</span></td>
-                    <td class="team-cell">NK Aluminij</td>
-                    <td class="team-cell">Olimpija Ljublj</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Slovenia - Prva Liga</span><br><span class="teams-line">NK Aluminij vs Olimpija Ljubljana</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 2</td>
-                    <td>1 - 2</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-04</td>
-                    <td><span class="league-badge" title="Azerbaijan - Azerbaijan C...">Azerbaijan - Azerbaijan C...</span></td>
-                    <td class="team-cell">Sumqayit FK</td>
-                    <td class="team-cell">Zira</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Azerbaijan - Azerbaijan Cup</span><br><span class="teams-line">Sumqayit FK vs Zira</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 0</td>
-                    <td>0 - 0</td>
-                    <td>0</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-03</td>
-                    <td><span class="league-badge" title="Bangladesh - Federation C...">Bangladesh - Federation C...</span></td>
-                    <td class="team-cell">Brothers Union</td>
-                    <td class="team-cell">PWD Sports Club</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Bangladesh - Federation Cup</span><br><span class="teams-line">Brothers Union vs PWD Sports Club</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 0</td>
-                    <td></td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-02</td>
-                    <td><span class="league-badge" title="Portugal - Liga Portugal">Portugal - Liga Portugal</span></td>
-                    <td class="team-cell">Casa Pia AC</td>
-                    <td class="team-cell">Porto</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Portugal - Liga Portugal</span><br><span class="teams-line">Casa Pia AC vs Porto</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 2</td>
-                    <td>2 - 1</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-02-01</td>
-                    <td><span class="league-badge" title="El Salvador - Primera Div...">El Salvador - Primera Div...</span></td>
-                    <td class="team-cell">Luís Ángel Firp</td>
-                    <td class="team-cell">Inter F.A</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">El Salvador - Primera Division</span><br><span class="teams-line">Luís Ángel Firpo vs Inter F.A</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 0</td>
-                    <td>0 - 0</td>
-                    <td>0</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
@@ -1175,13 +1103,8 @@
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>League</th>
-                    <th>Home Team</th>
-                    <th>Away Team</th>
+                    <th>Match</th>
                     <th>Odds</th>
-                    <th>Predicted</th>
-                    <th>Result</th>
-                    <th>Goals</th>
                     <th>Status</th>
                     <th>Profit</th>
                 </tr>
@@ -1190,364 +1113,224 @@
     
                 <tr>
                     <td class="date-cell">2026-01-31</td>
-                    <td><span class="league-badge" title="Australia - A-League">Australia - A-League</span></td>
-                    <td class="team-cell">Perth Glory</td>
-                    <td class="team-cell">Auckland</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Australia - A-League</span><br><span class="teams-line">Perth Glory vs Auckland</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 1</td>
-                    <td>2 - 1</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-30</td>
-                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
-                    <td class="team-cell">Persita Tangera</td>
-                    <td class="team-cell">Persija Jakarta</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Persita Tangerang vs Persija Jakarta</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 1</td>
-                    <td>0 - 2</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-29</td>
-                    <td><span class="league-badge" title="Unknown">Unknown</span></td>
-                    <td class="team-cell">Crvena Zvezda</td>
-                    <td class="team-cell">Celta Vigo</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Unknown</span><br><span class="teams-line">Crvena Zvezda vs Celta Vigo</span></div></td>
                     <td><span class="coef-badge">2.02</span></td>
-                    <td>0 - 1</td>
-                    <td>1 - 1</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$51.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-28</td>
-                    <td><span class="league-badge" title="Unknown">Unknown</span></td>
-                    <td class="team-cell">Union Saint-Gil</td>
-                    <td class="team-cell">Atalanta</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Unknown</span><br><span class="teams-line">Union Saint-Gilloise vs Atalanta</span></div></td>
                     <td><span class="coef-badge">2.10</span></td>
-                    <td>0 - 1</td>
-                    <td>1 - 0</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$55.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-27</td>
-                    <td><span class="league-badge" title="England - NPL Premier Div...">England - NPL Premier Div...</span></td>
-                    <td class="team-cell">FC United</td>
-                    <td class="team-cell">Stockton Town</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">England - NPL Premier Division</span><br><span class="teams-line">FC United vs Stockton Town</span></div></td>
                     <td><span class="coef-badge">1.97</span></td>
-                    <td>0 - 1</td>
-                    <td>POST</td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-exclamation" style="margin-right: 4px;"></i>ERROR</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-26</td>
-                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
-                    <td class="team-cell">Dewa United</td>
-                    <td class="team-cell">Arema FC</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Dewa United vs Arema FC</span></div></td>
                     <td><span class="coef-badge">2.08</span></td>
-                    <td>1 - 1</td>
-                    <td>2 - 0</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$54.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-25</td>
-                    <td><span class="league-badge" title="Australia - A-League Wome...">Australia - A-League Wome...</span></td>
-                    <td class="team-cell">Melbourne Victo</td>
-                    <td class="team-cell">Sydney W</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Australia - A-League Women</span><br><span class="teams-line">Melbourne Victory W vs Sydney W</span></div></td>
                     <td><span class="coef-badge">2.05</span></td>
-                    <td>1 - 0</td>
-                    <td>0 - 0</td>
-                    <td>0</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$52.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-24</td>
-                    <td><span class="league-badge" title="Bangladesh - Federation C...">Bangladesh - Federation C...</span></td>
-                    <td class="team-cell">Brothers Union</td>
-                    <td class="team-cell">PWD Sports Club</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Bangladesh - Federation Cup</span><br><span class="teams-line">Brothers Union vs PWD Sports Club</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 0</td>
-                    <td></td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-23</td>
-                    <td><span class="league-badge" title="El Salvador - Primera Div...">El Salvador - Primera Div...</span></td>
-                    <td class="team-cell">Luís Ángel Firp</td>
-                    <td class="team-cell">Inter F.A</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">El Salvador - Primera Division</span><br><span class="teams-line">Luís Ángel Firpo vs Inter F.A</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 0</td>
-                    <td>0 - 0</td>
-                    <td>0</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-22</td>
-                    <td><span class="league-badge" title="El Salvador - Primera Div...">El Salvador - Primera Div...</span></td>
-                    <td class="team-cell">Hercules</td>
-                    <td class="team-cell">CD FAS</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">El Salvador - Primera Division</span><br><span class="teams-line">Hercules vs CD FAS</span></div></td>
                     <td><span class="coef-badge">2.14</span></td>
-                    <td>0 - 0</td>
-                    <td>0 - 2</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$57.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-21</td>
-                    <td><span class="league-badge" title="Brazil - Campeonato Parai...">Brazil - Campeonato Parai...</span></td>
-                    <td class="team-cell">Confiança EC</td>
-                    <td class="team-cell">Botafogo PB</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Brazil - Campeonato Paraibano</span><br><span class="teams-line">Confiança EC vs Botafogo PB</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 0</td>
-                    <td>0 - 1</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-20</td>
-                    <td><span class="league-badge" title="England - National League...">England - National League...</span></td>
-                    <td class="team-cell">Leamington</td>
-                    <td class="team-cell">Buxton FC</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">England - National League North</span><br><span class="teams-line">Leamington vs Buxton FC</span></div></td>
                     <td><span class="coef-badge">1.98</span></td>
-                    <td>0 - 1</td>
-                    <td>No Score</td>
-                    <td>None</td>
                     <td><span class="status-pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-19</td>
-                    <td><span class="league-badge" title="Jamaica - Premier League">Jamaica - Premier League</span></td>
-                    <td class="team-cell">Molynes United</td>
-                    <td class="team-cell">Tivoli Gardens</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Jamaica - Premier League</span><br><span class="teams-line">Molynes United vs Tivoli Gardens</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 1</td>
-                    <td>3 - 2</td>
-                    <td>5</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-17</td>
-                    <td><span class="league-badge" title="Thailand - Thai League 2">Thailand - Thai League 2</span></td>
-                    <td class="team-cell">Phrae United</td>
-                    <td class="team-cell">Kasetsart FC</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Thailand - Thai League 2</span><br><span class="teams-line">Phrae United vs Kasetsart FC</span></div></td>
                     <td><span class="coef-badge">1.97</span></td>
-                    <td>1 - 1</td>
-                    <td>2 - 1</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-16</td>
-                    <td><span class="league-badge" title="Saudi Arabia - 1st Divisi...">Saudi Arabia - 1st Divisi...</span></td>
-                    <td class="team-cell">Al Jabalain</td>
-                    <td class="team-cell">Al Wahda Mecca</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Saudi Arabia - 1st Division</span><br><span class="teams-line">Al Jabalain vs Al Wahda Mecca</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>2 - 0</td>
-                    <td>2 - 0</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-15</td>
-                    <td><span class="league-badge" title="Mexico - Liga MX">Mexico - Liga MX</span></td>
-                    <td class="team-cell">Querétaro FC</td>
-                    <td class="team-cell">Club Tijuana</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Mexico - Liga MX</span><br><span class="teams-line">Querétaro FC vs Club Tijuana</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>1 - 1</td>
-                    <td>1 - 2</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-14</td>
-                    <td><span class="league-badge" title="Mexico - Liga MX">Mexico - Liga MX</span></td>
-                    <td class="team-cell">FC Juárez</td>
-                    <td class="team-cell">Guadalajara Chi</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Mexico - Liga MX</span><br><span class="teams-line">FC Juárez vs Guadalajara Chivas</span></div></td>
                     <td><span class="coef-badge">2.02</span></td>
-                    <td>0 - 1</td>
-                    <td>0 - 1</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$51.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-13</td>
-                    <td><span class="league-badge" title="Angola - Girabola">Angola - Girabola</span></td>
-                    <td class="team-cell">Petro Atletico</td>
-                    <td class="team-cell">Guelson FC</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Angola - Girabola</span><br><span class="teams-line">Petro Atletico vs Guelson FC</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>1 - 0</td>
-                    <td>2 - 1</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-12</td>
-                    <td><span class="league-badge" title="Brazil - Copa Sao Paulo d...">Brazil - Copa Sao Paulo d...</span></td>
-                    <td class="team-cell">Botafogo SP U20</td>
-                    <td class="team-cell">Vasco U20</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Brazil - Copa Sao Paulo de Juniores</span><br><span class="teams-line">Botafogo SP U20 vs Vasco U20</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 1</td>
-                    <td>1 - 0</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-11</td>
-                    <td><span class="league-badge" title="Portugal - Liga Portugal ...">Portugal - Liga Portugal ...</span></td>
-                    <td class="team-cell">Portimonense SC</td>
-                    <td class="team-cell">FC Felgueiras</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Portugal - Liga Portugal 2</span><br><span class="teams-line">Portimonense SC vs FC Felgueiras</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 0</td>
-                    <td>0 - 0</td>
-                    <td>0</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-10</td>
-                    <td><span class="league-badge" title="Türkiye - TFF 3. Lig">Türkiye - TFF 3. Lig</span></td>
-                    <td class="team-cell">Kilis Belediyes</td>
-                    <td class="team-cell">Kahramanmaras</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Türkiye - TFF 3. Lig</span><br><span class="teams-line">Kilis Belediyespor vs Kahramanmaras</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>2 - 0</td>
-                    <td>0 - 2</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-09</td>
-                    <td><span class="league-badge" title="Brazil - Copa Sao Paulo d...">Brazil - Copa Sao Paulo d...</span></td>
-                    <td class="team-cell">Trindade U20</td>
-                    <td class="team-cell">Luverdense MT U</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Brazil - Copa Sao Paulo de Juniores</span><br><span class="teams-line">Trindade U20 vs Luverdense MT U20</span></div></td>
                     <td><span class="coef-badge">1.97</span></td>
-                    <td>1 - 0</td>
-                    <td>0 - 1</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$48.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-07</td>
-                    <td><span class="league-badge" title="Saudi Arabia - 1st Divisi...">Saudi Arabia - 1st Divisi...</span></td>
-                    <td class="team-cell">Al Raed Club</td>
-                    <td class="team-cell">Al Ula</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Saudi Arabia - 1st Division</span><br><span class="teams-line">Al Raed Club vs Al Ula</span></div></td>
                     <td><span class="coef-badge">1.97</span></td>
-                    <td>1 - 1</td>
-                    <td>3 - 2</td>
-                    <td>5</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-06</td>
-                    <td><span class="league-badge" title="Israel - Liga Alef South">Israel - Liga Alef South</span></td>
-                    <td class="team-cell">Beitar Yavne</td>
-                    <td class="team-cell">Kfar Saba 1928</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Israel - Liga Alef South</span><br><span class="teams-line">Beitar Yavne vs Kfar Saba 1928</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>1 - 0</td>
-                    <td>1 - 1</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-04</td>
-                    <td><span class="league-badge" title="Indonesia - Liga 1">Indonesia - Liga 1</span></td>
-                    <td class="team-cell">Bali United Pus</td>
-                    <td class="team-cell">Arema FC</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Bali United Pusam vs Arema FC</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 0</td>
-                    <td>1 - 0</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-03</td>
-                    <td><span class="league-badge" title="Cyprus - Second Division">Cyprus - Second Division</span></td>
-                    <td class="team-cell">Ahironas / Onis</td>
-                    <td class="team-cell">Omonia 29is Mai</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Cyprus - Second Division</span><br><span class="teams-line">Ahironas / Onisilos vs Omonia 29is Maiou</span></div></td>
                     <td><span class="coef-badge">2.10</span></td>
-                    <td>0 - 1</td>
-                    <td>0 - 5</td>
-                    <td>5</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-02</td>
-                    <td><span class="league-badge" title="Israel - Liga Alef North">Israel - Liga Alef North</span></td>
-                    <td class="team-cell">Ironi Nesher</td>
-                    <td class="team-cell">Tzeirey Tamra</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Israel - Liga Alef North</span><br><span class="teams-line">Ironi Nesher vs Tzeirey Tamra</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>1 - 0</td>
-                    <td>1 - 3</td>
-                    <td>4</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2026-01-01</td>
-                    <td><span class="league-badge" title="England - Championship">England - Championship</span></td>
-                    <td class="team-cell">Ipswich Town</td>
-                    <td class="team-cell">Oxford United</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">England - Championship</span><br><span class="teams-line">Ipswich Town vs Oxford United</span></div></td>
                     <td><span class="coef-badge">2.10</span></td>
-                    <td>1 - 0</td>
-                    <td>2 - 1</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
@@ -1591,13 +1374,8 @@
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>League</th>
-                    <th>Home Team</th>
-                    <th>Away Team</th>
+                    <th>Match</th>
                     <th>Odds</th>
-                    <th>Predicted</th>
-                    <th>Result</th>
-                    <th>Goals</th>
                     <th>Status</th>
                     <th>Profit</th>
                 </tr>
@@ -1606,91 +1384,56 @@
     
                 <tr>
                     <td class="date-cell">2025-12-31</td>
-                    <td><span class="league-badge" title="Kuwait - Premier League">Kuwait - Premier League</span></td>
-                    <td class="team-cell">Al Nasr (KUW)</td>
-                    <td class="team-cell">Qadisiya Kuwait</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Kuwait - Premier League</span><br><span class="teams-line">Al Nasr (KUW) vs Qadisiya Kuwait</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 2</td>
-                    <td>0 - 0</td>
-                    <td>0</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2025-12-30</td>
-                    <td><span class="league-badge" title="Saudi Arabia - 1st Divisi...">Saudi Arabia - 1st Divisi...</span></td>
-                    <td class="team-cell">Al Arabi (KSA)</td>
-                    <td class="team-cell">Al Wahda Mecca</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Saudi Arabia - 1st Division</span><br><span class="teams-line">Al Arabi (KSA) vs Al Wahda Mecca</span></div></td>
                     <td><span class="coef-badge">2.10</span></td>
-                    <td>0 - 1</td>
-                    <td>0 - 1</td>
-                    <td>1</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$55.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2025-12-29</td>
-                    <td><span class="league-badge" title="Unknown">Unknown</span></td>
-                    <td class="team-cell">Zambia</td>
-                    <td class="team-cell">Morocco</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Unknown</span><br><span class="teams-line">Zambia vs Morocco</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 1</td>
-                    <td>0 - 3</td>
-                    <td>3</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2025-12-28</td>
-                    <td><span class="league-badge" title="Thailand - League Cup">Thailand - League Cup</span></td>
-                    <td class="team-cell">Chainat FC</td>
-                    <td class="team-cell">Port FC</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">Thailand - League Cup</span><br><span class="teams-line">Chainat FC vs Port FC</span></div></td>
                     <td><span class="coef-badge">2.00</span></td>
-                    <td>0 - 1</td>
-                    <td>0 - 5</td>
-                    <td>5</td>
                     <td><span class="status-loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2025-12-27</td>
-                    <td><span class="league-badge" title="England - Isthmian League">England - Isthmian League</span></td>
-                    <td class="team-cell">Carshalton</td>
-                    <td class="team-cell">Dulwich Hamlet</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">England - Isthmian League</span><br><span class="teams-line">Carshalton vs Dulwich Hamlet</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 1</td>
-                    <td>1 - 1</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2025-12-26</td>
-                    <td><span class="league-badge" title="UAE - Division 1">UAE - Division 1</span></td>
-                    <td class="team-cell">Al Dahra</td>
-                    <td class="team-cell">Dubai City Club</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">UAE - Division 1</span><br><span class="teams-line">Al Dahra vs Dubai City Club</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>0 - 0</td>
-                    <td>1 - 1</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr>
                     <td class="date-cell">2025-12-25</td>
-                    <td><span class="league-badge" title="India - Santosh Trophy">India - Santosh Trophy</span></td>
-                    <td class="team-cell">Uttarakhand</td>
-                    <td class="team-cell">Uttar Pradesh</td>
+                    <td class="match-cell"><div class="match-detail"><span class="league-line">India - Santosh Trophy</span><br><span class="teams-line">Uttarakhand vs Uttar Pradesh</span></div></td>
                     <td><span class="coef-badge">1.95</span></td>
-                    <td>1 - 0</td>
-                    <td>2 - 0</td>
-                    <td>2</td>
                     <td><span class="status-win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
@@ -1702,7 +1445,7 @@
         
         <div class="footer">
             <p><i class="fas fa-calendar-alt"></i> Report Period: 2025-12-25 to 2026-02-24</p>
-            <p><i class="fas fa-clock"></i> Generated: 2026-02-22 23:04 • Premium Report v1.0</p>
+            <p><i class="fas fa-clock"></i> Generated: 2026-02-23 00:38 • Premium Report v1.0</p>
             <p><i class="fas fa-user-shield"></i> Full premium data including today's matches</p>
             
             <div class="footer-legal">
