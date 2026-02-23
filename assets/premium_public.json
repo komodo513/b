@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-22 23:04",
+    "generated": "2026-02-23 00:38",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-21",
+    "date_range": "2025-12-25 to 2026-02-22",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 56,
-    "total_days": 56,
+    "total_matches": 57,
+    "total_days": 57,
     "total_wins": 31,
     "total_losses": 17,
-    "total_pending": 7,
+    "total_pending": 8,
     "total_errors": 1,
-    "total_staked": 2800,
+    "total_staked": 2850,
     "total_profit": 710.0000023841858,
-    "total_returns": 3510.000002384186,
+    "total_returns": 3560.000002384186,
     "win_rate": 64.6,
-    "roi": 25.4,
+    "roi": 24.9,
     "hit_rate": 100.0,
-    "profit_per_match": 12.68,
-    "profit_per_day": 12.68,
+    "profit_per_match": 12.46,
+    "profit_per_day": 12.46,
     "streak_wins": 5,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-02": {
       "name": "February 2026",
       "stats": {
-        "total": 21,
+        "total": 22,
         "wins": 10,
         "losses": 6,
-        "pending": 5,
+        "pending": 6,
         "errors": 0,
         "profit": 203.4999966621399,
         "staked": 800,
@@ -51,7 +51,7 @@
         "total_goals": 31,
         "avg_goals": 1.94
       },
-      "match_count": 21
+      "match_count": 22
     },
     "2026-01": {
       "name": "January 2026",
@@ -89,6 +89,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-02-22",
+      "league": "Mexico - Liga MX",
+      "home_team": "Club Necaxa",
+      "away_team": "Deportivo Toluca",
+      "probability": "42",
+      "under_over": "Under",
+      "over_probability": "58",
+      "correct_score": "1 - 1",
+      "avg_goals": 2.0899999141693115,
+      "weather": "14\u00b0",
+      "coef": 2.009999990463257,
+      "score": "",
+      "score_priority": 6,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-02-21",
       "league": "Mexico - Liga de Expansion MX",
@@ -164,25 +183,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-02-17",
-      "league": "Brazil - Campeonato Roraimense",
-      "home_team": "Rio Negro RR",
-      "away_team": "River",
-      "probability": "42",
-      "under_over": "Under",
-      "over_probability": "58",
-      "correct_score": "1 - 1",
-      "avg_goals": 2.0999999046325684,
-      "weather": "10\u00b0",
-      "coef": 2.0799999237060547,
-      "score": "0 - 2",
-      "score_priority": 6,
-      "result": "win",
-      "profit": 53.999996185302734,
-      "is_win": 1,
-      "total_goals": 2
     }
   ]
 }
