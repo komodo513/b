@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-25 23:47",
+    "generated": "2026-02-26 10:02",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-28",
+    "date_range": "2025-12-25 to 2026-03-01",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 61,
-    "total_days": 61,
+    "total_matches": 62,
+    "total_days": 62,
     "total_wins": 31,
     "total_losses": 19,
-    "total_pending": 10,
+    "total_pending": 11,
     "total_errors": 1,
-    "total_staked": 3050,
+    "total_staked": 3100,
     "total_profit": 604.5000076293945,
-    "total_returns": 3654.5000076293945,
+    "total_returns": 3704.5000076293945,
     "win_rate": 62.0,
-    "roi": 19.8,
-    "hit_rate": 100.0,
-    "profit_per_match": 9.91,
-    "profit_per_day": 9.91,
+    "roi": 19.5,
+    "hit_rate": 75.0,
+    "profit_per_match": 9.75,
+    "profit_per_day": 9.75,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -32,10 +32,27 @@
     "avg_odds": 2.0
   },
   "confidence_analysis": {
-    "level": "EXCELLENT",
-    "message": "Outstanding performance! Strong win rate with consistent profitability."
+    "level": "VERY GOOD",
+    "message": "Strong positive trend with good returns and consistency."
   },
   "monthly_summary": {
+    "2026-03": {
+      "name": "March 2026",
+      "stats": {
+        "total": 1,
+        "wins": 0,
+        "losses": 0,
+        "pending": 1,
+        "errors": 0,
+        "profit": 0,
+        "staked": 0,
+        "avg_odds": 2.05,
+        "win_rate": 0,
+        "total_goals": 0,
+        "avg_goals": 0
+      },
+      "match_count": 1
+    },
     "2026-02": {
       "name": "February 2026",
       "stats": {
@@ -89,6 +106,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-03-01",
+      "league": "Brazil - Campeonato Sul-Matogrossense",
+      "home_team": "Portuguesa",
+      "away_team": "Ivinhema MS",
+      "probability": "40",
+      "under_over": "Under",
+      "over_probability": "60",
+      "correct_score": "1 - 0",
+      "avg_goals": 2.0,
+      "weather": "26\u00b0",
+      "coef": 2.049999952316284,
+      "score": "",
+      "score_priority": 3,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-02-28",
       "league": "Mexico - Liga MX",
@@ -164,25 +200,6 @@
       "profit": 48.500001430511475,
       "is_win": 1,
       "total_goals": 1
-    },
-    {
-      "date": "2026-02-22",
-      "league": "Mexico - Liga MX",
-      "home_team": "Club Necaxa",
-      "away_team": "Deportivo Toluca",
-      "probability": "42",
-      "under_over": "Under",
-      "over_probability": "58",
-      "correct_score": "1 - 1",
-      "avg_goals": 2.0899999141693115,
-      "weather": "14\u00b0",
-      "coef": 2.009999990463257,
-      "score": "",
-      "score_priority": 6,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
     }
   ]
 }
