@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-26 22:41",
+    "generated": "2026-02-27 10:02",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-24",
+    "date_range": "2025-12-25 to 2026-02-26",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,21 +11,21 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 58,
-    "total_days": 58,
-    "total_wins": 32,
-    "total_losses": 18,
-    "total_pending": 7,
+    "total_matches": 59,
+    "total_days": 59,
+    "total_wins": 31,
+    "total_losses": 19,
+    "total_pending": 8,
     "total_errors": 1,
-    "total_staked": 2900,
-    "total_profit": 708.5000038146973,
-    "total_returns": 3608.5000038146973,
-    "win_rate": 64.0,
-    "roi": 24.4,
+    "total_staked": 2950,
+    "total_profit": 604.5000076293945,
+    "total_returns": 3554.5000076293945,
+    "win_rate": 62.0,
+    "roi": 20.5,
     "hit_rate": 100.0,
-    "profit_per_match": 12.22,
-    "profit_per_day": 12.22,
-    "streak_wins": 5,
+    "profit_per_match": 10.25,
+    "profit_per_day": 10.25,
+    "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
     "best_month_win_rate": 71.4,
@@ -39,10 +39,10 @@
     "2026-02": {
       "name": "February 2026",
       "stats": {
-        "total": 23,
+        "total": 24,
         "wins": 11,
         "losses": 7,
-        "pending": 5,
+        "pending": 6,
         "errors": 0,
         "profit": 201.99999809265137,
         "staked": 900,
@@ -51,22 +51,22 @@
         "total_goals": 35,
         "avg_goals": 1.94
       },
-      "match_count": 23
+      "match_count": 24
     },
     "2026-01": {
       "name": "January 2026",
       "stats": {
         "total": 28,
-        "wins": 16,
-        "losses": 9,
+        "wins": 15,
+        "losses": 10,
         "pending": 2,
         "errors": 1,
-        "profit": 361.5000009536743,
+        "profit": 257.5000047683716,
         "staked": 1250,
         "avg_odds": 2.01,
-        "win_rate": 64.0,
-        "total_goals": 54,
-        "avg_goals": 2.16
+        "win_rate": 60.0,
+        "total_goals": 56,
+        "avg_goals": 2.24
       },
       "match_count": 28
     },
@@ -89,6 +89,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-02-26",
+      "league": "Unknown",
+      "home_team": "Samsunspor",
+      "away_team": "Shkendija 79",
+      "probability": "36",
+      "under_over": "Under",
+      "over_probability": "64",
+      "correct_score": "1 - 0",
+      "avg_goals": 1.8200000524520874,
+      "weather": "9\u00b0",
+      "coef": 1.9700000286102295,
+      "score": "",
+      "score_priority": 3,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-02-24",
       "league": "Ecuador - Serie A",
@@ -164,25 +183,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-02-19",
-      "league": "Unknown",
-      "home_team": "Sigma Olomouc",
-      "away_team": "Lausanne-Sport",
-      "probability": "40",
-      "under_over": "Under",
-      "over_probability": "60",
-      "correct_score": "0 - 0",
-      "avg_goals": 2.0199999809265137,
-      "weather": "",
-      "coef": 2.0,
-      "score": "0 - 0",
-      "score_priority": 1,
-      "result": "win",
-      "profit": 50.0,
-      "is_win": 1,
-      "total_goals": 0
     }
   ]
 }
