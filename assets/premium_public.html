@@ -371,11 +371,11 @@
         }
         
         tbody tr {
-            border-bottom: 1px solid var(--premium-border);
-            transition: background-color 0.2s ease;
-            border-left: 4px solid transparent;
-            transition: background-color 0.18s ease, border-left-color 0.18s ease;
-        }
+    border-bottom: 2px solid var(--premium-light-text);
+    transition: background-color 0.2s ease;
+    border-left: 4px solid transparent;
+    transition: background-color 0.18s ease, border-left-color 0.18s ease;
+}
         
         tbody tr:hover {
             background-color: rgba(255, 255, 255, 0.02);
@@ -518,7 +518,39 @@
             min-width: 70px;
         }
 
-        /* Coef badge uniform size */
+        /* New row for score & odds side by side */
+        .score-odds-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+        }
+
+        /* Score badge */
+        .score-badge {
+            background: rgba(151, 117, 250, 0.15);
+            color: var(--premium-purple);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: var(--text-xs);
+            display: inline-block;
+            min-width: 50px;
+            text-align: center;
+            border: 1px solid rgba(151, 117, 250, 0.3);
+            font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+        }
+
+        /* Separator style */
+        .separator {
+            color: var(--premium-light-text);
+            font-weight: 400;
+            font-size: var(--text-sm);
+            opacity: 0.7;
+        }
+
+        /* Coef badge */
         .coef-badge {
             background: rgba(77, 171, 247, 0.08);
             color: var(--premium-blue);
@@ -544,20 +576,6 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             border: 1px solid rgba(77, 171, 247, 0.3);
-        }
-        
-        .coef-badge {
-            background: rgba(0, 255, 136, 0.15);
-            color: var(--premium-green);
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: var(--text-xs);
-            display: inline-block;
-            min-width: 50px;
-            text-align: center;
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
         }
         
         /* Special cells */
@@ -970,151 +988,351 @@
     
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-27</span><span class="league-line">Brazil - Copa do Brasil</span><br><span class="teams-line">Ceará SC vs Primavera SP</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>2 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="pending">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-26</span><span class="league-line">Unknown</span><br><span class="teams-line">Samsunspor vs Shkendija 79</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.97</span><br><span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.97</span>
+                    <span>N/A</span>
+                </div>
+                <span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-24</span><span class="league-line">Ecuador - Serie A</span><br><span class="teams-line">Libertad FC (ECU) vs Manta FC</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.97</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.97</span>
+                    <span>1 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$48.50</strong></td>
                 </tr>
         
                 <tr data-status="pending">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-22</span><span class="league-line">Mexico - Liga MX</span><br><span class="teams-line">Club Necaxa vs Deportivo Toluca</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.01</span><br><span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.01</span>
+                    <span>N/A</span>
+                </div>
+                <span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-21</span><span class="league-line">Mexico - Liga de Expansion MX</span><br><span class="teams-line">Tepatitlán de Morelos vs CD Irapuato</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>2 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="pending">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-20</span><span class="league-line">Germany - 2. Bundesliga</span><br><span class="teams-line">Bochum vs Nürnberg</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>N/A</span>
+                </div>
+                <span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-19</span><span class="league-line">Unknown</span><br><span class="teams-line">Sigma Olomouc vs Lausanne-Sport</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>0 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="pending">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-18</span><span class="league-line">Brazil - Campeonato Baiano</span><br><span class="teams-line">Alagoinhas Atlético BA vs Porto BA</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.08</span><br><span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.08</span>
+                    <span>N/A</span>
+                </div>
+                <span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-17</span><span class="league-line">Brazil - Campeonato Roraimense</span><br><span class="teams-line">Rio Negro RR vs River</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.08</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.08</span>
+                    <span>0 - 2</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$54.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-16</span><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Persita Tangerang vs PSBS Biak Numfor</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.96</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.96</span>
+                    <span>2 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-15</span><span class="league-line">Japan - J1 League</span><br><span class="teams-line">Avispa Fukuoka vs Cerezo Osaka</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>0 - 2</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr data-status="pending">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-14</span><span class="league-line">Romania - Divizia A</span><br><span class="teams-line">CS Metaloglobus vs Otelul Galati</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.99</span><br><span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.99</span>
+                    <span>N/A</span>
+                </div>
+                <span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-13</span><span class="league-line">Türkiye - TFF 1. Lig</span><br><span class="teams-line">76 Igdır Belediye Spor vs Ümraniyespor</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.10</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.10</span>
+                    <span>1 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$55.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-12</span><span class="league-line">Unknown</span><br><span class="teams-line">Atletico Madrid W vs Man Utd W</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.10</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.10</span>
+                    <span>0 - 3</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-11</span><span class="league-line">Thailand - Thai League 3</span><br><span class="teams-line">Singbury Warriors vs Pathum Thani University</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>2 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-10</span><span class="league-line">England - National League</span><br><span class="teams-line">Morecambe vs Tamworth</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>2 - 2</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-09</span><span class="league-line">Nicaragua - Primera Division</span><br><span class="teams-line">Real Madriz vs H&H Export</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.97</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.97</span>
+                    <span>1 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$48.50</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-08</span><span class="league-line">Spain - Tercera Division Group 3 - Cantabria</span><br><span class="teams-line">SD Noja vs Montañas del Pas</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>3 - 0</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-07</span><span class="league-line">Taiwan - Mulan Football League Women</span><br><span class="teams-line">Taipei Bear W vs Sakura W</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.02</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.02</span>
+                    <span>0 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$51.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-06</span><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Persib Bandung vs Malut United</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>2 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-05</span><span class="league-line">Slovenia - Prva Liga</span><br><span class="teams-line">NK Aluminij vs Olimpija Ljubljana</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>1 - 2</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-04</span><span class="league-line">Azerbaijan - Azerbaijan Cup</span><br><span class="teams-line">Sumqayit FK vs Zira</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>0 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="pending">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-03</span><span class="league-line">Bangladesh - Federation Cup</span><br><span class="teams-line">Brothers Union vs PWD Sports Club</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>N/A</span>
+                </div>
+                <span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-02</span><span class="league-line">Portugal - Liga Portugal</span><br><span class="teams-line">Casa Pia AC vs Porto</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>2 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-02-01</span><span class="league-line">El Salvador - Primera Division</span><br><span class="teams-line">Luís Ángel Firpo vs Inter F.A</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>0 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
@@ -1165,169 +1383,393 @@
     
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-31</span><span class="league-line">Australia - A-League</span><br><span class="teams-line">Perth Glory vs Auckland</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>2 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-30</span><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Persita Tangerang vs Persija Jakarta</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>0 - 2</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-29</span><span class="league-line">Unknown</span><br><span class="teams-line">Crvena Zvezda vs Celta Vigo</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.02</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.02</span>
+                    <span>1 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$51.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-28</span><span class="league-line">Unknown</span><br><span class="teams-line">Union Saint-Gilloise vs Atalanta</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.10</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.10</span>
+                    <span>1 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$55.00</strong></td>
                 </tr>
         
                 <tr data-status="error">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-27</span><span class="league-line">England - NPL Premier Division</span><br><span class="teams-line">FC United vs Stockton Town</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.97</span><br><span class="status-error" title="error"><i class="fas fa-exclamation" style="margin-right: 4px;"></i>ERROR</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.97</span>
+                    <span>POST</span>
+                </div>
+                <span class="status-error" title="error"><i class="fas fa-exclamation" style="margin-right: 4px;"></i>ERROR</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-26</span><span class="league-line">Brazil - Campeonato Acreano</span><br><span class="teams-line">Vasco da Gama AC vs ADESG AC</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>3 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-25</span><span class="league-line">Australia - A-League Women</span><br><span class="teams-line">Melbourne Victory W vs Sydney W</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.05</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.05</span>
+                    <span>0 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$52.50</strong></td>
                 </tr>
         
                 <tr data-status="pending">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-24</span><span class="league-line">Bangladesh - Federation Cup</span><br><span class="teams-line">Brothers Union vs PWD Sports Club</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>N/A</span>
+                </div>
+                <span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-23</span><span class="league-line">El Salvador - Primera Division</span><br><span class="teams-line">Luís Ángel Firpo vs Inter F.A</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>0 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-22</span><span class="league-line">El Salvador - Primera Division</span><br><span class="teams-line">Hercules vs CD FAS</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.14</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.14</span>
+                    <span>0 - 2</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$57.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-21</span><span class="league-line">Brazil - Campeonato Paraibano</span><br><span class="teams-line">Confiança EC vs Botafogo PB</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>0 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr data-status="pending">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-20</span><span class="league-line">England - National League North</span><br><span class="teams-line">Leamington vs Buxton FC</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.98</span><br><span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.98</span>
+                    <span>N/A</span>
+                </div>
+                <span class="status-pending" title="pending"><i class="fas fa-clock" style="margin-right: 4px;"></i>PENDING</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-neutral"><strong>-</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-19</span><span class="league-line">Jamaica - Premier League</span><br><span class="teams-line">Molynes United vs Tivoli Gardens</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>3 - 2</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-17</span><span class="league-line">Thailand - Thai League 2</span><br><span class="teams-line">Phrae United vs Kasetsart FC</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.97</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.97</span>
+                    <span>2 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-16</span><span class="league-line">Saudi Arabia - 1st Division</span><br><span class="teams-line">Al Jabalain vs Al Wahda Mecca</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>2 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-15</span><span class="league-line">Mexico - Liga MX</span><br><span class="teams-line">Querétaro FC vs Club Tijuana</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>1 - 2</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-14</span><span class="league-line">Mexico - Liga MX</span><br><span class="teams-line">FC Juárez vs Guadalajara Chivas</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.02</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.02</span>
+                    <span>0 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$51.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-13</span><span class="league-line">Angola - Girabola</span><br><span class="teams-line">Petro Atletico vs Guelson FC</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>2 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-12</span><span class="league-line">Brazil - Copa Sao Paulo de Juniores</span><br><span class="teams-line">Botafogo SP U20 vs Vasco U20</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>1 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-11</span><span class="league-line">Portugal - Liga Portugal 2</span><br><span class="teams-line">Portimonense SC vs FC Felgueiras</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>0 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-10</span><span class="league-line">Türkiye - TFF 3. Lig</span><br><span class="teams-line">Kilis Belediyespor vs Kahramanmaras</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>0 - 2</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-09</span><span class="league-line">Brazil - Copa Sao Paulo de Juniores</span><br><span class="teams-line">Trindade U20 vs Luverdense MT U20</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.97</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.97</span>
+                    <span>0 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$48.50</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-07</span><span class="league-line">Saudi Arabia - 1st Division</span><br><span class="teams-line">Al Raed Club vs Al Ula</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.97</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.97</span>
+                    <span>3 - 2</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-06</span><span class="league-line">Israel - Liga Alef South</span><br><span class="teams-line">Beitar Yavne vs Kfar Saba 1928</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>1 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-04</span><span class="league-line">Indonesia - Liga 1</span><br><span class="teams-line">Bali United Pusam vs Arema FC</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>1 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$50.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-03</span><span class="league-line">Cyprus - Second Division</span><br><span class="teams-line">Ahironas / Onisilos vs Omonia 29is Maiou</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.10</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.10</span>
+                    <span>0 - 5</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-02</span><span class="league-line">Israel - Liga Alef North</span><br><span class="teams-line">Ironi Nesher vs Tzeirey Tamra</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>1 - 3</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2026-01-01</span><span class="league-line">England - Championship</span><br><span class="teams-line">Ipswich Town vs Oxford United</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.10</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.10</span>
+                    <span>2 - 1</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
@@ -1378,43 +1820,99 @@
     
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2025-12-31</span><span class="league-line">Kuwait - Premier League</span><br><span class="teams-line">Al Nasr (KUW) vs Qadisiya Kuwait</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>0 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2025-12-30</span><span class="league-line">Saudi Arabia - 1st Division</span><br><span class="teams-line">Al Arabi (KSA) vs Al Wahda Mecca</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.10</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.10</span>
+                    <span>0 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$55.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2025-12-29</span><span class="league-line">Unknown</span><br><span class="teams-line">Zambia vs Morocco</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>0 - 3</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="loss">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2025-12-28</span><span class="league-line">Thailand - League Cup</span><br><span class="teams-line">Chainat FC vs Port FC</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">2.00</span><br><span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">2.00</span>
+                    <span>0 - 5</span>
+                </div>
+                <span class="status-loss" title="loss"><i class="fas fa-times" style="margin-right: 4px;"></i>LOSS</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-negative"><strong>-$50.00</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2025-12-27</span><span class="league-line">England - Isthmian League</span><br><span class="teams-line">Carshalton vs Dulwich Hamlet</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>1 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2025-12-26</span><span class="league-line">UAE - Division 1</span><br><span class="teams-line">Al Dahra vs Dubai City Club</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>1 - 1</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
                 <tr data-status="win">
                     <td class="match-cell"><div class="match-detail"><span class="date-line">2025-12-25</span><span class="league-line">India - Santosh Trophy</span><br><span class="teams-line">Uttarakhand vs Uttar Pradesh</span></div></td>
-                    <td class="odds-cell"><div class="odds-status-cell"><span class="coef-badge">1.95</span><br><span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span></div></td>
+                    <td class="odds-cell">
+            <div class="odds-status-cell">
+                <div class="score-odds-row">
+                    <span class="coef-badge">1.95</span>
+                    <span>2 - 0</span>
+                </div>
+                <span class="status-win" title="win"><i class="fas fa-check" style="margin-right: 4px;"></i>WIN</span>
+            </div>
+        </td>
                     <td class="profit-cell profit-positive"><strong>+$47.50</strong></td>
                 </tr>
         
@@ -1425,7 +1923,7 @@
         
         <div class="footer">
             <p><i class="fas fa-calendar-alt"></i> Report Period: 2025-12-25 to 2026-02-27</p>
-            <p><i class="fas fa-clock"></i> Generated: 2026-02-28 10:06 • Premium Report v1.0</p>
+            <p><i class="fas fa-clock"></i> Generated: 2026-02-28 15:41 • Premium Report v1.0</p>
             <p><i class="fas fa-user-shield"></i> Premium data showing matches up to yesterday</p>
             
             <div class="footer-legal">
