@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-02-28 15:41",
+    "generated": "2026-03-01 09:24",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-02-27",
+    "date_range": "2025-12-25 to 2026-02-28",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 60,
-    "total_days": 60,
-    "total_wins": 31,
+    "total_matches": 61,
+    "total_days": 61,
+    "total_wins": 32,
     "total_losses": 20,
     "total_pending": 8,
     "total_errors": 1,
-    "total_staked": 3000,
-    "total_profit": 554.5000076293945,
-    "total_returns": 3554.5000076293945,
-    "win_rate": 60.8,
-    "roi": 18.5,
+    "total_staked": 3050,
+    "total_profit": 602.0000100135803,
+    "total_returns": 3652.0000100135803,
+    "win_rate": 61.5,
+    "roi": 19.7,
     "hit_rate": 100.0,
-    "profit_per_match": 9.24,
-    "profit_per_day": 9.24,
+    "profit_per_match": 9.87,
+    "profit_per_day": 9.87,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,19 +39,19 @@
     "2026-02": {
       "name": "February 2026",
       "stats": {
-        "total": 25,
-        "wins": 11,
+        "total": 26,
+        "wins": 12,
         "losses": 8,
         "pending": 6,
         "errors": 0,
-        "profit": 151.99999809265137,
-        "staked": 950,
+        "profit": 199.50000047683716,
+        "staked": 1000,
         "avg_odds": 2.0,
-        "win_rate": 57.9,
-        "total_goals": 38,
-        "avg_goals": 2.0
+        "win_rate": 60.0,
+        "total_goals": 39,
+        "avg_goals": 1.95
       },
-      "match_count": 25
+      "match_count": 26
     },
     "2026-01": {
       "name": "January 2026",
@@ -89,6 +89,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-02-28",
+      "league": "Mexico - Liga MX",
+      "home_team": "Mazatlan FC",
+      "away_team": "Pachuca CF",
+      "probability": "49",
+      "under_over": "Under",
+      "over_probability": "51",
+      "correct_score": "0 - 2",
+      "avg_goals": 2.450000047683716,
+      "weather": "24\u00b0",
+      "coef": 1.9500000476837158,
+      "score": "1 - 0",
+      "score_priority": 4,
+      "result": "win",
+      "profit": 47.50000238418579,
+      "is_win": 1,
+      "total_goals": 1
+    },
     {
       "date": "2026-02-27",
       "league": "Brazil - Copa do Brasil",
@@ -164,25 +183,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-02-21",
-      "league": "Mexico - Liga de Expansion MX",
-      "home_team": "Tepatitl\u00e1n de Morelos",
-      "away_team": "CD Irapuato",
-      "probability": "23",
-      "under_over": "Under",
-      "over_probability": "77",
-      "correct_score": "1 - 1",
-      "avg_goals": 1.1299999952316284,
-      "weather": "26\u00b0",
-      "coef": 1.9500000476837158,
-      "score": "2 - 1",
-      "score_priority": 6,
-      "result": "loss",
-      "profit": -50,
-      "is_win": 0,
-      "total_goals": 3
     }
   ]
 }
