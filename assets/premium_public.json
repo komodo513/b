@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-03-02 10:13",
+    "generated": "2026-03-03 07:58",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-03-01",
+    "date_range": "2025-12-25 to 2026-03-02",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 62,
-    "total_days": 62,
+    "total_matches": 63,
+    "total_days": 63,
     "total_wins": 32,
     "total_losses": 21,
-    "total_pending": 8,
+    "total_pending": 9,
     "total_errors": 1,
-    "total_staked": 3100,
+    "total_staked": 3150,
     "total_profit": 552.0000100135803,
-    "total_returns": 3652.0000100135803,
+    "total_returns": 3702.0000100135803,
     "win_rate": 60.4,
-    "roi": 17.8,
+    "roi": 17.5,
     "hit_rate": 75.0,
-    "profit_per_match": 8.9,
-    "profit_per_day": 8.9,
+    "profit_per_match": 8.76,
+    "profit_per_day": 8.76,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,19 +39,19 @@
     "2026-03": {
       "name": "March 2026",
       "stats": {
-        "total": 1,
+        "total": 2,
         "wins": 0,
         "losses": 1,
-        "pending": 0,
+        "pending": 1,
         "errors": 0,
         "profit": -50,
         "staked": 50,
-        "avg_odds": 2.05,
+        "avg_odds": 2.02,
         "win_rate": 0.0,
         "total_goals": 4,
         "avg_goals": 4.0
       },
-      "match_count": 1
+      "match_count": 2
     },
     "2026-02": {
       "name": "February 2026",
@@ -106,6 +106,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-03-02",
+      "league": "Bulgaria - Parva Liga",
+      "home_team": "Ludogorets",
+      "away_team": "Lokomotiv Plovdiv",
+      "probability": "48",
+      "under_over": "Under",
+      "over_probability": "52",
+      "correct_score": "2 - 0",
+      "avg_goals": 2.4100000858306885,
+      "weather": "2\u00b0",
+      "coef": 2.0,
+      "score": "",
+      "score_priority": 5,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-03-01",
       "league": "Brazil - Campeonato Sul-Matogrossense",
@@ -181,25 +200,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-02-24",
-      "league": "Ecuador - Serie A",
-      "home_team": "Libertad FC (ECU)",
-      "away_team": "Manta FC",
-      "probability": "45",
-      "under_over": "Under",
-      "over_probability": "55",
-      "correct_score": "2 - 0",
-      "avg_goals": 2.2300000190734863,
-      "weather": "18\u00b0",
-      "coef": 1.9700000286102295,
-      "score": "1 - 0",
-      "score_priority": 5,
-      "result": "win",
-      "profit": 48.500001430511475,
-      "is_win": 1,
-      "total_goals": 1
     }
   ]
 }
