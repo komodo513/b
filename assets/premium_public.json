@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-03-07 10:02",
+    "generated": "2026-03-08 10:01",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-03-06",
+    "date_range": "2025-12-25 to 2026-03-07",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 66,
-    "total_days": 66,
-    "total_wins": 32,
+    "total_matches": 67,
+    "total_days": 67,
+    "total_wins": 33,
     "total_losses": 24,
     "total_pending": 9,
     "total_errors": 1,
-    "total_staked": 3300,
-    "total_profit": 402.0000100135803,
-    "total_returns": 3702.0000100135803,
-    "win_rate": 57.1,
-    "roi": 12.2,
+    "total_staked": 3350,
+    "total_profit": 450.5000114440918,
+    "total_returns": 3800.500011444092,
+    "win_rate": 57.9,
+    "roi": 13.4,
     "hit_rate": 75.0,
-    "profit_per_match": 6.09,
-    "profit_per_day": 6.09,
+    "profit_per_match": 6.72,
+    "profit_per_day": 6.72,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,19 +39,19 @@
     "2026-03": {
       "name": "March 2026",
       "stats": {
-        "total": 5,
-        "wins": 0,
+        "total": 6,
+        "wins": 1,
         "losses": 4,
         "pending": 1,
         "errors": 0,
-        "profit": -200,
-        "staked": 200,
+        "profit": -151.49999856948853,
+        "staked": 250,
         "avg_odds": 1.99,
-        "win_rate": 0.0,
-        "total_goals": 15,
-        "avg_goals": 3.75
+        "win_rate": 20.0,
+        "total_goals": 16,
+        "avg_goals": 3.2
       },
-      "match_count": 5
+      "match_count": 6
     },
     "2026-02": {
       "name": "February 2026",
@@ -106,6 +106,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-03-07",
+      "league": "Ecuador - Serie A",
+      "home_team": "Delfin SC",
+      "away_team": "Guayaquil City",
+      "probability": "38",
+      "under_over": "Under",
+      "over_probability": "62",
+      "correct_score": "2 - 0",
+      "avg_goals": 1.8799999952316284,
+      "weather": "25\u00b0",
+      "coef": 1.9700000286102295,
+      "score": "1 - 0",
+      "score_priority": 5,
+      "result": "win",
+      "profit": 48.500001430511475,
+      "is_win": 1,
+      "total_goals": 1
+    },
     {
       "date": "2026-03-06",
       "league": "Brazil - Campeonato Acreano",
@@ -181,25 +200,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-03-01",
-      "league": "Brazil - Campeonato Sul-Matogrossense",
-      "home_team": "Portuguesa",
-      "away_team": "Ivinhema MS",
-      "probability": "40",
-      "under_over": "Under",
-      "over_probability": "60",
-      "correct_score": "1 - 0",
-      "avg_goals": 2.0,
-      "weather": "26\u00b0",
-      "coef": 2.049999952316284,
-      "score": "2 - 2",
-      "score_priority": 3,
-      "result": "loss",
-      "profit": -50,
-      "is_win": 0,
-      "total_goals": 4
     }
   ]
 }
