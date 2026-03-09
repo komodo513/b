@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-03-08 10:02",
+    "generated": "2026-03-09 10:01",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-03-11",
+    "date_range": "2025-12-25 to 2026-03-12",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 71,
-    "total_days": 71,
+    "total_matches": 72,
+    "total_days": 72,
     "total_wins": 33,
     "total_losses": 24,
-    "total_pending": 13,
+    "total_pending": 14,
     "total_errors": 1,
-    "total_staked": 3550,
+    "total_staked": 3600,
     "total_profit": 450.5000114440918,
-    "total_returns": 4000.500011444092,
+    "total_returns": 4050.500011444092,
     "win_rate": 57.9,
-    "roi": 12.7,
+    "roi": 12.5,
     "hit_rate": 75.0,
-    "profit_per_match": 6.35,
-    "profit_per_day": 6.35,
+    "profit_per_match": 6.26,
+    "profit_per_day": 6.26,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-03": {
       "name": "March 2026",
       "stats": {
-        "total": 10,
+        "total": 11,
         "wins": 1,
         "losses": 4,
-        "pending": 5,
+        "pending": 6,
         "errors": 0,
         "profit": -151.49999856948853,
         "staked": 250,
@@ -51,7 +51,7 @@
         "total_goals": 16,
         "avg_goals": 3.2
       },
-      "match_count": 10
+      "match_count": 11
     },
     "2026-02": {
       "name": "February 2026",
@@ -106,6 +106,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-03-12",
+      "league": "Brazil - Campeonato Amapaense",
+      "home_team": "S\u00e3o Jos\u00e9 FC",
+      "away_team": "Orat\u00f3rio Recre. AP",
+      "probability": "30",
+      "under_over": "Under",
+      "over_probability": "70",
+      "correct_score": "1 - 0",
+      "avg_goals": 1.5,
+      "weather": "19\u00b0",
+      "coef": 2.0,
+      "score": "",
+      "score_priority": 3,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-03-11",
       "league": "Colombia - Primera A",
@@ -181,25 +200,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-03-07",
-      "league": "Ecuador - Serie A",
-      "home_team": "Delfin SC",
-      "away_team": "Guayaquil City",
-      "probability": "38",
-      "under_over": "Under",
-      "over_probability": "62",
-      "correct_score": "2 - 0",
-      "avg_goals": 1.8799999952316284,
-      "weather": "25\u00b0",
-      "coef": 1.9700000286102295,
-      "score": "1 - 0",
-      "score_priority": 5,
-      "result": "win",
-      "profit": 48.500001430511475,
-      "is_win": 1,
-      "total_goals": 1
     }
   ]
 }
