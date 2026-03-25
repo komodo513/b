@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-03-24 10:30",
+    "generated": "2026-03-25 09:31",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-03-23",
+    "date_range": "2025-12-25 to 2026-03-24",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 82,
-    "total_days": 82,
+    "total_matches": 83,
+    "total_days": 83,
     "total_wins": 39,
     "total_losses": 28,
-    "total_pending": 14,
+    "total_pending": 15,
     "total_errors": 1,
-    "total_staked": 4100,
+    "total_staked": 4150,
     "total_profit": 547.5000143051147,
-    "total_returns": 4647.500014305115,
+    "total_returns": 4697.500014305115,
     "win_rate": 58.2,
-    "roi": 13.4,
+    "roi": 13.2,
     "hit_rate": 75.0,
-    "profit_per_match": 6.68,
-    "profit_per_day": 6.68,
+    "profit_per_match": 6.6,
+    "profit_per_day": 6.6,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-03": {
       "name": "March 2026",
       "stats": {
-        "total": 21,
+        "total": 22,
         "wins": 7,
         "losses": 8,
-        "pending": 6,
+        "pending": 7,
         "errors": 0,
         "profit": -54.499995708465576,
         "staked": 750,
@@ -51,7 +51,7 @@
         "total_goals": 34,
         "avg_goals": 2.27
       },
-      "match_count": 21
+      "match_count": 22
     },
     "2026-02": {
       "name": "February 2026",
@@ -106,6 +106,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-03-24",
+      "league": "Ecuador - Serie A",
+      "home_team": "SD Aucas",
+      "away_team": "Orense SC",
+      "probability": "43",
+      "under_over": "Under",
+      "over_probability": "57",
+      "correct_score": "1 - 1",
+      "avg_goals": 2.1700000762939453,
+      "weather": "12\u00b0",
+      "coef": 2.0,
+      "score": "",
+      "score_priority": 6,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-03-23",
       "league": "Mexico - Liga de Expansion MX",
@@ -181,25 +200,6 @@
       "profit": 47.50000238418579,
       "is_win": 1,
       "total_goals": 0
-    },
-    {
-      "date": "2026-03-18",
-      "league": "Poland - III Liga Group IV",
-      "home_team": "Wisloka Debica",
-      "away_team": "Cracovia Krak\u00f3w II",
-      "probability": "41",
-      "under_over": "Under",
-      "over_probability": "59",
-      "correct_score": "1 - 0",
-      "avg_goals": 2.069999933242798,
-      "weather": "1\u00b0",
-      "coef": 2.0999999046325684,
-      "score": "1 - 0",
-      "score_priority": 3,
-      "result": "win",
-      "profit": 54.99999523162842,
-      "is_win": 1,
-      "total_goals": 1
     }
   ]
 }
