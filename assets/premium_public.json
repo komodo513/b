@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-03-25 09:31",
+    "generated": "2026-03-26 09:31",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-03-24",
+    "date_range": "2025-12-25 to 2026-03-25",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 83,
-    "total_days": 83,
+    "total_matches": 84,
+    "total_days": 84,
     "total_wins": 39,
     "total_losses": 28,
-    "total_pending": 15,
+    "total_pending": 16,
     "total_errors": 1,
-    "total_staked": 4150,
+    "total_staked": 4200,
     "total_profit": 547.5000143051147,
-    "total_returns": 4697.500014305115,
+    "total_returns": 4747.500014305115,
     "win_rate": 58.2,
-    "roi": 13.2,
+    "roi": 13.0,
     "hit_rate": 75.0,
-    "profit_per_match": 6.6,
-    "profit_per_day": 6.6,
+    "profit_per_match": 6.52,
+    "profit_per_day": 6.52,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-03": {
       "name": "March 2026",
       "stats": {
-        "total": 22,
+        "total": 23,
         "wins": 7,
         "losses": 8,
-        "pending": 7,
+        "pending": 8,
         "errors": 0,
         "profit": -54.499995708465576,
         "staked": 750,
@@ -51,7 +51,7 @@
         "total_goals": 34,
         "avg_goals": 2.27
       },
-      "match_count": 22
+      "match_count": 23
     },
     "2026-02": {
       "name": "February 2026",
@@ -106,6 +106,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-03-25",
+      "league": "Brazil - Copa do Nordeste",
+      "home_team": "Sport Recife",
+      "away_team": "Jacuipense BA",
+      "probability": "40",
+      "under_over": "Under",
+      "over_probability": "60",
+      "correct_score": "1 - 1",
+      "avg_goals": 1.9900000095367432,
+      "weather": "27\u00b0",
+      "coef": 2.0,
+      "score": "",
+      "score_priority": 6,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-03-24",
       "league": "Ecuador - Serie A",
@@ -181,25 +200,6 @@
       "profit": 48.500001430511475,
       "is_win": 1,
       "total_goals": 2
-    },
-    {
-      "date": "2026-03-19",
-      "league": "Honduras - Liga Nacional",
-      "home_team": "CD Olimpia",
-      "away_team": "Olancho",
-      "probability": "36",
-      "under_over": "Under",
-      "over_probability": "64",
-      "correct_score": "1 - 1",
-      "avg_goals": 1.8200000524520874,
-      "weather": "22\u00b0",
-      "coef": 1.9500000476837158,
-      "score": "0 - 0",
-      "score_priority": 6,
-      "result": "win",
-      "profit": 47.50000238418579,
-      "is_win": 1,
-      "total_goals": 0
     }
   ]
 }
