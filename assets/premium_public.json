@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-03-27 14:37",
+    "generated": "2026-03-28 08:16",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-03-26",
+    "date_range": "2025-12-25 to 2026-03-27",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 85,
-    "total_days": 85,
+    "total_matches": 86,
+    "total_days": 86,
     "total_wins": 39,
     "total_losses": 28,
-    "total_pending": 17,
+    "total_pending": 18,
     "total_errors": 1,
-    "total_staked": 4250,
+    "total_staked": 4300,
     "total_profit": 547.5000143051147,
-    "total_returns": 4797.500014305115,
+    "total_returns": 4847.500014305115,
     "win_rate": 58.2,
-    "roi": 12.9,
+    "roi": 12.7,
     "hit_rate": 75.0,
-    "profit_per_match": 6.44,
-    "profit_per_day": 6.44,
+    "profit_per_match": 6.37,
+    "profit_per_day": 6.37,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-03": {
       "name": "March 2026",
       "stats": {
-        "total": 24,
+        "total": 25,
         "wins": 7,
         "losses": 8,
-        "pending": 9,
+        "pending": 10,
         "errors": 0,
         "profit": -54.499995708465576,
         "staked": 750,
@@ -51,7 +51,7 @@
         "total_goals": 34,
         "avg_goals": 2.27
       },
-      "match_count": 24
+      "match_count": 25
     },
     "2026-02": {
       "name": "February 2026",
@@ -106,6 +106,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-03-27",
+      "league": "Brazil - Campeonato Brasileiro Women",
+      "home_team": "Juventude W",
+      "away_team": "Flamengo W",
+      "probability": "30",
+      "under_over": "Under",
+      "over_probability": "70",
+      "correct_score": "0 - 2",
+      "avg_goals": 1.5,
+      "weather": "20\u00b0",
+      "coef": 1.9500000476837158,
+      "score": "",
+      "score_priority": 4,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-03-26",
       "league": "USA - USL Championship",
@@ -177,25 +196,6 @@
       "coef": 1.9500000476837158,
       "score": "",
       "score_priority": 3,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
-    },
-    {
-      "date": "2026-03-22",
-      "league": "Chile - Primera B",
-      "home_team": "Deportes Santa Cruz",
-      "away_team": "Curic\u00f3 Unido",
-      "probability": "48",
-      "under_over": "Under",
-      "over_probability": "52",
-      "correct_score": "1 - 1",
-      "avg_goals": 2.4200000762939453,
-      "weather": "14\u00b0",
-      "coef": 1.9500000476837158,
-      "score": "",
-      "score_priority": 6,
       "result": "pending",
       "profit": 0,
       "is_win": 0,
