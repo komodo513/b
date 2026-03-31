@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-03-30 10:50",
+    "generated": "2026-03-31 09:33",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-03-29",
+    "date_range": "2025-12-25 to 2026-03-30",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 88,
-    "total_days": 88,
+    "total_matches": 89,
+    "total_days": 89,
     "total_wins": 39,
     "total_losses": 29,
-    "total_pending": 19,
+    "total_pending": 20,
     "total_errors": 1,
-    "total_staked": 4400,
+    "total_staked": 4450,
     "total_profit": 497.50001430511475,
-    "total_returns": 4897.500014305115,
+    "total_returns": 4947.500014305115,
     "win_rate": 57.4,
-    "roi": 11.3,
+    "roi": 11.2,
     "hit_rate": 75.0,
-    "profit_per_match": 5.65,
-    "profit_per_day": 5.65,
+    "profit_per_match": 5.59,
+    "profit_per_day": 5.59,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-03": {
       "name": "March 2026",
       "stats": {
-        "total": 27,
+        "total": 28,
         "wins": 7,
         "losses": 9,
-        "pending": 11,
+        "pending": 12,
         "errors": 0,
         "profit": -104.49999570846558,
         "staked": 800,
@@ -51,7 +51,7 @@
         "total_goals": 38,
         "avg_goals": 2.38
       },
-      "match_count": 27
+      "match_count": 28
     },
     "2026-02": {
       "name": "February 2026",
@@ -106,6 +106,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-03-30",
+      "league": "Chile - Primera B",
+      "home_team": "CD Magallanes",
+      "away_team": "Rangers Talca",
+      "probability": "41",
+      "under_over": "Under",
+      "over_probability": "59",
+      "correct_score": "2 - 0",
+      "avg_goals": 2.0299999713897705,
+      "weather": "20\u00b0",
+      "coef": 1.9500000476837158,
+      "score": "",
+      "score_priority": 5,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-03-29",
       "league": "Panama - Football League",
@@ -177,25 +196,6 @@
       "coef": 1.9700000286102295,
       "score": "",
       "score_priority": 3,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
-    },
-    {
-      "date": "2026-03-25",
-      "league": "Brazil - Copa do Nordeste",
-      "home_team": "Sport Recife",
-      "away_team": "Jacuipense BA",
-      "probability": "40",
-      "under_over": "Under",
-      "over_probability": "60",
-      "correct_score": "1 - 1",
-      "avg_goals": 1.9900000095367432,
-      "weather": "27\u00b0",
-      "coef": 2.0,
-      "score": "",
-      "score_priority": 6,
       "result": "pending",
       "profit": 0,
       "is_win": 0,
