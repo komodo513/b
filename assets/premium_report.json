@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-04-01 00:02",
+    "generated": "2026-04-01 09:19",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-04-03",
+    "date_range": "2025-12-25 to 2026-04-04",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 93,
-    "total_days": 93,
+    "total_matches": 94,
+    "total_days": 94,
     "total_wins": 39,
     "total_losses": 30,
-    "total_pending": 23,
+    "total_pending": 24,
     "total_errors": 1,
-    "total_staked": 4650,
+    "total_staked": 4700,
     "total_profit": 447.50001430511475,
-    "total_returns": 5097.500014305115,
+    "total_returns": 5147.500014305115,
     "win_rate": 56.5,
-    "roi": 9.6,
+    "roi": 9.5,
     "hit_rate": 60.0,
-    "profit_per_match": 4.81,
-    "profit_per_day": 4.81,
+    "profit_per_match": 4.76,
+    "profit_per_day": 4.76,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-04": {
       "name": "April 2026",
       "stats": {
-        "total": 3,
+        "total": 4,
         "wins": 0,
         "losses": 0,
-        "pending": 3,
+        "pending": 4,
         "errors": 0,
         "profit": 0,
         "staked": 0,
@@ -51,7 +51,7 @@
         "total_goals": 0,
         "avg_goals": 0
       },
-      "match_count": 3
+      "match_count": 4
     },
     "2026-03": {
       "name": "March 2026",
@@ -123,6 +123,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-04-04",
+      "league": "Peru - Primera Divisi\u00f3n",
+      "home_team": "Cienciano",
+      "away_team": "ADT",
+      "probability": "44",
+      "under_over": "Under",
+      "over_probability": "56",
+      "correct_score": "1 - 1",
+      "avg_goals": 2.2200000286102295,
+      "weather": "8\u00b0",
+      "coef": 2.0,
+      "score": "",
+      "score_priority": 6,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-04-03",
       "league": "Australia - NPL NSW",
@@ -198,25 +217,6 @@
       "profit": -50,
       "is_win": 0,
       "total_goals": 4
-    },
-    {
-      "date": "2026-03-30",
-      "league": "Chile - Primera B",
-      "home_team": "CD Magallanes",
-      "away_team": "Rangers Talca",
-      "probability": "41",
-      "under_over": "Under",
-      "over_probability": "59",
-      "correct_score": "2 - 0",
-      "avg_goals": 2.0299999713897705,
-      "weather": "20\u00b0",
-      "coef": 1.9500000476837158,
-      "score": "",
-      "score_priority": 5,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
     }
   ]
 }
