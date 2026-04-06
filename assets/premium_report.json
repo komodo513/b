@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-04-05 09:51",
+    "generated": "2026-04-06 08:04",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-04-06",
+    "date_range": "2025-12-25 to 2026-04-08",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 96,
-    "total_days": 96,
+    "total_matches": 97,
+    "total_days": 97,
     "total_wins": 40,
     "total_losses": 31,
-    "total_pending": 24,
+    "total_pending": 25,
     "total_errors": 0,
-    "total_staked": 4800,
+    "total_staked": 4850,
     "total_profit": 446.50001525878906,
-    "total_returns": 5246.500015258789,
+    "total_returns": 5296.500015258789,
     "win_rate": 56.3,
-    "roi": 9.3,
+    "roi": 9.2,
     "hit_rate": 60.0,
-    "profit_per_match": 4.65,
-    "profit_per_day": 4.65,
+    "profit_per_match": 4.6,
+    "profit_per_day": 4.6,
     "streak_wins": 4,
     "streak_losses": 3,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-04": {
       "name": "April 2026",
       "stats": {
-        "total": 6,
+        "total": 7,
         "wins": 1,
         "losses": 1,
-        "pending": 4,
+        "pending": 5,
         "errors": 0,
         "profit": -0.9999990463256836,
         "staked": 100,
@@ -51,7 +51,7 @@
         "total_goals": 7,
         "avg_goals": 3.5
       },
-      "match_count": 6
+      "match_count": 7
     },
     "2026-03": {
       "name": "March 2026",
@@ -123,6 +123,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-04-08",
+      "league": "Mexico - Liga de Expansion MX",
+      "home_team": "CD Tapatio",
+      "away_team": "Tlaxcala",
+      "probability": "39",
+      "under_over": "Under",
+      "over_probability": "61",
+      "correct_score": "1 - 0",
+      "avg_goals": 1.9299999475479126,
+      "weather": "27\u00b0",
+      "coef": 2.0,
+      "score": "",
+      "score_priority": 3,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-04-06",
       "league": "Australia - NPL NSW",
@@ -198,25 +217,6 @@
       "profit": 49.000000953674316,
       "is_win": 1,
       "total_goals": 2
-    },
-    {
-      "date": "2026-04-02",
-      "league": "Brazil - Serie B",
-      "home_team": "CRB AL",
-      "away_team": "Avai FC",
-      "probability": "47",
-      "under_over": "Under",
-      "over_probability": "53",
-      "correct_score": "0 - 2",
-      "avg_goals": 2.369999885559082,
-      "weather": "24\u00b0",
-      "coef": 2.0199999809265137,
-      "score": "",
-      "score_priority": 4,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
     }
   ]
 }
