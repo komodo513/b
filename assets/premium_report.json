@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-04-21 15:30",
+    "generated": "2026-04-22 10:36",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-04-24",
+    "date_range": "2025-12-25 to 2026-04-25",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 113,
-    "total_days": 113,
+    "total_matches": 114,
+    "total_days": 114,
     "total_wins": 56,
-    "total_losses": 49,
+    "total_losses": 50,
     "total_pending": 7,
     "total_errors": 0,
-    "total_staked": 5650,
-    "total_profit": 338.5000228881836,
+    "total_staked": 5700,
+    "total_profit": 288.5000228881836,
     "total_returns": 5988.500022888184,
-    "win_rate": 53.3,
-    "roi": 6.0,
+    "win_rate": 52.8,
+    "roi": 5.1,
     "hit_rate": 80.0,
-    "profit_per_match": 3.0,
-    "profit_per_day": 3.0,
+    "profit_per_match": 2.53,
+    "profit_per_day": 2.53,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "December 2025",
@@ -39,19 +39,19 @@
     "2026-04": {
       "name": "April 2026",
       "stats": {
-        "total": 23,
+        "total": 24,
         "wins": 9,
-        "losses": 7,
+        "losses": 8,
         "pending": 7,
         "errors": 0,
-        "profit": 93.50000619888306,
-        "staked": 800,
+        "profit": 43.50000619888306,
+        "staked": 850,
         "avg_odds": 2.01,
-        "win_rate": 56.2,
-        "total_goals": 41,
-        "avg_goals": 2.56
+        "win_rate": 52.9,
+        "total_goals": 45,
+        "avg_goals": 2.65
       },
-      "match_count": 23
+      "match_count": 24
     },
     "2026-03": {
       "name": "March 2026",
@@ -124,6 +124,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-04-25",
+      "league": "Canada - Premier League",
+      "home_team": "Supra du Qu\u00e9bec",
+      "away_team": "HFX Wanderers",
+      "probability": "20",
+      "under_over": "Under",
+      "over_probability": "80",
+      "correct_score": "1 - 1",
+      "avg_goals": 1.0,
+      "weather": "7\u00b0",
+      "coef": 1.9500000476837158,
+      "score": "",
+      "score_priority": 6,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
+    {
       "date": "2026-04-24",
       "league": "Mexico - Liga de Expansion MX",
       "home_team": "CD Tapatio",
@@ -192,31 +211,12 @@
       "avg_goals": 1.25,
       "weather": "18\u00b0",
       "coef": 2.0999999046325684,
-      "score": "",
+      "score": "3-1",
       "score_priority": 6,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
-    },
-    {
-      "date": "2026-04-20",
-      "league": "El Salvador - Primera Division",
-      "home_team": "CD FAS",
-      "away_team": "Cacahuatique",
-      "probability": "36",
-      "under_over": "Under",
-      "over_probability": "64",
-      "correct_score": "1 - 0",
-      "avg_goals": 1.7799999713897705,
-      "weather": "29\u00b0",
-      "coef": 2.0999999046325684,
-      "score": "3 - 0",
-      "score_priority": 3,
       "result": "loss",
       "profit": -50,
       "is_win": 0,
-      "total_goals": 3
+      "total_goals": 4
     }
   ]
 }
