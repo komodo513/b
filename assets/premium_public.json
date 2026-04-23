@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-04-22 11:05",
+    "generated": "2026-04-23 08:03",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-04-21",
+    "date_range": "2025-12-25 to 2026-04-22",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 110,
-    "total_days": 110,
+    "total_matches": 111,
+    "total_days": 111,
     "total_wins": 56,
     "total_losses": 50,
-    "total_pending": 3,
+    "total_pending": 4,
     "total_errors": 0,
-    "total_staked": 5500,
+    "total_staked": 5550,
     "total_profit": 288.5000228881836,
-    "total_returns": 5788.500022888184,
+    "total_returns": 5838.500022888184,
     "win_rate": 52.8,
     "roi": 5.2,
     "hit_rate": 80.0,
-    "profit_per_match": 2.62,
-    "profit_per_day": 2.62,
+    "profit_per_match": 2.6,
+    "profit_per_day": 2.6,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-04": {
       "name": "April 2026",
       "stats": {
-        "total": 20,
+        "total": 21,
         "wins": 9,
         "losses": 8,
-        "pending": 3,
+        "pending": 4,
         "errors": 0,
         "profit": 43.50000619888306,
         "staked": 850,
@@ -51,7 +51,7 @@
         "total_goals": 45,
         "avg_goals": 2.65
       },
-      "match_count": 20
+      "match_count": 21
     },
     "2026-03": {
       "name": "March 2026",
@@ -123,6 +123,25 @@
     }
   },
   "matches_sample": [
+    {
+      "date": "2026-04-22",
+      "league": "Brazil - Copa do Brasil",
+      "home_team": "Gr\u00eamio",
+      "away_team": "Confian\u00e7a",
+      "probability": "31",
+      "under_over": "Under",
+      "over_probability": "69",
+      "correct_score": "1 - 1",
+      "avg_goals": 1.5299999713897705,
+      "weather": "26\u00b0",
+      "coef": 1.9500000476837158,
+      "score": "",
+      "score_priority": 6,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
     {
       "date": "2026-04-21",
       "league": "Brazil - Campeonato Brasileiro Women",
@@ -198,25 +217,6 @@
       "profit": 50.0,
       "is_win": 1,
       "total_goals": 2
-    },
-    {
-      "date": "2026-04-17",
-      "league": "Guatemala - Liga Nacional",
-      "home_team": "Club Xelaj\u00fa MC",
-      "away_team": "Deportivo Achuapa",
-      "probability": "43",
-      "under_over": "Under",
-      "over_probability": "57",
-      "correct_score": "2 - 0",
-      "avg_goals": 2.1600000858306885,
-      "weather": "12\u00b0",
-      "coef": 1.9500000476837158,
-      "score": "",
-      "score_priority": 5,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
     }
   ]
 }
