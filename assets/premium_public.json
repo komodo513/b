@@ -1,6 +1,6 @@
 {
   "report_info": {
-    "generated": "2026-04-24 08:04",
+    "generated": "2026-04-24 20:37",
     "version": "1.0",
     "date_range": "2025-12-25 to 2026-04-23",
     "include_today": false,
@@ -13,18 +13,18 @@
   "summary_stats": {
     "total_matches": 112,
     "total_days": 112,
-    "total_wins": 56,
+    "total_wins": 57,
     "total_losses": 51,
-    "total_pending": 4,
+    "total_pending": 3,
     "total_errors": 0,
     "total_staked": 5600,
-    "total_profit": 238.5000228881836,
-    "total_returns": 5838.500022888184,
-    "win_rate": 52.3,
-    "roi": 4.3,
-    "hit_rate": 60.0,
-    "profit_per_match": 2.13,
-    "profit_per_day": 2.13,
+    "total_profit": 286.0000252723694,
+    "total_returns": 5886.000025272369,
+    "win_rate": 52.8,
+    "roi": 5.1,
+    "hit_rate": 80.0,
+    "profit_per_match": 2.55,
+    "profit_per_day": 2.55,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "December 2025",
@@ -32,24 +32,24 @@
     "avg_odds": 2.0
   },
   "confidence_analysis": {
-    "level": "MODERATE",
-    "message": "Break-even performance. Consider strategy refinements."
+    "level": "GOOD",
+    "message": "Positive performance with room for improvement in consistency."
   },
   "monthly_summary": {
     "2026-04": {
       "name": "April 2026",
       "stats": {
         "total": 22,
-        "wins": 9,
+        "wins": 10,
         "losses": 9,
-        "pending": 4,
+        "pending": 3,
         "errors": 0,
-        "profit": -6.499993801116943,
-        "staked": 900,
+        "profit": 41.00000858306885,
+        "staked": 950,
         "avg_odds": 2.01,
-        "win_rate": 50.0,
-        "total_goals": 53,
-        "avg_goals": 2.94
+        "win_rate": 52.6,
+        "total_goals": 55,
+        "avg_goals": 2.89
       },
       "match_count": 22
     },
@@ -154,12 +154,12 @@
       "avg_goals": 1.5299999713897705,
       "weather": "26\u00b0",
       "coef": 1.9500000476837158,
-      "score": "",
+      "score": "2-0",
       "score_priority": 6,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
+      "result": "win",
+      "profit": 47.50000238418579,
+      "is_win": 1,
+      "total_goals": 2
     },
     {
       "date": "2026-04-21",
