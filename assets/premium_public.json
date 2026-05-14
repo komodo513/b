@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-05-10 09:32",
+    "generated": "2026-05-14 09:34",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-05-06",
+    "date_range": "2025-12-25 to 2026-05-10",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 122,
-    "total_days": 122,
+    "total_matches": 123,
+    "total_days": 123,
     "total_wins": 61,
-    "total_losses": 54,
+    "total_losses": 55,
     "total_pending": 6,
     "total_errors": 0,
-    "total_staked": 6100,
-    "total_profit": 338.50003480911255,
+    "total_staked": 6150,
+    "total_profit": 288.50003480911255,
     "total_returns": 6438.500034809113,
-    "win_rate": 53.0,
-    "roi": 5.5,
+    "win_rate": 52.6,
+    "roi": 4.7,
     "hit_rate": 83.3,
-    "profit_per_match": 2.77,
-    "profit_per_day": 2.77,
+    "profit_per_match": 2.35,
+    "profit_per_day": 2.35,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "December 2025",
@@ -32,26 +32,26 @@
     "avg_odds": 2.0
   },
   "confidence_analysis": {
-    "level": "GOOD",
-    "message": "Positive performance with room for improvement in consistency."
+    "level": "MODERATE",
+    "message": "Break-even performance. Consider strategy refinements."
   },
   "monthly_summary": {
     "2026-05": {
       "name": "May 2026",
       "stats": {
-        "total": 5,
+        "total": 6,
         "wins": 2,
-        "losses": 1,
+        "losses": 2,
         "pending": 2,
         "errors": 0,
-        "profit": 55.00000715255737,
-        "staked": 150,
-        "avg_odds": 2.02,
-        "win_rate": 66.7,
-        "total_goals": 8,
-        "avg_goals": 2.67
+        "profit": 5.000007152557373,
+        "staked": 200,
+        "avg_odds": 2.03,
+        "win_rate": 50.0,
+        "total_goals": 12,
+        "avg_goals": 3.0
       },
-      "match_count": 5
+      "match_count": 6
     },
     "2026-04": {
       "name": "April 2026",
@@ -141,6 +141,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-05-10",
+      "league": "Canada - Canadian Championship",
+      "home_team": "Pacific",
+      "away_team": "Cavalry FC",
+      "probability": "44",
+      "under_over": "Under",
+      "over_probability": "56",
+      "correct_score": "0 - 1",
+      "avg_goals": 2.2200000286102295,
+      "weather": "15\u00b0",
+      "coef": 2.049999952316284,
+      "score": "1 - 3",
+      "score_priority": 2,
+      "result": "loss",
+      "profit": -50,
+      "is_win": 0,
+      "total_goals": 4
+    },
+    {
       "date": "2026-05-06",
       "league": "Vietnam - National Football Second League",
       "home_team": "Tay Ninh",
@@ -215,25 +234,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-05-01",
-      "league": "Mexico - Liga de Expansion MX",
-      "home_team": "Zacatecas",
-      "away_team": "Tepatitl\u00e1n de Morelos",
-      "probability": "44",
-      "under_over": "Under",
-      "over_probability": "56",
-      "correct_score": "1 - 1",
-      "avg_goals": 2.200000047683716,
-      "weather": "29\u00b0",
-      "coef": 1.9500000476837158,
-      "score": "1 - 1",
-      "score_priority": 6,
-      "result": "win",
-      "profit": 47.50000238418579,
-      "is_win": 1,
-      "total_goals": 2
     }
   ]
 }
