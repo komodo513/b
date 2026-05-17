@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-05-16 10:46",
+    "generated": "2026-05-17 09:06",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-05-15",
+    "date_range": "2025-12-25 to 2026-05-16",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 125,
-    "total_days": 125,
+    "total_matches": 126,
+    "total_days": 126,
     "total_wins": 61,
     "total_losses": 56,
-    "total_pending": 7,
+    "total_pending": 8,
     "total_errors": 0,
-    "total_staked": 6250,
+    "total_staked": 6300,
     "total_profit": 238.50003480911255,
-    "total_returns": 6488.500034809113,
+    "total_returns": 6538.500034809113,
     "win_rate": 52.1,
     "roi": 3.8,
     "hit_rate": 66.7,
-    "profit_per_match": 1.91,
-    "profit_per_day": 1.91,
+    "profit_per_match": 1.89,
+    "profit_per_day": 1.89,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "December 2025",
@@ -39,10 +39,10 @@
     "2026-05": {
       "name": "May 2026",
       "stats": {
-        "total": 8,
+        "total": 9,
         "wins": 2,
         "losses": 3,
-        "pending": 3,
+        "pending": 4,
         "errors": 0,
         "profit": -44.99999284744263,
         "staked": 250,
@@ -51,7 +51,7 @@
         "total_goals": 15,
         "avg_goals": 3.0
       },
-      "match_count": 8
+      "match_count": 9
     },
     "2026-04": {
       "name": "April 2026",
@@ -141,6 +141,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-05-16",
+      "league": "Uruguay - Primera Division",
+      "home_team": "Danubio FC",
+      "away_team": "Albion FC (URU)",
+      "probability": "44",
+      "under_over": "Under",
+      "over_probability": "56",
+      "correct_score": "0 - 2",
+      "avg_goals": 2.200000047683716,
+      "weather": "10\u00b0",
+      "coef": 2.0999999046325684,
+      "score": "",
+      "score_priority": 4,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
+    {
       "date": "2026-05-15",
       "league": "China - FA Cup",
       "home_team": "Dalian Kewei",
@@ -215,25 +234,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null
-    },
-    {
-      "date": "2026-05-04",
-      "league": "England - Women\u2019s Super League",
-      "home_team": "Aston Villa W",
-      "away_team": "West Ham W",
-      "probability": "46",
-      "under_over": "Under",
-      "over_probability": "54",
-      "correct_score": "2 - 0",
-      "avg_goals": 2.319999933242798,
-      "weather": "13\u00b0",
-      "coef": 2.1500000953674316,
-      "score": "0-2",
-      "score_priority": 5,
-      "result": "win",
-      "profit": 57.50000476837158,
-      "is_win": 1,
-      "total_goals": 2
     }
   ]
 }
