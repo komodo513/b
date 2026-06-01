@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-05-31 14:33",
+    "generated": "2026-06-01 08:00",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-05-25",
+    "date_range": "2025-12-25 to 2026-05-31",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 131,
-    "total_days": 131,
+    "total_matches": 132,
+    "total_days": 132,
     "total_wins": 63,
-    "total_losses": 58,
+    "total_losses": 59,
     "total_pending": 9,
     "total_errors": 0,
-    "total_staked": 6550,
-    "total_profit": 236.00003719329834,
+    "total_staked": 6600,
+    "total_profit": 186.00003719329834,
     "total_returns": 6786.000037193298,
-    "win_rate": 52.1,
-    "roi": 3.6,
+    "win_rate": 51.6,
+    "roi": 2.8,
     "hit_rate": 66.7,
-    "profit_per_match": 1.8,
-    "profit_per_day": 1.8,
+    "profit_per_match": 1.41,
+    "profit_per_day": 1.41,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "December 2025",
@@ -39,19 +39,19 @@
     "2026-05": {
       "name": "May 2026",
       "stats": {
-        "total": 14,
+        "total": 15,
         "wins": 4,
-        "losses": 5,
+        "losses": 6,
         "pending": 5,
         "errors": 0,
-        "profit": -47.499990463256836,
-        "staked": 450,
-        "avg_odds": 2.02,
-        "win_rate": 44.4,
-        "total_goals": 25,
-        "avg_goals": 2.78
+        "profit": -97.49999046325684,
+        "staked": 500,
+        "avg_odds": 2.01,
+        "win_rate": 40.0,
+        "total_goals": 29,
+        "avg_goals": 2.9
       },
-      "match_count": 14
+      "match_count": 15
     },
     "2026-04": {
       "name": "April 2026",
@@ -141,6 +141,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-05-31",
+      "league": "USA - USL League One",
+      "home_team": "Richmond Kickers",
+      "away_team": "Athletic Club Boise",
+      "probability": "10",
+      "under_over": "Under",
+      "over_probability": "90",
+      "correct_score": "1 - 0",
+      "avg_goals": 0.5,
+      "weather": "23\u00b0",
+      "coef": 1.9500000476837158,
+      "score": "2 - 2",
+      "score_priority": 3,
+      "result": "loss",
+      "profit": -50,
+      "is_win": 0,
+      "total_goals": 4
+    },
+    {
       "date": "2026-05-25",
       "league": "South Korea - K League 2",
       "home_team": "Paju Citizen",
@@ -215,25 +234,6 @@
       "profit": 47.50000238418579,
       "is_win": 1,
       "total_goals": 2
-    },
-    {
-      "date": "2026-05-17",
-      "league": "USA - USL League One",
-      "home_team": "Sarasota Paradise",
-      "away_team": "Alta",
-      "probability": "35",
-      "under_over": "Under",
-      "over_probability": "65",
-      "correct_score": "0 - 0",
-      "avg_goals": 1.75,
-      "weather": "22\u00b0",
-      "coef": 1.9700000286102295,
-      "score": "1 - 2",
-      "score_priority": 1,
-      "result": "loss",
-      "profit": -50,
-      "is_win": 0,
-      "total_goals": 3
     }
   ]
 }
