@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-06-21 10:37",
+    "generated": "2026-06-22 08:00",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-06-02",
+    "date_range": "2025-12-25 to 2026-06-21",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 133,
-    "total_days": 133,
-    "total_wins": 64,
+    "total_matches": 134,
+    "total_days": 134,
+    "total_wins": 65,
     "total_losses": 59,
     "total_pending": 9,
     "total_errors": 0,
-    "total_staked": 6650,
-    "total_profit": 240.00003337860107,
-    "total_returns": 6890.000033378601,
-    "win_rate": 52.0,
-    "roi": 3.6,
+    "total_staked": 6700,
+    "total_profit": 299.0000367164612,
+    "total_returns": 6999.000036716461,
+    "win_rate": 52.4,
+    "roi": 4.5,
     "hit_rate": 71.4,
-    "profit_per_match": 1.8,
-    "profit_per_day": 1.8,
+    "profit_per_match": 2.23,
+    "profit_per_day": 2.23,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "December 2025",
@@ -39,19 +39,19 @@
     "2026-06": {
       "name": "June 2026",
       "stats": {
-        "total": 1,
-        "wins": 1,
+        "total": 2,
+        "wins": 2,
         "losses": 0,
         "pending": 0,
         "errors": 0,
-        "profit": 53.999996185302734,
-        "staked": 50,
-        "avg_odds": 2.08,
+        "profit": 112.99999952316284,
+        "staked": 100,
+        "avg_odds": 2.13,
         "win_rate": 100.0,
-        "total_goals": 1,
-        "avg_goals": 1.0
+        "total_goals": 3,
+        "avg_goals": 1.5
       },
-      "match_count": 1
+      "match_count": 2
     },
     "2026-05": {
       "name": "May 2026",
@@ -158,6 +158,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-06-21",
+      "league": "USA - USL Championship",
+      "home_team": "Brooklyn FC",
+      "away_team": "Tampa Bay Rowdies",
+      "probability": "15",
+      "under_over": "Under",
+      "over_probability": "85",
+      "correct_score": "0 - 1",
+      "avg_goals": 0.75,
+      "weather": "23\u00b0",
+      "coef": 2.180000066757202,
+      "score": "0 - 2",
+      "score_priority": 2,
+      "result": "win",
+      "profit": 59.00000333786011,
+      "is_win": 1,
+      "total_goals": 2
+    },
+    {
       "date": "2026-06-02",
       "league": "Chile - Primera B",
       "home_team": "Curic\u00f3 Unido",
@@ -232,25 +251,6 @@
       "profit": 50.0,
       "is_win": 1,
       "total_goals": 2
-    },
-    {
-      "date": "2026-05-20",
-      "league": "Azerbaijan - I Liqa",
-      "home_team": "Zaqatala FK",
-      "away_team": "Shafa Baku",
-      "probability": "43",
-      "under_over": "Under",
-      "over_probability": "57",
-      "correct_score": "0 - 2",
-      "avg_goals": 2.1700000762939453,
-      "weather": "21\u00b0",
-      "coef": 1.9500000476837158,
-      "score": "",
-      "score_priority": 4,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
     }
   ]
 }
