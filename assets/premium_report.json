@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-06-21 10:37",
+    "generated": "2026-06-22 08:00",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-06-24",
+    "date_range": "2025-12-25 to 2026-06-25",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 137,
-    "total_days": 137,
+    "total_matches": 138,
+    "total_days": 138,
     "total_wins": 65,
     "total_losses": 59,
-    "total_pending": 12,
+    "total_pending": 13,
     "total_errors": 0,
-    "total_staked": 6850,
+    "total_staked": 6900,
     "total_profit": 299.0000367164612,
-    "total_returns": 7149.000036716461,
+    "total_returns": 7199.000036716461,
     "win_rate": 52.4,
-    "roi": 4.4,
+    "roi": 4.3,
     "hit_rate": 71.4,
-    "profit_per_match": 2.18,
-    "profit_per_day": 2.18,
+    "profit_per_match": 2.17,
+    "profit_per_day": 2.17,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "June 2026",
@@ -39,10 +39,10 @@
     "2026-06": {
       "name": "June 2026",
       "stats": {
-        "total": 5,
+        "total": 6,
         "wins": 2,
         "losses": 0,
-        "pending": 3,
+        "pending": 4,
         "errors": 0,
         "profit": 112.99999952316284,
         "staked": 100,
@@ -51,7 +51,7 @@
         "total_goals": 3,
         "avg_goals": 1.5
       },
-      "match_count": 5
+      "match_count": 6
     },
     "2026-05": {
       "name": "May 2026",
@@ -158,6 +158,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-06-25",
+      "league": "Brazil - Campeonato Brasileiro U20",
+      "home_team": "Vasco U20",
+      "away_team": "Criciuma U20",
+      "probability": "23",
+      "under_over": "Under",
+      "over_probability": "77",
+      "correct_score": "2 - 0",
+      "avg_goals": 1.1299999952316284,
+      "weather": "20\u00b0",
+      "coef": 2.069999933242798,
+      "score": "",
+      "score_priority": 5,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
+    {
       "date": "2026-06-24",
       "league": "Unknown",
       "home_team": "Bosnia-Herzegovina",
@@ -232,25 +251,6 @@
       "profit": 59.00000333786011,
       "is_win": 1,
       "total_goals": 2
-    },
-    {
-      "date": "2026-06-02",
-      "league": "Chile - Primera B",
-      "home_team": "Curic\u00f3 Unido",
-      "away_team": "Antofagasta",
-      "probability": "49",
-      "under_over": "Under",
-      "over_probability": "51",
-      "correct_score": "0 - 2",
-      "avg_goals": 2.430000066757202,
-      "weather": "15\u00b0",
-      "coef": 2.0799999237060547,
-      "score": "1-0",
-      "score_priority": 4,
-      "result": "win",
-      "profit": 53.999996185302734,
-      "is_win": 1,
-      "total_goals": 1
     }
   ]
 }
