@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-06-22 08:00",
+    "generated": "2026-06-23 08:01",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-06-25",
+    "date_range": "2025-12-25 to 2026-06-26",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 138,
-    "total_days": 138,
-    "total_wins": 65,
+    "total_matches": 139,
+    "total_days": 139,
+    "total_wins": 66,
     "total_losses": 59,
     "total_pending": 13,
     "total_errors": 0,
-    "total_staked": 6900,
-    "total_profit": 299.0000367164612,
-    "total_returns": 7199.000036716461,
-    "win_rate": 52.4,
-    "roi": 4.3,
+    "total_staked": 6950,
+    "total_profit": 351.5000343322754,
+    "total_returns": 7301.500034332275,
+    "win_rate": 52.8,
+    "roi": 5.1,
     "hit_rate": 71.4,
-    "profit_per_match": 2.17,
-    "profit_per_day": 2.17,
+    "profit_per_match": 2.53,
+    "profit_per_day": 2.53,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "June 2026",
@@ -32,26 +32,26 @@
     "avg_odds": 2.0
   },
   "confidence_analysis": {
-    "level": "MODERATE",
-    "message": "Break-even performance. Consider strategy refinements."
+    "level": "GOOD",
+    "message": "Positive performance with room for improvement in consistency."
   },
   "monthly_summary": {
     "2026-06": {
       "name": "June 2026",
       "stats": {
-        "total": 6,
-        "wins": 2,
+        "total": 7,
+        "wins": 3,
         "losses": 0,
         "pending": 4,
         "errors": 0,
-        "profit": 112.99999952316284,
-        "staked": 100,
-        "avg_odds": 2.06,
+        "profit": 165.49999713897705,
+        "staked": 150,
+        "avg_odds": 2.04,
         "win_rate": 100.0,
-        "total_goals": 3,
-        "avg_goals": 1.5
+        "total_goals": 4,
+        "avg_goals": 1.33
       },
-      "match_count": 6
+      "match_count": 7
     },
     "2026-05": {
       "name": "May 2026",
@@ -158,6 +158,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-06-26",
+      "league": "Unknown",
+      "home_team": "Japan",
+      "away_team": "Sweden",
+      "probability": "27",
+      "under_over": "Under",
+      "over_probability": "73",
+      "correct_score": "1 - 0",
+      "avg_goals": 1.350000023841858,
+      "weather": "35\u00b0",
+      "coef": 1.9500000476837158,
+      "score": "",
+      "score_priority": 3,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
+    {
       "date": "2026-06-25",
       "league": "Brazil - Campeonato Brasileiro U20",
       "home_team": "Vasco U20",
@@ -226,31 +245,12 @@
       "avg_goals": 1.75,
       "weather": "17\u00b0",
       "coef": 2.049999952316284,
-      "score": "",
-      "score_priority": 2,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
-    },
-    {
-      "date": "2026-06-21",
-      "league": "USA - USL Championship",
-      "home_team": "Brooklyn FC",
-      "away_team": "Tampa Bay Rowdies",
-      "probability": "15",
-      "under_over": "Under",
-      "over_probability": "85",
-      "correct_score": "0 - 1",
-      "avg_goals": 0.75,
-      "weather": "23\u00b0",
-      "coef": 2.180000066757202,
-      "score": "0 - 2",
+      "score": "1 - 0",
       "score_priority": 2,
       "result": "win",
-      "profit": 59.00000333786011,
+      "profit": 52.49999761581421,
       "is_win": 1,
-      "total_goals": 2
+      "total_goals": 1
     }
   ]
 }
