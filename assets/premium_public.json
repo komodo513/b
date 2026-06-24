@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-06-23 08:01",
+    "generated": "2026-06-24 08:01",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-06-22",
+    "date_range": "2025-12-25 to 2026-06-23",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 135,
-    "total_days": 135,
-    "total_wins": 66,
+    "total_matches": 136,
+    "total_days": 136,
+    "total_wins": 67,
     "total_losses": 59,
     "total_pending": 9,
     "total_errors": 0,
-    "total_staked": 6750,
-    "total_profit": 351.5000343322754,
-    "total_returns": 7101.500034332275,
-    "win_rate": 52.8,
-    "roi": 5.2,
+    "total_staked": 6800,
+    "total_profit": 402.5000333786011,
+    "total_returns": 7202.500033378601,
+    "win_rate": 53.2,
+    "roi": 5.9,
     "hit_rate": 71.4,
-    "profit_per_match": 2.6,
-    "profit_per_day": 2.6,
+    "profit_per_match": 2.96,
+    "profit_per_day": 2.96,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "June 2026",
@@ -39,19 +39,19 @@
     "2026-06": {
       "name": "June 2026",
       "stats": {
-        "total": 3,
-        "wins": 3,
+        "total": 4,
+        "wins": 4,
         "losses": 0,
         "pending": 0,
         "errors": 0,
-        "profit": 165.49999713897705,
-        "staked": 150,
-        "avg_odds": 2.1,
+        "profit": 216.49999618530273,
+        "staked": 200,
+        "avg_odds": 2.08,
         "win_rate": 100.0,
-        "total_goals": 4,
-        "avg_goals": 1.33
+        "total_goals": 5,
+        "avg_goals": 1.25
       },
-      "match_count": 3
+      "match_count": 4
     },
     "2026-05": {
       "name": "May 2026",
@@ -158,6 +158,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-06-23",
+      "league": "Brazil - Campeonato Brasileiro U20",
+      "home_team": "Sao Paulo U20",
+      "away_team": "Fortaleza U20",
+      "probability": "44",
+      "under_over": "Under",
+      "over_probability": "56",
+      "correct_score": "2 - 0",
+      "avg_goals": 2.2100000381469727,
+      "weather": "19\u00b0",
+      "coef": 2.0199999809265137,
+      "score": "1 - 0",
+      "score_priority": 5,
+      "result": "win",
+      "profit": 50.999999046325684,
+      "is_win": 1,
+      "total_goals": 1
+    },
+    {
       "date": "2026-06-22",
       "league": "Estonia - Esiliiga",
       "home_team": "FC Maardu",
@@ -232,25 +251,6 @@
       "profit": -50,
       "is_win": 0,
       "total_goals": 4
-    },
-    {
-      "date": "2026-05-25",
-      "league": "South Korea - K League 2",
-      "home_team": "Paju Citizen",
-      "away_team": "GimPo Citizen",
-      "probability": "38",
-      "under_over": "Under",
-      "over_probability": "62",
-      "correct_score": "0 - 0",
-      "avg_goals": 1.9199999570846558,
-      "weather": "29\u00b0",
-      "coef": 2.1500000953674316,
-      "score": "",
-      "score_priority": 1,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null
     }
   ]
 }
