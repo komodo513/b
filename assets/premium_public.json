@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-06-27 08:03",
+    "generated": "2026-06-28 08:03",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-06-26",
+    "date_range": "2025-12-25 to 2026-06-27",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Calculations based on $50 flat stake per match"
   },
   "summary_stats": {
-    "total_matches": 139,
-    "total_days": 139,
+    "total_matches": 140,
+    "total_days": 140,
     "total_wins": 67,
     "total_losses": 59,
-    "total_pending": 12,
+    "total_pending": 13,
     "total_errors": 0,
-    "total_staked": 6950,
+    "total_staked": 7000,
     "total_profit": 402.5000333786011,
-    "total_returns": 7352.500033378601,
+    "total_returns": 7402.500033378601,
     "win_rate": 53.2,
     "roi": 5.8,
     "hit_rate": 71.4,
-    "profit_per_match": 2.9,
-    "profit_per_day": 2.9,
+    "profit_per_match": 2.88,
+    "profit_per_day": 2.88,
     "streak_wins": 4,
     "streak_losses": 5,
     "best_month": "June 2026",
@@ -39,19 +39,19 @@
     "2026-06": {
       "name": "June 2026",
       "stats": {
-        "total": 7,
+        "total": 8,
         "wins": 4,
         "losses": 0,
-        "pending": 3,
+        "pending": 4,
         "errors": 0,
         "profit": 216.49999618530273,
         "staked": 200,
-        "avg_odds": 2.04,
+        "avg_odds": 2.03,
         "win_rate": 100.0,
         "total_goals": 5,
         "avg_goals": 1.25
       },
-      "match_count": 7
+      "match_count": 8
     },
     "2026-05": {
       "name": "May 2026",
@@ -158,6 +158,25 @@
   },
   "matches_sample": [
     {
+      "date": "2026-06-27",
+      "league": "Unknown",
+      "home_team": "Uruguay",
+      "away_team": "Spain",
+      "probability": "47",
+      "under_over": "Under",
+      "over_probability": "53",
+      "correct_score": "0 - 2",
+      "avg_goals": 2.3499999046325684,
+      "weather": "26\u00b0",
+      "coef": 1.9700000286102295,
+      "score": "",
+      "score_priority": 4,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null
+    },
+    {
       "date": "2026-06-26",
       "league": "Unknown",
       "home_team": "Japan",
@@ -230,25 +249,6 @@
       "score_priority": 5,
       "result": "win",
       "profit": 50.999999046325684,
-      "is_win": 1,
-      "total_goals": 1
-    },
-    {
-      "date": "2026-06-22",
-      "league": "Estonia - Esiliiga",
-      "home_team": "FC Maardu",
-      "away_team": "Viimsi JK",
-      "probability": "35",
-      "under_over": "Under",
-      "over_probability": "65",
-      "correct_score": "0 - 1",
-      "avg_goals": 1.75,
-      "weather": "17\u00b0",
-      "coef": 2.049999952316284,
-      "score": "1 - 0",
-      "score_priority": 2,
-      "result": "win",
-      "profit": 52.49999761581421,
       "is_win": 1,
       "total_goals": 1
     }
