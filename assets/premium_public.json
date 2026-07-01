@@ -1,13 +1,13 @@
 {
   "report_info": {
-    "generated": "2026-07-01 08:12",
+    "generated": "2026-07-01 08:33",
     "version": "1.0",
     "date_range": "2025-12-25 to 2026-06-30",
     "include_today": false,
     "privacy_level": "premium_public",
     "selection_method": "first_match_per_day",
     "service": "Betadvisor Club Premium",
-    "design": "Goldmine \u2013 Vue + xp.css",
+    "design": "Goldmine \u2013 Vue + xp.css (no duplicate Vue)",
     "stake_note": "Per-match profit based on $100 flat stake; performance cards report in $10 units"
   },
   "summary_stats": {
