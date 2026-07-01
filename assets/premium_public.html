@@ -1,14 +1,39 @@
 
 <style>
-    /* Bet365‑style dark theme overrides for Tailwind */
+    /* Bet365‑style typography & dark theme */
     #app {
-        font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 400;
         background: #282828;
         color: #ffffff;
         width: 100%;
         padding: 0 !important;
         margin: 0 !important;
     }
+    /* Override Tailwind text sizes to match 14px base */
+    #app .text-xs { font-size: 0.7rem; }   /* ~9.8px */
+    #app .text-sm { font-size: 0.8rem; }   /* ~11.2px */
+    #app .text-base { font-size: 1rem; }   /* 14px */
+    #app .text-lg { font-size: 1.1rem; }   /* 15.4px */
+    #app .text-xl { font-size: 1.3rem; }   /* 18.2px */
+    #app .text-2xl { font-size: 1.6rem; }  /* 22.4px */
+    #app .text-3xl { font-size: 1.8rem; }  /* 25.2px */
+    /* Headings */
+    #app h1, #app h2, #app h3, #app h4, #app h5, #app h6,
+    #app .h1, #app .h2, #app .h3, #app .h4, #app .h5, #app .h6 {
+        font-weight: 600;
+        margin: 0;
+    }
+    #app h1, #app .h1 { font-size: 1.4rem; }
+    #app h2, #app .h2 { font-size: 1.2rem; }
+    #app h3, #app .h3 { font-size: 1.1rem; }
+    #app h4, #app .h4 { font-size: 1rem; }
+    #app h5, #app .h5 { font-size: 0.95rem; }
+    #app h6, #app .h6 { font-size: 0.9rem; }
+    /* Bold */
+    #app .font-bold, #app strong, #app b { font-weight: 700; }
     /* Gold accent for badges and borders */
     .gold-border { border-color: #ffd700; }
     .bg-gold { background: #ffd700; }
@@ -2775,7 +2800,7 @@
     <!-- Footer -->
     <div class="border-t border-[#444444] pt-3 mt-3 text-center text-gray-400 text-sm">
         <p><i class="fas fa-calendar-alt"></i> Report: 2025-12-25 – 2026-06-30</p>
-        <p><i class="fas fa-clock"></i> Generated: 2026-07-01 09:45 • v1.0</p>
+        <p><i class="fas fa-clock"></i> Generated: 2026-07-01 09:49 • v1.0</p>
         <p><i class="fas fa-user-shield"></i> Premium data showing matches up to yesterday</p>
         <div class="mt-2 pt-2 border-t border-[#444444]">
             <p><strong>Terms:</strong> Personal use only. Unauthorised distribution prohibited.</p>
