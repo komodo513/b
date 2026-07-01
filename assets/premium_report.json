@@ -1,13 +1,13 @@
 {
   "report_info": {
-    "generated": "2026-07-01 07:48",
+    "generated": "2026-07-01 07:52",
     "version": "1.0",
     "date_range": "2025-12-25 to 2026-07-02",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
-    "service": "Betadvisor Club Goldmine",
-    "design": "Vue + xp.css (Goldmine)",
+    "service": "Betadvisor Club Premium",
+    "design": "Goldmine \u2013 Vue + xp.css",
     "stake_note": "Per-match profit based on $50 flat stake; performance-window cards report in $10 units"
   },
   "summary_stats": {
