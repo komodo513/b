@@ -1,6 +1,6 @@
 {
   "report_info": {
-    "generated": "2026-07-01 07:52",
+    "generated": "2026-07-01 08:04",
     "version": "1.0",
     "date_range": "2025-12-25 to 2026-06-30",
     "include_today": false,
@@ -8,7 +8,7 @@
     "selection_method": "first_match_per_day",
     "service": "Betadvisor Club Premium",
     "design": "Goldmine \u2013 Vue + xp.css",
-    "stake_note": "Per-match profit based on $50 flat stake; performance-window cards report in $10 units"
+    "stake_note": "Per-match profit based on $50 flat stake; performance cards report in $10 units"
   },
   "summary_stats": {
     "total_matches": 143,
@@ -73,24 +73,24 @@
       "avg_per_day": 1.0
     },
     {
-      "key": "last_15_days",
-      "label": "Last 15 Days",
-      "total": 10,
-      "wins": 3,
-      "losses": 0,
-      "pending": 7,
+      "key": "last_15_matches",
+      "label": "Last 15 Matches",
+      "total": 15,
+      "wins": 5,
+      "losses": 1,
+      "pending": 9,
       "void": 0,
-      "win_rate": 100.0,
+      "win_rate": 83.3,
       "avg_odds": 2.02,
-      "units_display": "3.25+u",
-      "net_display": "$32.5+",
+      "units_display": "4.33+u",
+      "net_display": "$43.3+",
       "net_positive": true,
-      "roi": 108.3,
-      "yield_pct": 108.3,
-      "max_win_streak": 3,
-      "max_loss_streak": 0,
-      "drawdown_display": "$0",
-      "avg_per_day": 1.0
+      "roi": 72.2,
+      "yield_pct": 72.2,
+      "max_win_streak": 4,
+      "max_loss_streak": 1,
+      "drawdown_display": "$10",
+      "avg_per_day": 0.4
     },
     {
       "key": "this_month",
