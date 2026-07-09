@@ -1,25 +1,41 @@
 
 <style>
-    /* Bet365‑style typography & dark theme – slate palette */
+    /* Bet365‑style typography & dark theme – XP font stack + slate palette */
     #app {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        font-size: 14px;
+        font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
+        font-size: 12px;
         line-height: 1.4;
         font-weight: 400;
         background: #0f172a;          /* slate-900 */
-        color: #f1f5f9;               /* slate-50 */
+        color: #e2e8f0;               /* slate-200 */
         width: 100%;
         padding: 0 !important;
         margin: 0 !important;
+        text-rendering: optimizeLegibility;
     }
-    /* Override Tailwind text sizes to match 14px base */
-    #app .text-xs { font-size: 0.7rem; }   /* ~9.8px */
-    #app .text-sm { font-size: 0.8rem; }   /* ~11.2px */
-    #app .text-base { font-size: 1rem; }   /* 14px */
-    #app .text-lg { font-size: 1.1rem; }   /* 15.4px */
-    #app .text-xl { font-size: 1.3rem; }   /* 18.2px */
-    #app .text-2xl { font-size: 1.6rem; }  /* 22.4px */
-    #app .text-3xl { font-size: 1.8rem; }  /* 25.2px */
+    #app, #app * {
+        font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
+    }
+    code, kbd, samp, pre, tt {
+        font-family: "Perfect DOS VGA 437 Win", monospace;
+    }
+    #app a, #app a:visited {
+        color: #60a5fa;
+    }
+    #app a:hover, #app a:focus {
+        color: #93c5fd;
+    }
+    #app .text-blue-600 { color: #60a5fa; }
+    #app .text-blue-800 { color: #1d4ed8; }
+    #app .hover\:text-blue-800:hover { color: #1d4ed8; }
+    /* Override Tailwind text sizes to match 12px base */
+    #app .text-xs { font-size: 0.75rem; }   /* ~9px */
+    #app .text-sm { font-size: 0.85rem; }   /* ~10.2px */
+    #app .text-base { font-size: 1rem; }    /* 12px */
+    #app .text-lg { font-size: 1.1rem; }   /* ~13.2px */
+    #app .text-xl { font-size: 1.25rem; }  /* ~15px */
+    #app .text-2xl { font-size: 1.4rem; }  /* ~16.8px */
+    #app .text-3xl { font-size: 1.55rem; } /* ~18.6px */
     /* Headings */
     #app h1, #app h2, #app h3, #app h4, #app h5, #app h6,
     #app .h1, #app .h2, #app .h3, #app .h4, #app .h5, #app .h6 {
@@ -43,9 +59,9 @@
     .bg-dark-sub { background: #334155; }    /* slate-700 */
     .border-dark { border-color: #475569; }  /* slate-600 */
     /* Override Tailwind text colours for better contrast */
-    #app .text-gray-400 { color: #94a3b8; }  /* slate-400 */
-    #app .text-gray-300 { color: #cbd5e1; }  /* slate-300 */
-    #app .text-gray-200 { color: #e2e8f0; }  /* slate-200 */
+    #app .text-gray-400 { color: #cbd5e1; }  /* slate-300 */
+    #app .text-gray-300 { color: #e2e8f0; }  /* slate-200 */
+    #app .text-gray-200 { color: #f8fafc; }  /* slate-100 */
     /* Match card left border */
     .match-card { border-left-width: 4px; }
     .match-card.win { border-left-color: #00ff88; }
@@ -2994,7 +3010,7 @@
     <!-- Footer -->
     <div class="border-t border-dark pt-2 mt-2 text-center text-gray-400 text-xs px-1">
         <p class="mb-0"><i class="fas fa-calendar-alt"></i> 2025-12-25 – 2026-07-09</p>
-        <p class="mb-0"><i class="fas fa-clock"></i> 2026-07-09 18:25 • v1.0</p>
+        <p class="mb-0"><i class="fas fa-clock"></i> 2026-07-09 21:43 • v1.0</p>
         <p class="mb-0"><i class="fas fa-user-shield"></i> Full premium data including today's matches</p>
         <div class="mt-1 pt-1 border-t border-dark text-xs">
             <p class="mb-0"><strong>Terms:</strong> Personal use only. Unauthorised distribution prohibited.</p>
