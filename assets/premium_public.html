@@ -64,11 +64,11 @@
     #app .text-gray-200 { color: #f8fafc; }  /* slate-100 */
     .match-card { 
         border: 1px solid #475569;
-        border-radius: 10px;
+        border-radius: 9px;
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        padding: 10px;
+        gap: 6px;
+        padding: 8px;
         background: #111827;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
         transition: all 0.2s ease;
@@ -104,31 +104,31 @@
     .panel {
         background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
         border: 1px solid #334155;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 9px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
-    .section-card { padding: 10px; }
-    .metric-card { padding: 10px; }
-    .panel-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .section-card { padding: 8px; }
+    .metric-card { padding: 8px; }
+    .panel-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
     .section-title { font-size: 0.95rem; font-weight: 700; color: #f8fafc; letter-spacing: 0.02em; }
     .metric-label { color: #94a3b8; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; }
     .metric-value { font-size: 0.95rem; font-weight: 700; color: #f8fafc; }
-    .metric-pill { padding: 8px; text-align: center; background: #0f172a; border: 1px solid #334155; border-radius: 8px; }
-    .month-body { padding: 10px; background: #0f172a; }
+    .metric-pill { padding: 7px; text-align: center; background: #0f172a; border: 1px solid #334155; border-radius: 7px; }
+    .month-body { padding: 8px; background: #0f172a; }
     .month-section { background: transparent; border: 0; box-shadow: none; }
-    .bank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; margin-top: 8px; }
-    .match-card .meta-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 7px 8px; border-radius: 8px; background: rgba(15, 23, 42, 0.74); border: 1px solid #334155; }
+    .bank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 6px; margin-top: 6px; }
+    .match-card .meta-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 6px 7px; border-radius: 7px; background: rgba(15, 23, 42, 0.74); border: 1px solid #334155; }
     .match-card .meta-stack { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-    .match-card .date-chip, .match-card .league-chip { display: inline-flex; align-items: center; gap: 4px; width: fit-content; padding: 3px 7px; border-radius: 999px; background: #111827; border: 1px solid #475569; color: #cbd5e1; font-size: 0.66rem; line-height: 1.1; }
+    .match-card .date-chip, .match-card .league-chip { display: inline-flex; align-items: center; gap: 4px; width: fit-content; padding: 2px 6px; border-radius: 999px; background: #111827; border: 1px solid #475569; color: #cbd5e1; font-size: 0.64rem; line-height: 1.1; }
     .match-card .league-chip { color: #93c5fd; }
-    .match-card .team-stack { display: flex; flex-direction: column; gap: 6px; padding-top: 2px; }
+    .match-card .team-stack { display: flex; flex-direction: column; gap: 4px; padding-top: 1px; }
     .match-card .team-row { display: flex; align-items: flex-start; gap: 6px; }
     .match-card .team-bullet { width: 6px; height: 6px; border-radius: 50%; background: #ffd700; margin-top: 6px; box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.16); flex-shrink: 0; }
-    .match-card .team-name { font-size: 0.84rem; font-weight: 700; color: #f8fafc; line-height: 1.2; }
-    .match-card .stat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding-top: 8px; border-top: 1px solid #334155; }
-    .match-card .stat-cell { background: #0f172a; border: 1px solid #334155; border-radius: 7px; padding: 6px 7px; min-height: 42px; display: flex; flex-direction: column; justify-content: center; }
-    .match-card .stat-label { display: block; font-size: 0.62rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
-    .match-card .stat-value { font-size: 0.8rem; font-weight: 700; color: #f8fafc; }
+    .match-card .team-name { font-size: 0.8rem; font-weight: 700; color: #f8fafc; line-height: 1.15; }
+    .match-card .stat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding-top: 6px; border-top: 1px solid #334155; }
+    .match-card .stat-cell { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 5px 6px; min-height: 38px; display: flex; flex-direction: column; justify-content: center; }
+    .match-card .stat-label { display: block; font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 1px; }
+    .match-card .stat-value { font-size: 0.76rem; font-weight: 700; color: #f8fafc; }
     /* Responsive grids – mobile first */
     .match-grid {
         display: grid;
@@ -4744,7 +4744,7 @@
     <!-- Footer -->
     <div class="border-t border-dark pt-2 mt-2 text-center text-gray-400 text-xs px-1">
         <p class="mb-0"><i class="fas fa-calendar-alt"></i> 2025-12-25 – 2026-07-09</p>
-        <p class="mb-0"><i class="fas fa-clock"></i> 2026-07-10 10:16 • v1.0</p>
+        <p class="mb-0"><i class="fas fa-clock"></i> 2026-07-10 12:12 • v1.0</p>
         <p class="mb-0"><i class="fas fa-user-shield"></i> Premium data showing matches up to yesterday</p>
         <div class="mt-1 pt-1 border-t border-dark text-xs">
             <p class="mb-0"><strong>Terms:</strong> Personal use only. Unauthorised distribution prohibited.</p>
