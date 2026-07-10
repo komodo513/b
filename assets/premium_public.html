@@ -92,13 +92,16 @@
     .badge-pending { background: rgba(255,215,0,0.15); color: #ffd700; }
     .badge-void { background: rgba(255,255,255,0.05); color: #b0b0b0; }
     /* Performance card top border */
-    .perf-card { border-top: 3px solid #ffd700; display: flex; flex-direction: column; gap: 3px; min-height: 100%; }
+    .perf-card { border-top: 3px solid #ffd700; display: flex; flex-direction: column; gap: 4px; min-height: 100%; }
+    .perf-card .perf-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; }
     .perf-card .perf-title { font-size: 0.68rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; }
-    .perf-card .perf-wr { font-size: 1.06rem; font-weight: 800; line-height: 1; }
-    .perf-card .perf-line { display: flex; justify-content: space-between; align-items: center; gap: 6px; font-size: 0.69rem; line-height: 1.15; color: #e2e8f0; padding: 2px 0; border-bottom: 1px solid rgba(148, 163, 184, 0.12); }
-    .perf-card .perf-line:last-child { border-bottom: 0; padding-bottom: 0; }
-    .perf-card .perf-line span:first-child { color: #94a3b8; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.04em; }
-    .perf-card .perf-line b { color: #f8fafc; }
+    .perf-card .perf-wr-wrap { display: flex; flex-direction: column; align-items: flex-end; line-height: 1; }
+    .perf-card .perf-wr { font-size: 1.06rem; font-weight: 800; }
+    .perf-card .perf-wr-tag { font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; }
+    .perf-card .perf-metric-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+    .perf-card .perf-metric { padding: 3px 4px; border-radius: 6px; background: rgba(15, 23, 42, 0.66); border: 1px solid rgba(148, 163, 184, 0.12); display: flex; flex-direction: column; gap: 1px; }
+    .perf-card .perf-metric .metric-key { font-size: 0.56rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; }
+    .perf-card .perf-metric .metric-value { font-size: 0.72rem; font-weight: 700; color: #f8fafc; line-height: 1.15; }
     /* Info notice */
     .info-notice { border-left: 4px solid #00ff88; }
     /* Month stats pills – updated to slate */
@@ -122,7 +125,7 @@
     .metric-pill { padding: 6px 7px; text-align: center; background: #0f172a; border: 1px solid #334155; border-radius: 7px; min-height: 46px; display: flex; flex-direction: column; justify-content: center; gap: 1px; }
     .month-body { padding: 8px; background: #0f172a; }
     .month-section { background: transparent; border: 0; box-shadow: none; }
-    .bank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 6px; margin-top: 6px; }
+    .bank-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 6px; }
     .match-card .meta-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 6px 7px; border-radius: 7px; background: rgba(15, 23, 42, 0.74); border: 1px solid #334155; }
     .match-card .meta-stack { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
     .match-card .date-chip, .match-card .league-chip { display: inline-flex; align-items: center; gap: 4px; width: fit-content; padding: 2px 6px; border-radius: 999px; background: #111827; border: 1px solid #475569; color: #cbd5e1; font-size: 0.64rem; line-height: 1.1; }
@@ -183,6 +186,7 @@
             <span class="inline-block bg-yellow-400 text-black text-xs font-bold px-2 py-0.5 rounded-full"><i class="fas fa-gem"></i> Goldmine Plan• From Dec 2025 - July 2026</span>
             <h1 class="text-gray-400 text-xs">Best Single Bet of the Day</h1>
 <p>This section shows our best value bet of the day. Data is based on settled matches (WIN/LOSS). (PENDING) means the result is not yet updated, or the match was postponed/canceled. The same picks are also tracked on Tipstrr for verification.</p>
+<p class="text-xs text-gray-400 mt-1"><strong>Updated:</strong> 10 Jul 2026</p>
         </div>
         <div class="bg-dark-card border border-dark rounded p-1 text-center">
             <span class="text-gray-400 text-xs block">Days</span>
@@ -203,62 +207,86 @@
     <div class="perf-grid mb-2 px-1">
         
             <div class="panel metric-card perf-card">
-                <div class="perf-title">Overall (All-Time)</div>
-                <div class="flex items-baseline gap-0.5">
-                    <span class="perf-wr text-green-400">55.0%</span>
-                    <small class="uppercase text-gray-400 text-xxs">WR</small>
+                <div class="perf-head">
+                    <div class="perf-title">Overall (All-Time)</div>
+                    <div class="perf-wr-wrap">
+                        <span class="perf-wr text-green-400">55.0%</span>
+                        <span class="perf-wr-tag">WR</span>
+                    </div>
                 </div>
-                <div class="perf-line"><span>Matches</span><span><b>152</b> M • <b>77</b>W / <b>63</b>L / <b>11</b>P / <b>1</b>V</span></div>
-                <div class="perf-line"><span>Odds</span><b>2.0</b></div>
-                <div class="perf-line"><span>Units</span><b class="text-green-400">14.11+u</b></div>
-                <div class="perf-line"><span>ROI</span><b>10.1%</b></div>
-                <div class="perf-line"><span>Yield</span><b>10.1%</b></div>
-                <div class="perf-line"><span>Streak</span><span><b class="text-green-400">W5</b>/<b class="text-red-400">L5</b> • DD <b>$114</b></span></div>
+                <div class="perf-metric-grid">
+                    <div class="perf-metric"><span class="metric-key">Matches</span><span class="metric-value">152 M</span></div>
+                    <div class="perf-metric"><span class="metric-key">Result</span><span class="metric-value"><b>77</b>W / <b>63</b>L</span></div>
+                    <div class="perf-metric"><span class="metric-key">Pending/void</span><span class="metric-value"><b>11</b>P / <b>1</b>V</span></div>
+                    <div class="perf-metric"><span class="metric-key">Odds</span><span class="metric-value">2.0</span></div>
+                    <div class="perf-metric"><span class="metric-key">Units</span><span class="metric-value text-green-400">14.11+u</span></div>
+                    <div class="perf-metric"><span class="metric-key">ROI</span><span class="metric-value">10.1%</span></div>
+                    <div class="perf-metric"><span class="metric-key">Yield</span><span class="metric-value">10.1%</span></div>
+                    <div class="perf-metric"><span class="metric-key">Streak/DD</span><span class="metric-value"><b class="text-green-400">W5</b>/<b class="text-red-400">L5</b> • $114</span></div>
+                </div>
             </div>
         
 
             <div class="panel metric-card perf-card">
-                <div class="perf-title">Last 7 Days</div>
-                <div class="flex items-baseline gap-0.5">
-                    <span class="perf-wr text-green-400">83.3%</span>
-                    <small class="uppercase text-gray-400 text-xxs">WR</small>
+                <div class="perf-head">
+                    <div class="perf-title">Last 7 Days</div>
+                    <div class="perf-wr-wrap">
+                        <span class="perf-wr text-green-400">83.3%</span>
+                        <span class="perf-wr-tag">WR</span>
+                    </div>
                 </div>
-                <div class="perf-line"><span>Matches</span><span><b>6</b> M • <b>5</b>W / <b>1</b>L / <b>0</b>P / <b>0</b>V</span></div>
-                <div class="perf-line"><span>Odds</span><b>2.01</b></div>
-                <div class="perf-line"><span>Units</span><b class="text-green-400">4.05+u</b></div>
-                <div class="perf-line"><span>ROI</span><b>67.5%</b></div>
-                <div class="perf-line"><span>Yield</span><b>67.5%</b></div>
-                <div class="perf-line"><span>Streak</span><span><b class="text-green-400">W5</b>/<b class="text-red-400">L1</b> • DD <b>$10</b></span></div>
+                <div class="perf-metric-grid">
+                    <div class="perf-metric"><span class="metric-key">Matches</span><span class="metric-value">6 M</span></div>
+                    <div class="perf-metric"><span class="metric-key">Result</span><span class="metric-value"><b>5</b>W / <b>1</b>L</span></div>
+                    <div class="perf-metric"><span class="metric-key">Pending/void</span><span class="metric-value"><b>0</b>P / <b>0</b>V</span></div>
+                    <div class="perf-metric"><span class="metric-key">Odds</span><span class="metric-value">2.01</span></div>
+                    <div class="perf-metric"><span class="metric-key">Units</span><span class="metric-value text-green-400">4.05+u</span></div>
+                    <div class="perf-metric"><span class="metric-key">ROI</span><span class="metric-value">67.5%</span></div>
+                    <div class="perf-metric"><span class="metric-key">Yield</span><span class="metric-value">67.5%</span></div>
+                    <div class="perf-metric"><span class="metric-key">Streak/DD</span><span class="metric-value"><b class="text-green-400">W5</b>/<b class="text-red-400">L1</b> • $10</span></div>
+                </div>
             </div>
         
 
             <div class="panel metric-card perf-card">
-                <div class="perf-title">Last 15 Matches</div>
-                <div class="flex items-baseline gap-0.5">
-                    <span class="perf-wr text-green-400">76.9%</span>
-                    <small class="uppercase text-gray-400 text-xxs">WR</small>
+                <div class="perf-head">
+                    <div class="perf-title">Last 15 Matches</div>
+                    <div class="perf-wr-wrap">
+                        <span class="perf-wr text-green-400">76.9%</span>
+                        <span class="perf-wr-tag">WR</span>
+                    </div>
                 </div>
-                <div class="perf-line"><span>Matches</span><span><b>15</b> M • <b>10</b>W / <b>3</b>L / <b>2</b>P / <b>0</b>V</span></div>
-                <div class="perf-line"><span>Odds</span><b>2.0</b></div>
-                <div class="perf-line"><span>Units</span><b class="text-green-400">7.06+u</b></div>
-                <div class="perf-line"><span>ROI</span><b>54.3%</b></div>
-                <div class="perf-line"><span>Yield</span><b>54.3%</b></div>
-                <div class="perf-line"><span>Streak</span><span><b class="text-green-400">W5</b>/<b class="text-red-400">L1</b> • DD <b>$10</b></span></div>
+                <div class="perf-metric-grid">
+                    <div class="perf-metric"><span class="metric-key">Matches</span><span class="metric-value">15 M</span></div>
+                    <div class="perf-metric"><span class="metric-key">Result</span><span class="metric-value"><b>10</b>W / <b>3</b>L</span></div>
+                    <div class="perf-metric"><span class="metric-key">Pending/void</span><span class="metric-value"><b>2</b>P / <b>0</b>V</span></div>
+                    <div class="perf-metric"><span class="metric-key">Odds</span><span class="metric-value">2.0</span></div>
+                    <div class="perf-metric"><span class="metric-key">Units</span><span class="metric-value text-green-400">7.06+u</span></div>
+                    <div class="perf-metric"><span class="metric-key">ROI</span><span class="metric-value">54.3%</span></div>
+                    <div class="perf-metric"><span class="metric-key">Yield</span><span class="metric-value">54.3%</span></div>
+                    <div class="perf-metric"><span class="metric-key">Streak/DD</span><span class="metric-value"><b class="text-green-400">W5</b>/<b class="text-red-400">L1</b> • $10</span></div>
+                </div>
             </div>
         
 
             <div class="panel metric-card perf-card">
-                <div class="perf-title">This Month</div>
-                <div class="flex items-baseline gap-0.5">
-                    <span class="perf-wr text-green-400">75.0%</span>
-                    <small class="uppercase text-gray-400 text-xxs">WR</small>
+                <div class="perf-head">
+                    <div class="perf-title">This Month</div>
+                    <div class="perf-wr-wrap">
+                        <span class="perf-wr text-green-400">75.0%</span>
+                        <span class="perf-wr-tag">WR</span>
+                    </div>
                 </div>
-                <div class="perf-line"><span>Matches</span><span><b>9</b> M • <b>6</b>W / <b>2</b>L / <b>1</b>P / <b>0</b>V</span></div>
-                <div class="perf-line"><span>Odds</span><b>2.0</b></div>
-                <div class="perf-line"><span>Units</span><b class="text-green-400">4.07+u</b></div>
-                <div class="perf-line"><span>ROI</span><b>50.9%</b></div>
-                <div class="perf-line"><span>Yield</span><b>50.9%</b></div>
-                <div class="perf-line"><span>Streak</span><span><b class="text-green-400">W5</b>/<b class="text-red-400">L1</b> • DD <b>$10</b></span></div>
+                <div class="perf-metric-grid">
+                    <div class="perf-metric"><span class="metric-key">Matches</span><span class="metric-value">9 M</span></div>
+                    <div class="perf-metric"><span class="metric-key">Result</span><span class="metric-value"><b>6</b>W / <b>2</b>L</span></div>
+                    <div class="perf-metric"><span class="metric-key">Pending/void</span><span class="metric-value"><b>1</b>P / <b>0</b>V</span></div>
+                    <div class="perf-metric"><span class="metric-key">Odds</span><span class="metric-value">2.0</span></div>
+                    <div class="perf-metric"><span class="metric-key">Units</span><span class="metric-value text-green-400">4.07+u</span></div>
+                    <div class="perf-metric"><span class="metric-key">ROI</span><span class="metric-value">50.9%</span></div>
+                    <div class="perf-metric"><span class="metric-key">Yield</span><span class="metric-value">50.9%</span></div>
+                    <div class="perf-metric"><span class="metric-key">Streak/DD</span><span class="metric-value"><b class="text-green-400">W5</b>/<b class="text-red-400">L1</b> • $10</span></div>
+                </div>
             </div>
         
     </div>
@@ -4758,7 +4786,7 @@
     <!-- Footer -->
     <div class="border-t border-dark pt-2 mt-2 text-center text-gray-400 text-xs px-1">
         <p class="mb-0"><i class="fas fa-calendar-alt"></i> 2025-12-25 – 2026-07-09</p>
-        <p class="mb-0"><i class="fas fa-clock"></i> 2026-07-10 13:39 • v1.0</p>
+        <p class="mb-0"><i class="fas fa-clock"></i> 2026-07-10 13:56 • v1.0</p>
         <p class="mb-0"><i class="fas fa-user-shield"></i> Premium data showing matches up to yesterday</p>
         <div class="mt-1 pt-1 border-t border-dark text-xs">
             <p class="mb-0"><strong>Terms:</strong> Personal use only. Unauthorised distribution prohibited.</p>
