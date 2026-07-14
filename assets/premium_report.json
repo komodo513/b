@@ -1,6 +1,6 @@
 {
   "report_info": {
-    "generated": "2026-07-14 12:33",
+    "generated": "2026-07-15 01:39",
     "version": "1.0",
     "date_range": "2025-12-25 to 2026-07-17",
     "include_today": true,
@@ -56,23 +56,23 @@
     {
       "key": "last_7_days",
       "label": "Last 7 Days",
-      "total": 4,
-      "wins": 1,
+      "total": 3,
+      "wins": 0,
       "losses": 1,
       "pending": 2,
       "void": 0,
-      "decided": 2,
-      "win_rate": 50.0,
-      "avg_odds": 2.01,
-      "units_display": "0.00+u",
-      "net_display": "$0.0+",
-      "net_positive": true,
-      "roi": 0.0,
-      "yield_pct": 0.0,
-      "max_win_streak": 1,
+      "decided": 1,
+      "win_rate": 0.0,
+      "avg_odds": 2.02,
+      "units_display": "1.00-u",
+      "net_display": "$10.0-",
+      "net_positive": false,
+      "roi": -100.0,
+      "yield_pct": -100.0,
+      "max_win_streak": 0,
       "max_loss_streak": 1,
       "drawdown_display": "$10",
-      "avg_per_day": 0.4
+      "avg_per_day": 0.3
     },
     {
       "key": "last_15_matches",
