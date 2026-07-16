@@ -75,10 +75,8 @@
     .match-card:hover {
         box-shadow: inset -1px -1px rgba(255,255,255,0.08), inset 1px 1px rgba(0,0,0,0.5), inset -2px -2px rgba(255,255,255,0.04), inset 2px 2px rgba(0,0,0,0.3);
     }
-    .match-card.win { border-left: 4px solid #00ff88; }
-    .match-card.loss { border-left: 4px solid #ff5555; }
-    .match-card.pending { border-left: 4px solid #ffd700; }
-    .match-card.void { border-left: 4px solid #666666; }
+    /* Win/loss/pending borders removed — using XP bevel box-shadow from .match-card instead.
+       Result is conveyed via the badge (badge-win/badge-loss/badge-pending) and profit colour. */
     .match-card .profit.positive { color: #00ff88; }
     .match-card .profit.negative { color: #ff5555; }
     .match-card .profit.neutral { color: #b0b0b0; }
@@ -181,7 +179,7 @@
             <span class="inline-block bg-yellow-400 text-black text-xs font-bold px-2 py-0.5 rounded-full"><i class="fas fa-gem"></i> Goldmine Plan• From Dec 2025 - July 2026</span>
             <h1 class="text-gray-400 text-xs">Best Single Bet of the Day</h1>
 <p>This section shows our best value bet of the day. Data is based on settled matches (WIN/LOSS). (PENDING) means the result is not yet updated, or the match was postponed/canceled. The same picks are also tracked on Tipstrr for verification.</p>
-<p class="text-xs text-gray-400 mt-1"><strong>Updated:</strong> 16 Jul 2026</p>
+<p class="text-xs text-gray-400 mt-1"><strong>Updated:</strong> 17 Jul 2026</p>
         </div>
         <div class="bg-dark-card border border-dark rounded p-1 text-center">
             <span class="text-gray-400 text-xs block">Days</span>
@@ -4893,7 +4891,7 @@
     <!-- Footer -->
     <div class="border-t border-dark pt-2 mt-2 text-center text-gray-400 text-xs px-1">
         <p class="mb-0"><i class="fas fa-calendar-alt"></i> 2025-12-25 – 2026-07-19</p>
-        <p class="mb-0"><i class="fas fa-clock"></i> 2026-07-16 08:03 • v1.0</p>
+        <p class="mb-0"><i class="fas fa-clock"></i> 2026-07-17 01:18 • v1.0</p>
         <p class="mb-0"><i class="fas fa-user-shield"></i> Full premium data including today's matches</p>
         <div class="mt-1 pt-1 border-t border-dark text-xs">
             <p class="mb-0"><strong>Terms:</strong> Personal use only. Unauthorised distribution prohibited.</p>
