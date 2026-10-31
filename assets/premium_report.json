@@ -1,6 +1,6 @@
 {
   "report_info": {
-    "generated": "2026-10-30 08:06",
+    "generated": "2026-10-31 08:05",
     "version": "1.0",
     "date_range": "2025-12-25 to 2026-11-01",
     "include_today": true,
@@ -56,14 +56,14 @@
     {
       "key": "last_7_days",
       "label": "Last 7 Days",
-      "total": 9,
+      "total": 8,
       "wins": 0,
       "losses": 2,
-      "pending": 7,
+      "pending": 6,
       "void": 0,
       "decided": 2,
       "win_rate": 0.0,
-      "avg_odds": 2.05,
+      "avg_odds": 2.06,
       "units_display": "2.00-u",
       "net_display": "$20.0-",
       "net_positive": false,
