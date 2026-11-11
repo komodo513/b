@@ -1,8 +1,8 @@
 {
   "report_info": {
-    "generated": "2026-11-10 08:04",
+    "generated": "2026-11-11 08:04",
     "version": "1.0",
-    "date_range": "2025-12-25 to 2026-11-13",
+    "date_range": "2025-12-25 to 2026-11-14",
     "include_today": true,
     "privacy_level": "premium_full",
     "selection_method": "first_match_per_day",
@@ -11,20 +11,20 @@
     "stake_note": "Per-match profit based on $100 flat stake; performance cards report in $10 units"
   },
   "summary_stats": {
-    "total_matches": 241,
-    "total_days": 241,
+    "total_matches": 243,
+    "total_days": 243,
     "total_wins": 101,
     "total_losses": 101,
-    "total_pending": 38,
+    "total_pending": 40,
     "total_void": 1,
-    "total_staked": 24000,
+    "total_staked": 24200,
     "total_profit": 103.000093,
-    "total_returns": 24103.000093,
+    "total_returns": 24303.000093,
     "win_rate": 50.0,
     "roi": 0.4,
     "hit_rate": 58.3,
-    "profit_per_match": 0.43,
-    "profit_per_day": 0.43,
+    "profit_per_match": 0.42,
+    "profit_per_day": 0.42,
     "streak_wins": 5,
     "streak_losses": 5,
     "best_month": "June 2026",
@@ -35,10 +35,10 @@
     {
       "key": "overall_alltime",
       "label": "Overall (All-Time)",
-      "total": 241,
+      "total": 243,
       "wins": 101,
       "losses": 101,
-      "pending": 38,
+      "pending": 40,
       "void": 1,
       "decided": 202,
       "win_rate": 50.0,
@@ -56,14 +56,14 @@
     {
       "key": "last_7_days",
       "label": "Last 7 Days",
-      "total": 9,
+      "total": 10,
       "wins": 0,
       "losses": 1,
-      "pending": 8,
+      "pending": 9,
       "void": 0,
       "decided": 1,
       "win_rate": 0.0,
-      "avg_odds": 1.99,
+      "avg_odds": 2.0,
       "units_display": "1.00-u",
       "net_display": "$10.0-",
       "net_positive": false,
@@ -72,7 +72,7 @@
       "max_win_streak": 0,
       "max_loss_streak": 1,
       "drawdown_display": "$10",
-      "avg_per_day": 0.9
+      "avg_per_day": 1.0
     },
     {
       "key": "last_15_matches",
@@ -93,15 +93,15 @@
       "max_win_streak": 1,
       "max_loss_streak": 1,
       "drawdown_display": "$20",
-      "avg_per_day": 0.9
+      "avg_per_day": 1.0
     },
     {
       "key": "this_month",
       "label": "This Month",
-      "total": 12,
+      "total": 14,
       "wins": 1,
       "losses": 2,
-      "pending": 9,
+      "pending": 11,
       "void": 0,
       "decided": 3,
       "win_rate": 33.3,
@@ -114,7 +114,7 @@
       "max_win_streak": 1,
       "max_loss_streak": 1,
       "drawdown_display": "$20",
-      "avg_per_day": 0.9
+      "avg_per_day": 1.0
     }
   ],
   "confidence_analysis": {
@@ -125,19 +125,19 @@
     "2026-11": {
       "name": "November 2026",
       "stats": {
-        "total": 12,
+        "total": 14,
         "wins": 1,
         "losses": 2,
-        "pending": 9,
+        "pending": 11,
         "void": 0,
         "profit": -101.999998,
-        "staked": 1200,
+        "staked": 1400,
         "avg_odds": 2.0,
         "win_rate": 33.3,
         "total_goals": 8,
         "avg_goals": 2.67
       },
-      "match_count": 12
+      "match_count": 14
     },
     "2026-10": {
       "name": "October 2026",
@@ -329,6 +329,26 @@
   },
   "matches_sample": [
     {
+      "date": "2026-11-14",
+      "league": "Japan - J3 League",
+      "home_team": "FC Gifu",
+      "away_team": "Matsumoto Yamaga",
+      "probability": "40",
+      "under_over": "Under",
+      "over_probability": "60",
+      "correct_score": "1 - 0",
+      "avg_goals": 1.9800000190734863,
+      "weather": "15°",
+      "coef": 2.02,
+      "score": "",
+      "score_priority": 3,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null,
+      "staked": 100
+    },
+    {
       "date": "2026-11-13",
       "league": "El Salvador - Primera Division",
       "home_team": "Atlético Balboa",
@@ -362,6 +382,26 @@
       "coef": 2.0,
       "score": "",
       "score_priority": 4,
+      "result": "pending",
+      "profit": 0,
+      "is_win": 0,
+      "total_goals": null,
+      "staked": 100
+    },
+    {
+      "date": "2026-11-11",
+      "league": "Türkiye - TFF 3. Lig",
+      "home_team": "Adana Adaletgücü",
+      "away_team": "Karaköprü Bld.",
+      "probability": "35",
+      "under_over": "Under",
+      "over_probability": "65",
+      "correct_score": "0 - 1",
+      "avg_goals": 1.75,
+      "weather": "17°",
+      "coef": 2.04,
+      "score": "",
+      "score_priority": 2,
       "result": "pending",
       "profit": 0,
       "is_win": 0,
@@ -486,46 +526,6 @@
       "profit": 0,
       "is_win": 0,
       "total_goals": null,
-      "staked": 100
-    },
-    {
-      "date": "2026-11-04",
-      "league": "England - Championship",
-      "home_team": "Bristol City",
-      "away_team": "Wolverhampton",
-      "probability": "47",
-      "under_over": "Under",
-      "over_probability": "53",
-      "correct_score": "0 - 2",
-      "avg_goals": 2.359999895095825,
-      "weather": "8°",
-      "coef": 1.97,
-      "score": "",
-      "score_priority": 4,
-      "result": "pending",
-      "profit": 0,
-      "is_win": 0,
-      "total_goals": null,
-      "staked": 100
-    },
-    {
-      "date": "2026-11-03",
-      "league": "Bolivia - División Profesional",
-      "home_team": "Real Tomayapo",
-      "away_team": "Blooming",
-      "probability": "38",
-      "under_over": "Under",
-      "over_probability": "62",
-      "correct_score": "0 - 0",
-      "avg_goals": 1.8799999952316284,
-      "weather": "31°",
-      "coef": 2.1,
-      "score": "1 - 2",
-      "score_priority": 1,
-      "result": "loss",
-      "profit": -100,
-      "is_win": 0,
-      "total_goals": 3,
       "staked": 100
     }
   ]
